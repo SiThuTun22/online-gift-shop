@@ -1,0 +1,263 @@
+{% extends 'mm/base.html' %}
+{% load static %}
+{% block styles %}
+<link rel="stylesheet" href="{% static 'css/discovery.css' %}">
+
+<style>
+          .article-list {
+            border-left: 3px solid #aa30cc;
+             padding-left: 20px;
+        }
+
+        .article-list-item {
+             padding: 15px;
+             margin-bottom: 15px;
+             border: 2px solid #e9ecef;
+             border-radius: 10px;
+             transition: all 0.3s ease;
+                
+        }
+
+        .article-list-item:hover {
+             border-color: #aa30cc;
+            background: #F7F7F7;
+            }
+        
+    </style>
+{% endblock %}
+{% block content %}
+
+
+   <!-- Full-Screen Section -->
+    <div class="container-fluid d-flex flex-column flex-md-row align-items-center text-dark" style="background-color: #aa30cc;">
+    <!-- Left Side: Text and Paragraph -->
+    <div class="col-md-6 d-flex flex-column justify-content-between vh-100 m-4 py-6 vh-sm-0 min-vh-sm-50">
+         <h1 class="fs-4 md-mt-3 mt-xl-0 text-center fw-light text-uppercase title1 ">အသိအမြင်ဆောင်းပါးများ</h1>
+    
+        <h2 class="display-1 m-3 text-center text-capitalize my-title ">သစ်ခွ</h2>
+      
+        <p class="d-none d-md-block lead fs-5 mb-0 description2">
+        </p>
+    
+    </div>
+
+    <!-- Right Side: Full-Size Image -->
+    <div class="col-md-6">
+                <img src="{% static 'images/ch-orchidcover.png' %}" alt="Orchid Image" class="img-fluid">
+
+    </div>
+</div>
+
+<!-- Additional Paragraph (only for smaller screens) -->
+<div class="container-fluid text-center d-md-none p-4 text-dark" style="background-color: #aa30cc;">
+    <p class="lead description3">
+    </p>
+</div>
+   
+<div class="container py-5 mt-5">
+    <div class="row g-5">
+        <!-- Article List -->
+        <div class="col-md-6">
+            <div class="article-list">
+                <h3 class="mb-4">ဆက်စပ်သော ဆောင်းပါးများကို ရှာဖွေပါ</h3>
+                <div class="article-list-item">
+                    <a href="#article1" class="text-decoration-none text-dark">
+                        <span>သစ်ခွအကြောင်း သိကောင်းစရာ</span>
+                        <span style="float: right;"><button type="button" class="btn read-btn" style="background-color:#aa30cc;cursor: pointer;border:#aa30cc;">ဖတ်ရန် <i class="bi bi-arrow-right"></i></button></span>
+
+                    </a>
+                </div>
+                <div class="article-list-item">
+                    <a href="#article2" class="text-decoration-none text-dark">
+                        <span>သစ်ခွ စိုက်ပျိုးမြေပြုပြင်ခြင်း</span>
+                        <span style="float: right;"><button type="button" class="btn read-btn" style="background-color:#aa30cc;cursor: pointer;border:#aa30cc;">ဖတ်ရန် <i class="bi bi-arrow-right"></i></button></span>
+                    </a>
+                </div>
+                <div class="article-list-item">
+                    <a href="#article3" class="text-decoration-none text-dark">
+                        <span>ပိုးမွှားရောဂါ ကာကွယ်နှိမ်နင်းနည်းနာ</span>
+                        <span style="float: right;"><button type="button" class="btn read-btn" style="background-color:#aa30cc;cursor: pointer;border:#aa30cc;">ဖတ်ရန် <i class="bi bi-arrow-right"></i></button></span>
+
+                    </a>
+                </div>
+                <div class="article-list-item">
+                    <a href="#article4" class="text-decoration-none text-dark">
+                        <span>ပန်းသစ်ခွ နဲ့ ကျန်းမာရေး</span>
+                        <span style="float: right;"><button type="button" class="btn read-btn" style="background-color:#aa30cc;cursor: pointer;border:#aa30cc;">ဖတ်ရန် <i class="bi bi-arrow-right"></i></button></span>
+
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- New Video Section -->
+        <div class="col-md-6">
+            <div class="video-container p-4 rounded-4 shadow" style="background-color: #aa30cc;">
+                <h3 class="mb-4 text-dark">စိုက်ပျိုးနည်းအဆင့်ဆင့်</h3>
+                <div class="ratio ratio-16x9">
+                    <video controls class="rounded-3 w-100" style="border: 3px solid #ffffff;">
+                    <source src="{% static 'videos/orchid.mp4' %}" type="video/mp4">
+                    Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="mt-3 text-end">
+                    <small class="text-muted">Credits to the video contributor</small>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- blog card -->
+ <article id="article1" class="container my-5 article-card">
+    <div class="row g-0 shadow-lg">
+        <!-- Image column -->
+        <div class="col-md-6">
+            <img 
+                src="{% static 'images/orchidarticle1.png' %}"
+                alt="topic1" 
+                class="img-fluid h-100 object-fit-cover"
+                loading="lazy"
+            >
+        </div>
+
+        <!-- Content column-->
+        <div class="col-md-6 p-4 d-flex flex-column bg-white">
+            <header class="mb-4">
+                <div class=" text-dark">
+                    <h2 class="display-5 mb-3 pb-2 custom-border">သစ်ခွအကြောင်း သိကောင်းစရာ</h2>
+                </div>
+            </header>
+
+            <div class="lead mb-4 flex-grow-1">
+                <p class="text-dark">
+                    အင်္ဂလိပ်အမည်: Orchid <br>
+                    ရုက္ခဗေဒ အမည်: Orchidaceae <br>
+                    ပင်မျိုးကွဲ အမည်: Liliopsida <br>
+                    သစ်ခွမျိုးနွယ်ကိုအခြေခံအားဖြင့် ကြီးထွားပုံပေါ်မူတည်ပြီး ဒေါင်လိုက်ကြီးထွားသော (မိုနိုပိုဒီယယ်) သစ်ခွအုပ်စုနှင့် အလျားလိုက် ကြီးထွားသော (ဆင်ပိုဒီယယ်) သစ်ခွအုပ်စု ဟူ၍နှစ်မျိုးခွဲနိုင်ပါသည်။ စိုက်ပျိုးရာတွင်လည်းကောင်း၊ မျိုးပွားရာတွင်လည်းကောင်း၊ ကြီးထွားမှု ပုံစံကပါ်မူတည်ပီး၊ ရာသီမရွေး တစ်နှစ်ပတ်လုံး ပွင့်တတ်သည့်အမျိုးအစားများနှင့် ရာသီအလိုက် တစ်နှစ်တစ်ခါသာပွင့်သည့် အပင်အမျိုးအစားဟူ၍ နှစ်မျိုးတွေ့နိုင်သည်။ မြန်မာ့သစ်ခွများသည် ရာသီချိန်တစ်ခုသာပွင့်လေ့ရှိပါသည်။ စီးပွားဖြစ်စိုက်ပျိုးရန်အတွက် ရာသီမရွေးပွင့်သည့်သစ်ခွ အမျိုးအစားများကိုသာ ရွေးချယ် စိုက်ပျိုးသင့်ပါသည်။
+                </p>
+            </div>
+
+            <div class="text-end">
+                <time datetime="2024-03-26T07:00:00Z" class="fst-italic text-muted">
+                    March 26, 2024
+                </time>
+            </div>
+        </div>
+    </div>
+</article>
+
+<!-- blog card -->
+<article id="article2" class="container my-5 article-card">
+    <div class="row g-0 shadow-lg">
+        <!-- Image column -->
+        <div class="col-md-6">
+            <img 
+                src="{% static 'images/orchidarticle2.png' %}"
+                alt="topic2" 
+                class="img-fluid h-100 object-fit-cover"
+                loading="lazy"
+            >
+        </div>
+
+        <!-- Content column-->
+        <div class="col-md-6 p-4 d-flex flex-column bg-white">
+            <header class="mb-4">
+                <div  class=" text-dark">
+                    <h2 class="display-5 mb-3 pb-2 custom-border">သစ်ခွ စိုက်ပျိုးမြေပြုပြင်ခြင်း</h2>
+                </div>
+            </header>
+
+            <div class="lead mb-4 flex-grow-1">
+                <p class="text-dark">
+                     ကတ်တဲလီယာ၊ စင်ဗီဒီယမ်၊ ဒမ်ဒရိုဗီယမ်၊ အစရှိသည့် ဆင်ပိုဒီယယ်သစ်ခွများကို မြေအိုး၊ပလတ်စတစ်အိုးများဖြင့် စိုက်ပျိုးကြလေ့ရှိကြပါသည်။ သစ်ခွသည် ရေအစိုဓာတ် ရရုံသာလိုအပ်ပြီး ရေအိုင်နေသည်ကို မနှစ်သက်ပါ။ ထိုကြောင့် သစ်ခွစိုက်သည့်အိုးမှာ ရေထွက်ပေါက် များစွာရှိရပါမည်။ ရေထွက်ပေါက် မပိတ်စေရန် တွင် အုတ်ခဲကျိုး၊ အိုးကွဲများခံပြီးနောက် ပျိုးခံ ပစ္စည်းများထည့်ပေးရပါမည်။ 
+                     ဗင်ဒါကဲ့သို့သော မိုနိုပိုဒီယယ်သစ်ခွများကို သစ်သားခြင်းတွင်၊ သစ်သားတိုင်များတွင် ကပ်၍ စိုက်ပျိုးကြပါသည်။ ပင့်ကူသစ်ခွ၊ အရိုးသစ်ခွ၊ အရန်ဒါသစ်ခွ စသည့် မိုနိုပိုဒီယယ် သစ်ခွများကို မြေတွင်ချ၍ အခင်းလိုက် ်းတူးပြီး အောက်ခြေတွင် မြေဆွေး၊ နွားချေးဆွေး၊ အုတ်ခဲကျိုး၊ အုန်းဆံဖတ်များထည့်ပြီး အပင်များ စိုက်ပျိုးလေ့ရှိသည်။
+                  </p>
+            </div>
+
+            <div class="text-end">
+                <time datetime="2024-03-26T07:00:00Z" class="fst-italic text-muted">
+                    March 26, 2024
+                </time>
+            </div>
+        </div>
+    </div>
+</article>
+
+
+<!-- blog card -->
+<article id="article3" class="container my-5 article-card">
+    <div class="row g-0 shadow-lg">
+        <!-- Image column -->
+        <div class="col-md-6">
+            <img 
+               src="{% static 'images/orchidarticle3.png' %}"
+                alt="Topic3" 
+                class="img-fluid h-100 object-fit-cover"
+                loading="lazy"
+            >
+        </div>
+
+        <!-- Content column-->
+        <div class="col-md-6 p-4 d-flex flex-column bg-white">
+            <header class="mb-4">
+                <div class=" text-dark">
+                    <h2 class="display-5 mb-3 pb-2 custom-border">ပိုးမွှားရောဂါ ကာကွယ်နှိမ်နင်းနည်းနာ</h2>
+                </div>
+            </header>
+
+            <div class="lead mb-4 flex-grow-1">
+                <p class="text-dark">
+                    သစ်ခွပင်တွင် အများဆုံးကျရောက်တတ်သော ပိုးမွှားများမှာ ချိပ်ပိုး၊ ဆစ်ပိုး၊ ဝါဂွမ်းပိုး၊ မွှားပင့်ကူ၊ ပျ၊ ခရု၊ ပက်ကျိ စသည်တိုဖြစ်ပါသည်။ ယင်းတို့ကို သင့်လျော်သော ပိုးသတ်ဆေး လက်ဖက်ရည်ဇွန်းတစ်ဇွန်းလျှင် ရေတစ်ဂါလံနှင့် ရောစပ်၍ လောင်းပေးရပါမည်။ သစ်ခွပင်များသည် အချိန်အခါမရွေး မှိရာဂါ၊ ဗိုင်းရပ်စ်ရာဂါ၊ ဘတ်တီးရီးယားကရာဂါများ ကျရာက် တတ်ပါသည်။ ရောဂါပိုးများ ကျရောက်နေသည့် အပင်အစိတ်အပိုင်းများကို ဖြတ်တောက်ပစ်ရန်လိုပါသည်။ ကြိုတင်ကာကွယ်သည့်အနေဖြင့် မှိသတ်ဆေးတစ်မျိုးမျိုးကို အပတ်စဥ် ဖျန်းပေးရပါမည်။                </p>          
+              </div>
+
+            <div class="text-end">
+                <time datetime="2024-03-26T07:00:00Z" class="fst-italic text-muted">
+                    March 26, 2024
+                </time>
+            </div>
+        </div>
+    </div>
+</article>
+
+<!-- blog card  -->
+<article id="article4" class="container my-5 article-card">
+    <div class="row g-0 shadow-lg">
+        <!-- Image column -->
+        <div class="col-md-6">
+            <img 
+                src="{% static 'images/orchidarticle4.png' %}"
+                alt="topic4" 
+                class="img-fluid h-100 object-fit-cover"
+                loading="lazy"
+            >
+        </div>
+
+        <!-- Content column-->
+        <div class="col-md-6 p-4 d-flex flex-column bg-white">
+            <header class="mb-4">
+                <div class=" text-dark">
+                    <h2 class="display-5 mb-3 pb-2 custom-border">ပန်းသစ်ခွ နဲ့ ကျန်းမာရေး</h2>
+                </div>
+            </header>
+
+            <div class="lead mb-4 flex-grow-1">
+                <p class="text-dark">
+                    သစ်ခွက စိတ်ဖိစီးမှုကို ပြေလျော့စေနိုင်တယ်။ သစ်ခွမှာ ကယ်လ်ဆီယမ် နဲ့ မဂ္ဂနီဆီယမ် ကြွယ်ဝစွာ ပါဝင်နေတာကြောင့် အရိုးနဲ့သွားတွေ သန်မာစေဖို့ အားဖြည့်ပေးနိုင်ပါတယ်။ အရိုးပွရောဂါကို ကာကွယ်ဖို့နဲ့ သွားတွေ ကြံ့ခိုင်စေသည်။ သစ်ခွပန်း မှာပါတဲ့ ဓာတ်တိုးဆန့်ကျင် ပစ္စည်းတွေက အသားအရေထိခိုက်ပျက်စီးတာ ကင်ဆာလိုမျိုးနာတာရှည်ရောဂါတွေ မဖြစ်အောင် ကာကွယ်ပေးနိုင်ပါတယ်။ ဆဲလ်တွေကို အထိရောက်ဆုံး ပြုပြင်ပေးပါတယ်။ သစ်ခွပန်းအမျှင်ဓာတ်နဲ့ ရေဓာတ်က အစာခြေစနစ်ကို ကျန်းမာစေပြီး ဝမ်းပျက်ဝမ်းလျှောတာ၊ ဝမ်းချုပ်တာမျိုးတွေ မဖြစ်အောင် ကာကွယ်ပေးနိုင်ပါတယ်။ ဗီတာမင် C နဲ့ ဗီတာမင် E တို့ ကြွယ်ဝစွာ ပါဝင်နေတာ​ကြောင့် မျက်လုံးကို ကျန်းမာစေနိုင်တယ်။ အသားအရေကို ကျန်းမာနုပျိုစေနိုင်တဲ့ ဗီတာမင် A နဲ့ ဓာတ်တိုးဆန့်ကျင် ပစ္စည်းတွေ ကြွယ်ဝစွာ ပါဝင်နေပါပြီ။ 
+                </p>
+            </div>
+            <div class="text-end">
+                <time datetime="2024-03-26T07:00:00Z" class="fst-italic text-muted">
+                    March 26, 2024
+                </time>
+            </div>
+        </div>
+    </div>
+</article>
+
+
+            {% endblock %}
+            {% block script %}
+        <script src="{% static 'js/discovery.js' %}"></script>
+        {% endblock %}

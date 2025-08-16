@@ -1,0 +1,243 @@
+{% extends 'en/base.html' %}
+{% load static %}
+{% block styles %}
+<link rel="stylesheet" href="{% static 'css/discovery.css' %}">
+
+<style>
+          .article-list {
+            border-left: 3px solid #9ac244;
+             padding-left: 20px;
+        }
+
+        .article-list-item {
+             padding: 15px;
+             margin-bottom: 15px;
+             border: 2px solid #e9ecef;
+             border-radius: 10px;
+             transition: all 0.3s ease;
+                
+        }
+
+        .article-list-item:hover {
+             border-color: #9ac244;
+            background: #F7F7F7;
+            }
+        
+    </style>
+{% endblock %}
+{% block content %}
+
+    <!-- Full-Screen Section -->
+    <div class="container-fluid d-flex flex-column flex-md-row align-items-center " style="background-color: #9ac244;">
+    <!-- Left Side: Text and Paragraph -->
+    <div class="col-md-6 d-flex flex-column justify-content-between vh-100 m-4 py-6 vh-sm-0 min-vh-sm-50">
+         <h1 class="fs-4 md-mt-3 mt-xl-0 text-center fw-light text-uppercase title1">Flower articles</h1>
+    
+        <h2 class="display-1 m-3 text-center text-capitalize my-title description1">Kant kaw</h2>
+      
+        <p class="d-none d-md-block lead fs-5 mb-0 description2">
+        </p>
+    
+    </div>
+
+    <!-- Right Side: Full-Size Image -->
+    <div class="col-md-6">
+        <img src="{% static 'images/ch-kantkawcover.png' %}" alt="Kantkaw Image" class="img-fluid">
+    </div>
+</div>
+
+<!-- Additional Paragraph (only for smaller screens) -->
+<div class="container-fluid text-center d-md-none p-4 text-dark" style="background-color: #9ac244;">
+    <p class="lead description3">
+    </p>
+</div>
+   
+
+<div class="container py-5 mt-5">
+    <div class="row g-5">
+        <!-- Article List -->
+        <div class="col-md-6">
+            <div class="article-list">
+                <h3 class="mb-4 display-5">Discover Related Articles</h3>
+                <div class="article-list-item">
+                    <a href="#article1" class="text-decoration-none text-dark">
+                        <span>Botanical Profile and Native Regions</span>
+                        <span style="float: right;"><button type="button" class="btn read-btn" style="background-color: #9ac244;cursor: pointer;border:#9ac244;">read more <i class="bi bi-arrow-right"></i></button></span>
+
+                    </a>
+                </div>
+                <div class="article-list-item">
+                    <a href="#article2" class="text-decoration-none text-dark">
+                        <span>Soil Requirements for Growing Kant Kaw</span>
+                        <span style="float: right;"><button type="button" class="btn read-btn" style="background-color: #9ac244;cursor: pointer;border:#9ac244;">read more <i class="bi bi-arrow-right"></i></button></span>
+
+                    </a>
+                </div>
+                <div class="article-list-item">
+                    <a href="#article3" class="text-decoration-none text-dark">
+                        <span>Seeds: Germination and Viability</span>
+                        <span style="float: right;"><button type="button" class="btn read-btn" style="background-color: #9ac244;cursor: pointer;border:#9ac244;">read more <i class="bi bi-arrow-right"></i></button></span>
+
+                    </a>
+                </div>
+                <div class="article-list-item">
+                    <a href="#article4" class="text-decoration-none text-dark">
+                        <span>Cultivation Guidelines and Uses of Kantkaw</span>
+                        <span style="float: right;"><button type="button" class="btn read-btn" style="background-color: #9ac244;cursor: pointer;border:#9ac244;">read more <i class="bi bi-arrow-right"></i></button></span>
+
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- blog card -->
+ <article class="container my-5 article-card" id="article1">
+    <div class="row g-0 shadow-lg">
+        <!-- Image column -->
+        <div class="col-md-6">
+            <img 
+                src="{% static 'images/kantkawarticle1.png' %}"
+                alt="topic1" 
+                class="img-fluid h-100 object-fit-cover"
+                loading="lazy"
+            >
+        </div>
+
+        <!-- Content column-->
+        <div class="col-md-6 p-4 d-flex flex-column bg-white">
+            <header class="mb-4">
+                <div class=" text-dark">
+                    <h2 class="display-5 mb-3 pb-2 custom-border">Botanical Profile and Native Regions</h2>
+                </div>
+            </header>
+
+            <div class="lead mb-4 flex-grow-1">
+                <p class="text-dark">
+                    English Name: Ceylon Ironwood Tree<br>
+                    Botanical Name: Mesua ferrea <br>
+                    The Ceylon Ironwood Tree, known locally as Kant Kaw, belongs to the Caryophyllaceae family. It is a slow-growing tree renowned for its elegant shape, vibrant green foliage, and large, fragrant white flowers. Thriving in tropical and humid climates, the Kant Kaw is native to regions such as Sri Lanka, India, Nepal, Myanmar, Thailand, the Philippines, Malaysia, and Sumatra.
+                </p>   
+                </div>
+
+            <div class="text-end">
+                <time datetime="2024-03-26T07:00:00Z" class="fst-italic text-muted">
+                    March 26, 2024
+                </time>
+            </div>
+        </div>
+    </div>
+</article>
+
+<!-- blog card -->
+<article class="container my-5 article-card" id="article2">
+    <div class="row g-0 shadow-lg">
+        <!-- Image column -->
+        <div class="col-md-6">
+            <img 
+                src="{% static 'images/kantkawarticle2.png' %}"
+                alt="topic2" 
+                class="img-fluid h-100 object-fit-cover"
+                loading="lazy"
+            >
+        </div>
+
+        <!-- Content column-->
+        <div class="col-md-6 p-4 d-flex flex-column bg-white">
+            <header class="mb-4">
+                <div class="text-dark">
+                    <h2 class="display-5 mb-3 pb-2 custom-border">Soil Requirements for Growing Kant Kaw</h2>
+                </div>
+            </header>
+
+            <div class="lead mb-4 flex-grow-1">
+                <p class="text-dark">
+                    Ceylon Ironwood trees (Mesua ferrea) thrive in annual temperatures of 30–35°C and prefer yearly rainfall between 118–157 inches (300–400 cm). They require well-draining, moisture-retentive soil with a slightly acidic pH level of 5–5.5. These conditions are critical for healthy growth, as the species is highly sensitive to waterlogged soil and extreme temperature fluctuations.
+                </p>             
+            </div>
+
+            <div class="text-end">
+                <time datetime="2024-03-26T07:00:00Z" class="fst-italic text-muted">
+                    March 26, 2024
+                </time>
+            </div>
+        </div>
+    </div>
+</article>
+
+
+<!-- blog card -->
+<article class="container my-5 article-card" id="article3">
+    <div class="row g-0 shadow-lg">
+        <!-- Image column -->
+        <div class="col-md-6">
+            <img 
+                src="{% static 'images/kantkawarticle3.png' %}"
+                alt="Topic3" 
+                class="img-fluid h-100 object-fit-cover"
+                loading="lazy"
+            >
+        </div>
+
+        <!-- Content column-->
+        <div class="col-md-6 p-4 d-flex flex-column bg-white">
+            <header class="mb-4">
+                <div class="text-dark">
+                    <h2 class="display-5 mb-3 pb-2 custom-border">Seeds: Germination and Viability</h2>
+                </div>
+            </header>
+
+            <div class="lead mb-4 flex-grow-1">
+                <p class="text-dark">
+                    Ceylon Ironwood (Mesua ferrea) seeds are easy to manage and exhibit fast, high-quality germination. The germination rate ranges between 30–70%, with seeds typically sprouting within 11–14 days. Notably, dry, brown seeds can achieve a 100% germination rate. However, seed viability declines sharply after 2–4 months, requiring timely sowing for optimal results.
+                </p>
+                </div>
+
+            <div class="text-end">
+                <time datetime="2024-03-26T07:00:00Z" class="fst-italic text-muted">
+                    March 26, 2024
+                </time>
+            </div>
+        </div>
+    </div>
+</article>
+
+<article class="container my-5 article-card" id="article4">
+    <div class="row g-0 shadow-lg">
+        <!-- Image column -->
+        <div class="col-md-6">
+            <img 
+                src="{% static 'images/kantkawarticle4.png' %}"
+                alt="topic4" 
+                class="img-fluid h-100 object-fit-cover"
+                loading="lazy"
+            >
+        </div>
+
+        <!-- Content column-->
+        <div class="col-md-6 p-4 d-flex flex-column bg-white">
+            <header class="mb-4">
+                <div class="text-dark">
+                    <h2 class="display-5 mb-3 pb-2 custom-border">Cultivation Guidelines and Uses of Ceylon Ironwood</h2>
+                </div>
+            </header>
+
+            <div class="lead mb-4 flex-grow-1">
+                <p class="text-dark">
+                
+                    Seedlings propagated from seeds are ready for transplanting when they reach a height of 45–50 cm (17–19 inches). hold significant economic value in traditional medicine and local industries.  For small-scale or ornamental cultivation, maintain a spacing of 20–25 feet (6–7.5 meters) between trees to ensure healthy growth.
+                    </p>
+                    </div>
+            <div class="text-end">
+                <time datetime="2024-03-26T07:00:00Z" class="fst-italic text-muted">
+                    March 26, 2024
+                </time>
+            </div>
+        </div>
+    </div>
+</article>
+            {% endblock %}
+            {% block script %}
+        <script src="{% static 'js/discovery.js' %}"></script>
+        {% endblock %}

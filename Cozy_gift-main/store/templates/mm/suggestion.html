@@ -1,0 +1,413 @@
+{% extends 'mm/base.html' %}
+{% load static %}
+{% block styles %}
+<link rel="stylesheet" href="{% static 'css/suggestion.css' %}">
+{% endblock %}
+{% block content %}
+
+<!-- Roses Section -->
+<div class="container occasion-section">
+    <h2 class="occasion-title">ပန်းများ၏ အဓိပ္ပါယ်များနှင့် အကြံပြုချက်များ</h2>
+    <h4 class="occasion-subtitle">နှင်းဆီ</h4>
+
+    <button class="scroll-btn left-btn" id="prevBtnRose">&#10094;</button>
+
+    <div class="scroll-wrapper">
+        <div id="scroll-container-rose" class="scroll-container">
+            <div class="occasion-card" onclick="showContent('Rose', 'red')">
+                <div class="card-image-container">
+                    <img src="{% static 'images/redrose.png' %}" alt="Red Roses">
+                </div>
+                <p class="occasion-name">နှင်းဆီနီ</p>
+            </div>
+            <div class="occasion-card" onclick="showContent('Rose', 'white')">
+                <div class="card-image-container">
+                    <img src="{% static 'images/whiterose.png' %}" alt="White Roses">
+                </div>
+                <p class="occasion-name">နှင်းဆီဖြူ</p>
+            </div>
+            <div class="occasion-card" onclick="showContent('Rose', 'yellow')">
+                <div class="card-image-container">
+                    <img src="{% static 'images/yellowrose.png' %}" alt="Yellow Roses">
+                </div>
+                <p class="occasion-name">နှင်းဆီ၀ါ</p>
+            </div>
+            <div class="occasion-card" onclick="showContent('Rose', 'pink')">
+                <div class="card-image-container">
+                    <img src="{% static 'images/pinkrose.png' %}" alt="Pink Roses">
+                </div>
+                <p class="occasion-name">ပန်းရောင်နှင်းဆီ</p>
+            </div>
+            
+            <div class="occasion-card" onclick="showContent('Rose', 'lavender')">
+                <div class="card-image-container">
+                    <img src="{% static 'images/lavenderrose.png' %}" alt="Lavender Roses">
+                </div>
+                <p class="occasion-name">ခရမ်းနှင်းဆီ</p>
+            </div>
+            <div class="occasion-card" onclick="showContent('Rose', 'orange')">
+                <div class="card-image-container">
+                    <img src="{% static 'images/orangerose.png' %}" alt="Orange Roses">
+                </div>
+                <p class="occasion-name">လိမ္မော်နှင်းဆီ</p>
+            </div>
+            <div class="occasion-card" onclick="showContent('Rose', 'blue')">
+                <div class="card-image-container">
+                    <img src="{% static 'images/bluerose.png' %}" alt="Blue Roses">
+                </div>
+                <p class="occasion-name">နှင်းဆီပြာ</p>
+            </div>
+        </div>
+    </div>
+    
+    <button class="scroll-btn right-btn" id="nextBtnRose">&#10095;</button>
+</div>
+
+<!-- Content Box for Roses -->
+<div id="content-boxRose" class="container content-container">
+    <button class="close-btn" onclick="hideContent('Rose')">x</button>
+    <p id="content-textRose"></p>
+</div>
+
+<div class="container">
+    <h1 class="about-heading">အရေအတွက်နှင့် နှင်းဆီရဲ့ အဓိပ္ပာယ်</h1>
+
+    <p><strong>နှင်းဆီတစ်ပွင့်ရဲ့ အဓိပ္ပာယ် </strong> <b> _"ပထမဆုံးတွေ့ဆုံခြင်းမှာပဲ ချစ်မိခြင်း"</b> ကို ကိုယ်စားပြုပါတယ်။ ဒါ့အပြင် လူတစ်ယောက်အပေါ် မြဲမြံတဲ့ သစ္စာစောင့်သိမှုကို ဖော်ပြပြီး သူ့ရဲ့အရောင် ဘာပဲဖြစ်နေပါစေ <b>"သင်ဟာ ကျွန်တော့်ရဲ့ အနက်ရှိုင်းဆုံး ချစ်ခြင်းမေတ္တာတွေရဲ့ တစ်ဦးတည်းသော ပစ်မှတ်ပါပဲ"</b> ဆိုတဲ့ သတင်းစကားကို ပေးပါတယ်။</p>
+
+    <div class="rose-meanings">
+        <!-- 1 Rose -->
+        <div class="product-container">
+            <div class="product">
+                <div class="product-image">
+                    <img src="{% static 'images/onerose.png' %}" alt="One Rose">
+                </div>
+                <div class="product-info">
+                    <div class="product-title">မြင်မြင်ချင်း ချစ်ခြင်းမေတ္တာ</div>    
+                </div>
+                <a href="{% url 'mm:product_detail' 44 %}" class="buy-button">ဝယ်ယူရန်</a>
+            </div>
+        </div>
+
+        <!-- 2 Roses -->
+        <p><strong>နှင်းဆီနှစ်ပွင့်ကတော့ သင်နက်ရှိုင်းစွာချစ်မြတ်နိုးရသူတွေကို လက်ဆောင်ပေးတဲ့ နှင်းဆီပန်း အရေအတွက်ဖြစ်ပါတယ်။</strong></p>
+        <div class="product-container">
+            <div class="product">
+                <div class="product-image">
+                    <img src="{% static 'images/tworose.png' %}" alt="Two Roses">
+                </div>
+                <div class="product-info">
+                    <div class="product-title">နူးညံ့သော အရောင်ဖျော့ နှင်းဆီ</div>    
+                </div>
+                <a href="{% url 'mm:product_detail' 45 %}" class="buy-button">ဝယ်ယူရန်</a>
+            </div>
+        </div>
+
+        <!-- 3 Roses -->
+        <p>နှင်းဆီသုံးပွင့်ကတော့ <b>"ငါမင်းကိုချစ်တယ်"</b>လို့ ရိုးရှင်းပြီး ပွင့်ပွင့်လင်းလင်း ပြောခြင်းဖြစ်ပါတယ်။
+
+.</p>
+        <div class="product-container">
+            <div class="product">
+                <div class="product-image">
+                    <img src="{% static 'images/threerose.png' %}" alt="Three Roses">
+                </div>
+                <div class="product-info">
+                    <div class="product-title">အဝါရောင်ဖျော့ နှင်းဆီသုံးပွင့်</div>    
+                </div>
+                <a href="{% url 'mm:product_detail' 46 %}" class="buy-button">ဝယ်ယူရန်</a>
+            </div>
+        </div>
+
+        <div class="description">
+    <p><b>နှင်းဆီလေးပွင့် </b> –<b>"ငါတို့နှစ်ဦးကြား ဘာအရာမှ ခြားနားနိုင်မည်မဟုတ်"</b> ဟု ပြောရန် အကောင်းဆုံးနည်းလမ်းဖြစ်ပါသည်။</p>
+    <p><b>နှင်းဆီငါးပွင့်</b> – အထူးချစ်ရသူတစ်ဦးအပေါ် သင်၏ချစ်ခြင်းမေတ္တာကို ဖော်ပြရန် အကောင်းဆုံးနည်းလမ်းတစ်ခု ဖြစ်ပါသည်။</p>
+    <p><b>နှင်းဆီခြောက်ပွင့်</b> - <b>"ငါ မင်းရဲ့သူဖြစ်ချင်တယ်"</b> ဟု အဓိပ္ပာယ်ရပါသည်။</p>
+    <p><b>နှင်းဆီခုနစ်ပွင့်</b> - <b>"ငါ မင်းကို အရူးအမူးချစ်နေပြီ"</b></p>
+    <p><b>နှင်းဆီရှစ်ပွင့်</b> ခက်ခဲတဲ့အချိန်တွေမှာ ကြုံတွေ့နေရတဲ့ မိတ်ဆွေ ဒါမှမဟုတ် မိသားစုဝင်တွေအတွက် ပံ့ပိုးကူညီမှုကို ပြသတဲ့ သင်္ကေတဖြစ်ပါတယ်။</p>
+    <p><b>နှင်းဆီကိုးပွင့်</b> ထာဝရချစ်ခြင်းမေတ္တာကို ဖော်ညွှန်းပြီး၊ အဲ့ဒီအရေးပါတဲ့သူနဲ့ ဘဝတစ်သက်တာလုံး အတူနေထိုင်ချင်ကြောင်း ပြသခြင်းဖြစ်ပါတယ်။</p>
+        </div>
+
+    </div>
+
+
+        <!-- 10 Roses -->
+        <p><b>နှင်းဆီဆယ်ပွင့်</b> – သူတို့ဟာ ပြီးပြည့်စုံတယ်လို့ ပြောခြင်းဖြစ်ပါတယ်။</p>
+    <div class="rose-meanings">
+        <div class="product-container">
+            <div class="product">
+                <div class="product-image">
+                    <img src="{% static 'images/tenrose.png' %}" alt="Ten Roses">
+                </div>
+                <div class="product-info">
+                    <div class="product-title">ပြီးပြည့်စုံသော ချစ်ခြင်း</div>    
+                </div>
+                <a href="{% url 'mm:product_detail' 47 %}" class="buy-button">ဝယ်ယူရန်</a>
+            </div>
+        </div>
+    </div>
+        <!-- 11 Roses -->
+        <p><b>နှင်းဆီဆယ့်တစ်ပွင့် –</b>  "မင်းဟာ ငါ့ရဲ့ တန်ဖိုးထားရဆုံးသူပါပဲ" ဟု အဓိပ္ပာယ်ရပါသည်။</p>
+        <div class="product-container">
+            <div class="product">
+                <div class="product-image">
+                    <img src="{% static 'images/elevenrose.png' %}" alt="Eleven Roses">
+                </div>
+                <div class="product-info">
+                    <div class="product-title">ရာသက်ပန်နှင်းဆီ ၁၁ ပွင့်</div>    
+                </div>
+                <a href="{% url 'mm:product_detail' 48 %}" class="buy-button">ဝယ်ယူရန်</a>
+            </div>
+        </div>
+
+        <!-- Rose meanings description -->
+                <div class="description">
+            <p><b>နှင်းဆီဆယ့်နှစ်ပွင့်</b> – မင်းကိုယ်တိုင်ပိုင်ချင်တယ်ဆိုတဲ့ စကားကို ရိုးရှင်းစွာဖော်ပြနိုင်တဲ့နည်းလမ်းတစ်ခုပဲဖြစ်ပါတယ်။</p>
+            <p><b>နှင်းဆီဆယ့်သုံးပွင့်</b> – ထာဝရမိတ်ဆွေတစ်ဦး သို့မဟုတ် လျှို့ဝှက်ချစ်သူတစ်ဦးကို ကိုယ်စားပြုပါတယ်။</p>
+            <p><b>နှင်းဆီဆယ့်လေးပွင့်</b> – မင်းအပေါ် ဂုဏ်ယူမှုအပြည့်နဲ့ဖြစ်နေတယ်ဆိုတာ ဖော်ပြချင်တဲ့အခါ အသုံးပြုလို့ရပါတယ်။</p>
+            <p><b>နှင်းဆီဆယ့်ငါးပွင့်</b> – မင်းကို စိတ်မသန်စေခဲ့တာရှိရင် တောင်းပန်ဖော်ပြချင်တဲ့အခါ သင့်လျော်တဲ့ပန်းအရေအတွက်ဖြစ်ပါတယ်။</p>
+            <p><b>နှင်းဆီဆယ့်ခြောက်ပွင့်</b> – ခရီးသွားနေသူအတွက် ‘Bon Voyage’ ဆိုတဲ့ ချစ်ခင်မှုနှင့် ဆုတောင်းချက်ကို ပေးနိုင်ပါတယ်။</p>
+            <p><b>နှင်းဆီဆယ့်ခုနစ်ပွင့်</b> – အထူးနေ့မှာ မိမိဇနီးအတွက်ပေးရန်အတွက် သင့်လျော်တဲ့အရေအတွက်ဖြစ်ပါတယ်။</p>
+            <p><b>နှင်းဆီဆယ့်ရှစ်ပွင့်</b> – တည့်တည့်လင်လင် ဖြစ်တဲ့ ချစ်ခြင်းမေတ္တာနဲ့ စစ်မှန်မှုကို ကိုယ်စားပြုပါတယ်။</p>
+            <p><b>နှင်းဆီနှစ်ဆယ်ပွင့်</b> – ယုံကြည်မှုနဲ့ စစ်မှန်မှုကို ဖော်ပြနိုင်တဲ့ သင်္ကေတတစ်ခုဖြစ်ပါတယ်။</p>
+            <p><b>နှင်းဆီနှစ်ဆယ့်တစ်ပွင့်</b> – ချစ်ခြင်းအပေါ် ပိုမိုရင်ခုန်ဖွယ်အဓိပ္ပာယ်နဲ့ တည်ငြိမ်မှုကို ကိုယ်စားပြုပါတယ်။</p>
+            <p><b>နှင်းဆီနှစ်ဆယ့်နှစ်ပွင့်</b> – အတူရှိခြင်းနဲ့ ကံကောင်းခြင်းတို့ကို ဖော်ပြပါတယ်။</p>
+            <p><b>နှင်းဆီနှစ်ဆယ့်သုံးပွင့်</b> – <b>အဆုံးမဲ့ချစ်ခြင်း</b> ကို ကိုယ်စားပြုပါတယ်။</p>
+            </div>
+
+        <!-- 24 Roses -->
+        <p><b>နှင်းဆီနှစ်ဆယ်လေးပွင့်</b> – တစ်နေ့လုံး၊ ၂၄ နာရီလုံး မင်းကိုအမြဲတွေးနေတယ်ဆိုတဲ့ <b>“မင်းက ငါ့စိတ်ထဲက မထွက်နိုင်တဲ့သူ”</b> ဆိုတဲ့အဓိပ္ပါယ်ကို ကိုယ်စားပြုပါတယ်။</p>
+
+<div class="product-container">
+    <div class="product">
+        <div class="product-image">
+            <img src="{% static 'images/twentyfourrose.png' %}" alt="24 Roses">
+        </div>
+        <div class="product-info">
+            <div class="product-title">ရွှေရောင် သစ္စာစောင့်သိမှု</div>
+            <p>အဆုံးမဲ့သော ချစ်ခြင်းနှင့် ရင်းနှီးမြှုပ်နှံမှု</p>
+        </div>
+        <a href="{% url 'mm:product_detail' 49 %}" class="buy-button">ဝယ်ယူရန်</a>
+    </div>
+</div>
+
+            
+        <div class="description">
+            <p><b>နှင်းဆီနှစ်ဆယ့်ငါးပွင့်</b> – နှင်းဆီ ၂၅ ပွင့်နဲ့ တစ်စုံတစ်ယောက်ကို ကမ္ဘာပေါ်ရှိ ပျော်ရွှင်မှုအားလုံး ရရှိပါစေကြောင်း ဆုတောင်းပေးလိုက်ပါ။</p>
+            <p><b>နှင်းဆီနှစ်ဆယ့်ခုနစ်ပွင့်</b> – နှင်းဆီ ၂၇ ပွင့်နဲ့ သင့်ဇနီးသည်ကို ဘယ်လောက်ချစ်ကြောင်း ပြောပြနိုင်ပါတယ်။</p>
+            <p><b>နှင်းဆီသုံးဆယ်ပွင့်</b> – ယုံကြည်မှုနဲ့ သစ္စာရှိမှုကို ဖော်ပြပါတယ်။</p>
+            <p><b>နှင်းဆီသုံးဆယ့်သုံးပွင့်</b> – ချစ်ခင်မှုကို ဖော်ပြပါတယ်။ နှင်းဆီ ၃၃ ပွင့်က သင်သူမကို အချစ်ဆုံးဖြစ်ပြီး ထာဝရချစ်သွားလိုကြောင်း ဆိုလိုပါတယ်။ တရုတ်ဘာသာစကားမှာ နံပါတ် ၃၃ ဟာ မှော်ဆန်တဲ့ ဂဏန်းဖြစ်ပါတယ်။ မျိုးဆက်သုံးဆက် (သို့မဟုတ်) ထာဝရကို ဆိုလိုပါတယ်။ ချစ်ရသူတွေဆီ ပေးပို့ဖို့ နှင်းဆီ ၃၃ ပွင့်ပန်းစည်းဟာ တရုတ်နိုင်ငံမှာ အလူကြိုက်အများဆုံးဖြစ်ပါတယ်။</p>
+        </div>
+
+
+        <!-- 33 -->
+            <div class="product-container">
+               <div class="product">
+                       <div class="product-image">
+                         <img src="{% static 'images/thirtythreerose.png' %}" alt="Galaxy Eternal Love">
+                        </div>
+                 <div class="product-info">
+                        <div class="product-title">ဖြူစင်ခြင်းနှင့် ပြည့်ဝခြင်း</div>
+                </div>
+                  <a href="{% url 'mm:product_detail' 50 %}" class="buy-button">ဝယ်ယူရန်</a>
+                </div>
+            </div>
+                <div class="description">
+                    <p><b>နှင်းဆီလေးဆယ်ပွင့်</b> – တစ်ဦးတစ်ယောက်ကို စစ်မှန်သောချစ်ခြင်းနဲ့ ချစ်နေတယ်ဆိုရင် ဒီအရေအတွက်က ပေးဖို့အကောင်းဆုံးဖြစ်ပါတယ်။</p>
+                    <p><b>နှင်းဆီလေးဆယ့်ခုနှစ်ပွင့်</b> – “မင်းတစ်ဦးတည်းပဲ ငါ့အတွက်ရှိတာ” ဆိုတဲ့အဓိပ္ပာယ်ကို ကိုယ်စားပြုပါတယ်။</p>
+                    <p><b>နှင်းဆီလေးဆယ့်ရှစ်ပွင့်</b> – မပြောင်းလဲတဲ့ ချစ်ခြင်းမေတ္တာကို ကိုယ်စားပြုပါတယ်။</p>
+                    <p><b>နှင်းဆီ ငါးဆယ်ပွင့်</b> – လုံးဝစည်းမျဉ်းမရှိတဲ့ အချစ်၊ မျှော်မှန်းမှုမပါဘဲ ချစ်တတ်တဲ့စိတ်ကို ကိုယ်စားပြုပါတယ်။</p>
+                </div>
+       
+                        
+
+
+               <!-- 50-->
+               <div class="product-container">
+                <div class="product">
+                    <div class="product-image">
+                        <img src="{% static 'images/fiftyrose.png' %}" alt="Galaxy Eternal Love">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-title">ချွင်းချက်မရှိသော ချစ်ခြင်းမေတ္တာ</div>
+
+                    </div>
+                    <a href="{% url 'mm:product_detail' 51 %}" class="buy-button">ဝယ်ယူရန်</a>
+                </div>
+                </div>
+                
+            <p><b>နှင်းဆီ ငါးဆယ့်နှစ်ပွင့်</b> – တရုတ်မှာ နှင်းဆီ ၅၂ ပွင့် ပေးခြင်းက “ငါမင်းကိုချစ်တယ်” (我爱你) ဆိုတဲ့ စူးမြတ်သောချစ်ခြင်းနဲ့ ရင်ခုန်ဖွယ်ကောင်းတဲ့ သစ္စာရှိမှုကို ပြသတဲ့ သင်္ကေတတစ်ခုဖြစ်ပါတယ်။</p>
+
+            <div class="product-container">
+                <div class="product">
+                    <div class="product-image">
+                        <img src="{% static 'images/fiftytworose.png' %}" alt="Galaxy Eternal Love">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-title">အနှိုင်းမဲ့ ချစ်ခြင်း (၅၂ ပွင့် ရှန်ပိန်ရောင် နှင်းဆီ)</div>
+                    </div>
+                    <a href="{% url 'mm:product_detail' 52 %}" class="buy-button">ဝယ်ယူရန်</a>
+                </div>
+            </div>
+
+
+            <div class="description">
+                    <p><b>နှင်းဆီငါးဆယ့်ခြောက်ပွင့်</b> – ဒီအရေအတွက်က  “ချစ်ခြင်း” ကို ရိုးရိုးရှင်းရှင်းနဲ့ ပြသပါတယ်။</p>
+                    <p><b>နှင်းဆီခြောက်ဆယ့်ခြောက်ပွင့်</b> – “ငါ့ရဲ့ချစ်ခြင်းက ဘယ်တော့မှမပြောင်းလဲဘူး” ဆိုတဲ့အဓိပ္ပာယ်ကို ပေးစွမ်းပါတယ်။</p>
+                    <p><b>နှင်းဆီခုနှစ်ဆယ့်ခုနစ်ပွင့်</b> – ဒီနှင်းဆီပွင့်အရေအတွက်က "ယုံကြည်ခြင်း" ကို ကိုယ်စားပြုပြီး သင်လက်ဆောင်ပေးတဲ့သူဟာ သင့်ရဲ့ စိတ်ဝိဉာဉ်ဖော် (soul mate) ဖြစ်တယ်လို့ သင်ယုံကြည်ကြောင်း ပြသပါတယ်။</p>
+                    <p><b>နှင်းဆီရှစ်ဆယ့်ရှစ်ပွင့်</b> – တစ်စုံတစ်ယောက်ကို အကြီးအကျယ် တောင်းပန်ချင်တယ်ဆိုရင် နှင်းဆီ ၈၈ ပွင့်ကို ရွေးချယ်သင့်ပါတယ်။</p>
+                    <p><b>နှင်းဆီကိုးဆယ့်ကိုးပွင့်</b> –  "ငါ သေတဲ့အထိ မင်းကိုချစ်နေမယ်"</p>
+                    <p><b>နှင်းဆီတစ်ရာပွင့်</b> –  "၁၀၀% မင်းကိုချစ်တယ်"</p>
+                    <p><b>နှင်းဆီတစ်ရာရှစ်ပွင့်</b> – “မင်းငါနဲ့လက်ထပ်မလား?” </p>
+            </div>
+
+                    
+                 <!-- 108-->
+            <div class="product-container">
+                <div class="product">
+                    <div class="product-image">
+                        <img src="{% static 'images/onezeroeithtrose.png' %}" alt="Galaxy Eternal Love">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-title">“မင်းငါနဲ့လက်ထပ်မလား?” (နှင်းဆီနီ ၁၀၈ ပွင့် )</div>
+
+                    </div>
+                    <a href="{% url 'mm:product_detail' 53 %}" class="buy-button">ဝယ်ယူရန်</a>
+                    </div>       
+        </div>
+    </div>
+
+
+<!-- Myanmar Seasonal Flowers Section -->
+<div class="container occasion-section">
+    <h4 class="occasion-subtitle"></h4>
+
+    <button class="scroll-btn left-btn" id="prevBtnFlower">&#10094;</button>
+
+
+    
+    <div class="scroll-wrapper">
+        <div id="scroll-container-flower" class="scroll-container">
+            <div class="occasion-card" onclick="showContent('KantKaw', 'padauk')">
+                <div class="card-image-container">
+                    <img src="{% static 'images/padauk.png' %}" alt="Padauk" >
+                </div>
+                <p class="occasion-name">ပိတောက်</p>
+            </div>
+            <div class="occasion-card" onclick="showContent('KantKaw', 'khantkaw')">
+                <div class="card-image-container">
+                    <img src="{% static 'images/khantkaw.png' %}" alt="Khant Kaw" >
+                </div>
+                <p class="occasion-name">ကံ့ကော်</p>
+            </div>
+            <div class="occasion-card" onclick="showContent('KantKaw', 'jasmine')">
+                <div class="card-image-container">
+                    <img src="{% static 'images/jasmine.png' %}" alt="Jasmine" >
+                </div>
+                <p class="occasion-name">စံပယ်</p>
+            </div>
+            <div class="occasion-card" onclick="showContent('KantKaw', 'thazin')">
+                <div class="card-image-container">
+                    <img src="{% static 'images/thazin.png' %}" alt="Thazin" >
+                </div>
+                <p class="occasion-name">သဇင်</p>
+            </div>
+            <div class="occasion-card" onclick="showContent('KantKaw', 'sakawar')">
+                <div class="card-image-container">
+                    <img src="{% static 'images/sakawar.png' %}" alt="Sa Ka War" >
+                </div>
+                <p class="occasion-name">စကားဝါ </p>
+            </div>
+        </div>
+    </div>
+
+    <button class="scroll-btn right-btn" id="nextBtnFlower">&#10095;</button>
+</div>
+
+<!-- Content Box for Myanmar Flowers -->
+<div id="content-boxKantKaw" class="container content-container">
+    <button class="close-btn" onclick="hideContent('KantKaw')">x</button>
+    <p id="content-textKantKaw"></p>
+</div>
+
+<div class="full-width-hero">
+    <div class="hero-overlay">
+        <div class="hero-content">
+            <h3 class="hero-title">🌸ပန်းပင်စိုက်ပျိုးခြင်းလမ်းညွှန် ကြည့်ရှုရန်</h3>
+            <a href="{% url 'mm:flowerlanding_mm' %}" class="hero-cta">
+                ဆောင်းပါးများဖတ်မယ် →
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    // Content Data
+    const contentData = {
+        Rose: {
+            red: "အနီရောင်နှင်းဆီ – ချစ်ခြင်းမေတ္တာနဲ့ ရိုမန်တစ်ဆန်မှုကို ကိုယ်စားပြုပါတယ်။ နက်ရှိုင်းတဲ့ စိတ်ခံစားမှုတွေကို ရိုးရာအရ ဖော်ပြတဲ့ သင်္ကေတတစ်ခုဖြစ်ပြီး ချစ်ခြင်းမေတ္တာကို ဖော်ပြဖို့ မကြာခဏ ပေးလေ့ရှိပါတယ်။",
+            white: "အဖြူရောင်နှင်းဆီ – သန့်စင်မှု၊ ဖြူစင်မှုနဲ့ အစပြုခြင်းအသစ်တွေကို ဖော်ညွှန်းပါတယ်။ မင်္ဂလာပွဲတွေနဲ့ အောက်မေ့ဖွယ်အခမ်းအနားတွေမှာ မကြာခဏ အသုံးပြုလေ့ရှိပါတယ်။",
+            pink: "ပန်းရောင်နှင်းဆီ – လေးစားကြည်ညိုမှု၊ ကျေးဇူးတင်မှုနဲ့ ပျော်ရွှင်မှုကို ကိုယ်စားပြုပါတယ်။ ကျေးဇူးတင်ကြောင်း ဖော်ပြဖို့အတွက် အကောင်းဆုံးပါပဲ။",
+            yellow: "အဝါရောင်နှင်းဆီ – ခင်မင်ရင်းနှီးမှု၊ နွေးထွေးမှုနဲ့ ပျော်ရွှင်မှုကို ကိုယ်စားပြုပါတယ်။ တစ်စုံတစ်ယောက်ရဲ့ နေ့ရက်ကို လင်းလက်တောက်ပစေဖို့ အသင့်တော်ဆုံးပါပဲ။",
+            lavender: "ခရမ်းရောင်ဖျော့နှင်းဆီ – စိတ်ကူးယဉ်ဆန်မှုနဲ့ ပထမဆုံးတွေ့ဆုံခြင်းမှာပဲ ချစ်မိခြင်းကို ဖော်ပြပါတယ်။ ထူးခြားပြီး လေးစားကြည်ညိုမှုကို ဖော်ညွှန်းပါတယ်။",
+            orange: " လိမ္မော်ရောင်နှင်းဆီ – စိတ်အားထက်သန်မှုနဲ့ ပြင်းပြတဲ့ စိတ်ဆန္ဒကို ကိုယ်စားပြုပါတယ်။ တက်ကြွမှုနဲ့ စိတ်လှုပ်ရှားမှုကို ပုံဆောင်တဲ့အနေနဲ့ မကြာခဏ ပေးလေ့ရှိပါတယ်။",
+            blue: " အပြာရောင်နှင်းဆီ – သဘာဝအတိုင်း မရှိတာကြောင့် လျှို့ဝှက်ဆန်းကြယ်မှုနဲ့ မဖြစ်နိုင်တာကို ကိုယ်စားပြုပါတယ်။"
+        },
+        KantKaw: {
+            padauk: "မြန်မာ့အမျိုးသားပန်းအဖြစ် လူသိများတဲ့ ပိတောက်ပန်းဟာ ခွန်အား၊ ကြံ့ခိုင်မှုနဲ့ နုပျိုလန်းဆန်းမှုတို့ကို ပုံဆောင်ပါတယ်။ မြန်မာ့နှစ်သစ်ကူး သင်္ကြန်ပွဲတော်ကာလမှာ တောက်ပစွာ ဖူးပွင့်လေ့ရှိပြီး မြန်မာလူမျိုးတွေကတော့ ပိတောက်ပင်ပွင့်တဲ့အခါ လာမယ့်နှစ်အတွက် စီးပွားဥစ္စာ တိုးတက်ပြီး ပျော်ရွှင်မှုတွေ ယူဆောင်လာတယ်လို့ ယုံကြည်ကြပါတယ်။ သင်္ကြန်ကာလမှာ ရွှေဝါရောင်ပွင့်တွေ အပြိုင်အဆိုင်ပွင့်ပြီး ရက်အနည်းငယ်သာ ခံပေမယ့် မြန်မာ့ရိုးရာ ယဉ်ကျေးမှုမှာ အလွန်တန်ဖိုးထားရတဲ့ ပန်းတစ်မျိုးဖြစ်ပါတယ်။",
+            khantkaw: "ကံ့ကော်ပန်းဟာ ထာဝရချစ်ခြင်းမေတ္တာ၊ သစ္စာစောင့်သိမှုနဲ့ ပြင်းပြတဲ့ စိတ်ဆန္ဒတို့ကို ကိုယ်စားပြုပါတယ်။ ဒါကြောင့်လည်း ရိုမန်တစ်ဆန်တဲ့ အခမ်းအနားတွေနဲ့ ပတ်ဝန်းကျင်တွေမှာ ရေပန်းစားတဲ့ ပန်းတစ်မျိုးဖြစ်ပါတယ်။ အဖြူရောင်ပွင့်ပြီး မွှေးကြိုင်တဲ့ ရနံ့ရှိတာကြောင့် ဘုရားပန်းအဖြစ်လည်း ကပ်လှူကြပါတယ်။",
+            jasmine: "စံပယ်ပန်းဟာ ချစ်ခြင်းမေတ္တာ၊ လှပမှုနဲ့ ကံကောင်းခြင်းရဲ့ တစ်ကမ္ဘာလုံးဆိုင်ရာ သင်္ကေတတစ်ခု ဖြစ်ပါတယ်။ မင်္ဂလာပွဲတွေနဲ့ ပျော်ပွဲရွှင်ပွဲအခမ်းအနားတွေမှာ မကြာခဏ အသုံးပြုလေ့ရှိပါတယ်။ ညဘက်မှာ ပိုမွှေးကြိုင်တတ်ပြီး စိတ်ကို ကြည်လင်လန်းဆန်းစေတဲ့ ဂုဏ်သတ္တိလည်း ရှိပါတယ်။ မြန်မာ့ယဉ်ကျေးမှုမှာ အမျိုးသမီးတွေ ဆံထုံးမှာ ပန်ဆင်လေ့ရှိတဲ့ ပန်းတစ်မျိုးလည်း ဖြစ်ပါတယ်။",
+            thazin: "သဇင်ပန်းကို တစ်ချိန်က မြန်မာမင်းသမီးတွေ တန်ဖိုးထား မြတ်နိုးခဲ့ကြပြီး သူတို့ရဲ့ ကျက်သရေရှိမှုနဲ့ ဖြူစင်မှုတို့ကို ပုံဆောင်ပါတယ်။ မြန်မာနိုင်ငံမှာ သဇင်ပန်းကို လက်ဆောင်ပေးတာဟာ အထူးချစ်ရတဲ့သူတစ်ဦးအပေါ် နက်ရှိုင်းတဲ့ ချစ်ခြင်းမေတ္တာနဲ့ သစ္စာစောင့်သိမှုကို ဖော်ပြတဲ့ နည်းလမ်းတစ်ခုလည်း ဖြစ်ပါတယ်။ မြန်မာ့ရိုင်းသစ်ခွတွေထဲမှာ အတန်ဖိုးအထားဆုံးပန်းဖြစ်ပြီး ဆောင်းရာသီ (နတ်တော်လ) မှာသာ ဖူးပွင့်တတ်ပါတယ်။",
+            sakawar: "စကားဝါပန်း (Magnolia champaca) ကို Golden Champa သို့မဟုတ် Joy Perfume Tree လို့လည်း ခေါ်ဆိုကြပြီး အလွန်မွှေးကြိုင်တဲ့ ရနံ့ရှိပါတယ်။ အာရှယဉ်ကျေးမှုများစွာမှာ မြင့်မြတ်တဲ့ပန်းအဖြစ် သတ်မှတ်ကြပါတယ်။ အဝါဖျော့ဖျော့ ဒါမှမဟုတ် လိမ္မော်ရောင်ရှိပြီး သူ့ရဲ့ ပြင်းရှတဲ့ရနံ့ကြောင့် ရေမွှေးနဲ့ အမွှေးနံ့သာတွေ ထုတ်လုပ်ရာမှာလည်း အသုံးပြုကြပါတယ်။ မြန်မာ့အလယ်ပိုင်းဒေသတွေမှာ အများဆုံး တွေ့ရတတ်ပါတယ်။"
+        }
+    };
+
+    // Function to Show Content
+    function showContent(type, key) {
+        const contentBox = document.getElementById(`content-box${type}`);
+        const contentText = document.getElementById(`content-text${type}`);
+        contentText.innerText = contentData[type][key];
+        contentBox.style.display = "block";
+        contentBox.style.animation = 'fadeInn 0.3s ease forwards';
+    }
+
+    // Function to Hide Content
+    function hideContent(type) {
+        const contentBox = document.getElementById(`content-box${type}`);
+        contentBox.style.display = "none";
+        contentBox.style.animation = 'fadeOut 0.3s ease forwards';
+        
+    }
+
+    // Scroll Functionality
+    document.addEventListener("DOMContentLoaded", function () {
+        const setupScroll = (containerId, prevBtnId, nextBtnId) => {
+            const container = document.getElementById(containerId);
+            const cards = container.querySelectorAll(".occasion-card");
+            const cardWidth = cards[0].offsetWidth;
+            const visibleCards = 4;
+            const totalCards = cards.length;
+            const maxPosition = totalCards - visibleCards;
+            let position = 0;
+
+            document.getElementById(prevBtnId).addEventListener("click", () => {
+                if (position > 0) {
+                    position--;
+                    container.style.transform = `translateX(-${position * cardWidth}px)`;
+                }
+            });
+
+            document.getElementById(nextBtnId).addEventListener("click", () => {
+                if (position < maxPosition) {
+                    position++;
+                    container.style.transform = `translateX(-${position * cardWidth}px)`;
+                }
+            });
+        };
+
+        setupScroll("scroll-container-rose", "prevBtnRose", "nextBtnRose");
+        setupScroll("scroll-container-flower", "prevBtnFlower", "nextBtnFlower");
+    });
+</script>
+
+{% endblock %}

@@ -1,0 +1,172 @@
+<!-- Navigation Bar -->
+<div class="sticky-top bg-white">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
+        <div class="container-fluid d-flex align-items-center justify-content-between sticky-top">
+            <!-- Hamburger Menu (Left) -->
+            <button class="navbar-toggler order-0 d-lg-none custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+       <!-- Logo and Shop Name -->
+       {% load static %}
+<a class="navbar-brand d-flex align-items-center mx-auto text-truncate" href="{% url 'mm:home_mm' %}">
+    <img src="{% static 'images/logo.png' %}" alt="Logo" class="me-2 brand-logo">
+    <span class="fs-6 shop-name">Blooming Moments</span>
+</a>
+
+
+        <!-- Right-Side Links for Desktop -->
+        <ul class="navbar-nav mx-auto d-none d-lg-flex flex-row align-items-center gap-5">
+            <li class="nav-item">
+                <a class="nav-link title1" href="{% url 'mm:search_mm' %}"><i class="bi bi-search"></i> ရှာရန်</a>
+            </li>
+            
+            {% if user.is_authenticated %}
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'mm:login' %}"><i class="bi bi-person"></i>လော့အောက်</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toogle="dropdown" aria-expanded="false">အကောင့်</a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="{% url 'mm:update_user' %}"><i class="bi bi-person"></i>{{request.user}}</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="{% url 'mm:update_info' %}"><i class="bi bi-person"></i>update info</a></li>
+            </ul>
+            </li>
+            {% if user.is_superuser %}
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toogle="dropdown" aria-expanded="false">အော်ဒါ</a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="{% url 'shipped_dash' %}"><i class="bi bi-person"></i>ပို့ပီး</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="{% url 'not_shipped_dash' %}"><i class="bi bi-person"></i>မပို့ရသေး</a></li>
+            </ul>
+            </li>
+            {% endif %}
+            {% else %}
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'store:login' %}"><i class="bi bi-person"></i>လော့အင်</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'store:register' %}"><i class="bi bi-person"></i>အကောင့်ဖွင့်</a>
+            </li>
+            {% endif %}
+            <li class="nav-item">
+                 <a href="{% url 'en:home_en' %}" class="text-black">English</a> | <a href="{% url 'mm:home_mm' %}" class="text-black">မြန်မာ</a>
+            </li>
+            
+            
+            <form class="d-flex">
+                <a href="{% url 'cart_summary' %}" class="btn btn-outline-dark"><i class="bi-cart-fill me-1"></i>
+                    Cart
+                    <span class="badge bg-dark text-white ms-1 rounded-pill" id="cart_quantity">{{cart|length}}</span></a>
+              </form>
+        </ul>
+
+        <!-- Icons for Smaller Screens -->
+        <div class="d-flex d-lg-none gap-1 align-items-center icons-container">
+            {% if user.is_authenticated %}
+            <a class="nav-link p-1" href="{% url 'mm:update_user' %}">
+                <i class="bi bi-person small-icon"></i>
+            </a>
+            {% else %}
+            <a class="nav-link p-1" href="{% url 'mm:register' %}">
+                <i class="bi bi-person small-icon"></i>
+            </a>
+            {% endif %}
+            <a class="nav-link p-1" href="{% url 'mm:search_mm' %}">
+                <i class="bi bi-search small-icon"></i>
+            </a>
+            <a href="{% url 'cart_summary' %}" class="btn btn-outline-dark cart-btn p-1">
+                <i class="bi-cart-fill cart-icon me-1"></i>
+                <span class="badge bg-dark text-white rounded-pill cart-badge" id="cart_quantity">{{ cart|length }}</span>
+            </a>
+            </form>
+        </div>
+    </div>
+</nav>
+
+<!-- Second Row: Categories for Mobile -->
+<div class="collapse d-lg-none bg-light " id="navbarNavDropdown" >
+    <div class="p-4">
+        <ul class="list-unstyled mb-0">
+            <!-- Deal Of The Day
+            <li class="nav-item dropdown">
+                <a class="text-dark d-block py-2 dropdown-toggle" href="#" id="dealDropdownMobile" data-bs-toggle="dropdown">
+                    Deal Of The Day
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dealDropdownMobile">
+                    <li><a class="dropdown-item" href="#">Today's Deals</a></li>
+                    <li><a class="dropdown-item" href="#">Clearance Sale</a></li>
+                    <li><a class="dropdown-item" href="#">Limited-Time Offers</a></li>
+                </ul>
+            </li> -->
+            <!-- Flowers -->
+            
+            <li><a href="{% url 'mm:product' %}" class="text-dark d-block py-2">ပစ္စည်းများ</a></li>
+            <!-- Cakes
+            <li class="nav-item dropdown">
+                <a class="text-dark d-block py-2 dropdown-toggle" href="#" id="cakesDropdownMobile" data-bs-toggle="dropdown">
+                    Cakes
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="cakesDropdownMobile">
+                    <li><a class="dropdown-item" href="#">Birthday Cakes</a></li>
+                    <li><a class="dropdown-item" href="#">Wedding Cakes</a></li>
+                </ul>
+            </li> -->
+            <!-- Handmade Crafts
+            <li class="nav-item dropdown">
+                <a class="text-dark d-block py-2 dropdown-toggle" href="#" id="craftsDropdownMobile" data-bs-toggle="dropdown">
+                    Handmade Crafts
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="craftsDropdownMobile">
+                    <li><a class="dropdown-item" href="#">Artisan Gifts</a></li>
+                    <li><a class="dropdown-item" href="#">Unique Creations</a></li>
+                </ul>
+            </li> -->
+            <!-- Discover -->
+            <!-- <li class="nav-item dropdown">
+                <a class="text-dark d-block py-2 dropdown-toggle" href="#" id="candlesDropdownMobile" data-bs-toggle="dropdown">
+                    Discover
+                </a>
+                 <ul class="dropdown-menu" aria-labelledby="candlesDropdownMobile">
+                    
+                </ul> 
+            </li> -->
+            <li><a href="{% url 'mm:suggestion' %}" class="text-dark d-block py-2">အဆိုပြုချက်</a></li>
+            <!-- About Us -->
+            <li><a href="{% url 'mm:about_us' %}" class="text-dark d-block py-2">ကျွန်ုပ်တို့အကြောင်း</a></li>
+        </ul>
+    </div>
+</div>
+
+<!-- Second Row: Categories for Desktop -->
+<div class="bg-light py-2 d-none d-lg-block">
+    <div class="container-fluid">
+        <ul class="nav justify-content-center">
+            <!-- Deal Of The Day
+            <li class="nav-item dropdown">
+                <a class="nav-link text-dark px-5 mx-3 dropdown-toggle" href="#" id="dealDropdown" data-bs-toggle="dropdown">
+                    Deal Of The Day
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="dealDropdown">
+                    <li><a class="dropdown-item" href="#">Today's Deals</a></li>
+                    <li><a class="dropdown-item" href="#">Clearance Sale</a></li>
+                    <li><a class="dropdown-item" href="#">Limited-Time Offers</a></li>
+                </ul>
+            </li> -->
+            <!-- Flowers -->
+            <li class="nav-item"><a href="{% url 'mm:product' %}" class="nav-link text-dark px-5 mx-3" >ပစ္စည်းများ</a></li>
+        
+            <!-- Discover -->
+            <li class="nav-item"><a href="{% url 'mm:suggestion' %}"  class="nav-link text-dark px-5 mx-3" >အဆိုပြုချက်</a></li>
+            <!-- About Us -->
+            <li class="nav-item">
+                <a class="nav-link text-dark px-5 mx-3" href="{% url 'mm:about_us' %}">ကျွန်ုပ်တို့အကြောင်း</a>
+            </li>
+        </ul>
+    </div>
+</div>
+</div>
+<script src="{% static 'js/navbar.js' %}"></script>
+        

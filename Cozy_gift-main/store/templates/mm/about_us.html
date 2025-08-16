@@ -1,0 +1,189 @@
+{% extends 'en/base.html' %}
+{% load static %}
+{% block styles %}
+<link rel="stylesheet" href="{% static 'css/about_us.css' %}">
+{% endblock %}
+{% block content %}
+
+<!-- Hero section -->
+<section class="hero">
+    <div class="container">
+        <h1>အချိန်တိုလေးတွေကို ထာဝရအမှတ်တရများအဖြစ် ပြောင်းလဲပေးမယ့်နေရာ <span style="color: #ff6b9b;">❤</span></h1>
+        <p>သင့်စိတ်ခံစားချက်တွေကို အကောင်းဆုံးဖော်ပြနိုင်မယ့် ရွေးချယ်စရာလက်ဆောင်များနှင့် ပန်းစည်းအလှများကို ရှာဖွေလိုက်ပါ</p>
+    </div>
+</section>
+
+<!-- Our Story section -->
+<section id="our-story" class="our-story">
+    <div class="container">
+        <h2>ကျွန်ုပ်တို့၏ ခရီးကြောင်း</h2>
+        <div class="row"> 
+            <div class="story-content">
+                <div class="story-text">
+                    <h3>စတင်ခြင်း</h3>
+                    <p>၂၀၂၀ ခုနှစ်က မန္တလေးရှိ Myanmar Institute of Information Technology မှ မိတ်ဆွေလေးဦးနှင့် စတင်ခဲ့ပါသည်။ ခေတ်မီနည်းပညာခေတ်ကြီးအတွင်း လက်ရာမြောက်လက်ဆောင်ရွေးချယ်မှုများ ပျောက်ဆုံးနေသည်ကို သတိထားမိခဲ့ပါသည်။ ကမ္ဘာတစ်ဝှမ်းရှိ လက်မှုပညာရှင်များနှင့် လက်ဆောင်ရွေးချယ်သူများကို ချိတ်ဆက်ပေးရန် ရည်ရွယ်ချက်ဖြင့် စတင်ခဲ့ခြင်းဖြစ်ပါသည်။</p>
+
+                    <h3>ပထမခြေလှမ်း</h3>
+                    <p>တက္ကသိုလ်ပရောဂျက်အဖြစ် စတင်ခဲ့ပြီး Django နည်းပညာဖြင့် စနစ်တကျတည်ဆောက်ခဲ့ပါသည်။ ညအချိန်များစွာပေးကာ နည်းပညာနှင့် အနုပညာကို ပေါင်းစပ်ခဲ့ပါသည်။</p>
+
+                    <h3>တည်မြဲသောလုပ်ငန်း</h3>
+                    <p>၄ နှစ်တာအတွေ့အကြုံဖြင့် မန္တလေးမြို့တွင် လက်ရှိပူးပေါင်းဆောင်ရွက်နေသော လက်မှုပညာရှင် ၈၅ ဦးနှင့်အတူ မြို့နယ်အနှံ့ ပျော်ရွှင်မှုပေါင်း ၅,၀၀၀ ကျော်ကို ပို့ဆောင်ပေးနိုင်ခဲ့ပါသည်။ ယခုအခါ ပန်းစည်း၊ ကိတ်မုန့်နှင့် ချောကလက်များဖြင့် အထိမ်းအမှတ်များပြုလုပ်လိုသူများ ကျွန်ုပ်တို့ကို အမှီပြုလာကြပါသည်။</p>
+
+                    
+                </div>
+
+                 <div class="story-image">
+    <div id="map" style="height: 600px; width: 600px;" class="col-12 col-lg-6"></div>
+    <script>
+        // Set fixed coordinates
+        const fixedLat = 21.9379;
+        const fixedLng = 96.0920;
+
+        const map = L.map('map').setView([fixedLat, fixedLng], 18); 
+
+        // Base map layers
+        let osm = L.tileLayer('https://tile.openstreetmap.de/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        });
+
+        let googleStreets = L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
+            maxZoom: 19,
+            subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
+        });
+
+        let googleHybrid = L.tileLayer('http://{s}.google.com/vt/lyrs=s,h&x={x}&y={y}&z={z}', {
+            maxZoom: 20,
+            subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
+        });
+
+        // Add default base layer
+        googleStreets.addTo(map);
+
+        // Add marker at fixed location
+        let marker = L.marker([fixedLat, fixedLng], { alt: 'shop location' }).addTo(map);
+        marker.bindPopup("<b>Shop Location</b><br>Lat: " + fixedLat + "<br>Lng: " + fixedLng).openPopup();
+
+        // Add scale control
+        L.control.scale().addTo(map);
+
+        // Layer controls
+        let baseMaps = {
+            "OpenStreetMap": osm,
+            "Google Streets": googleStreets,
+            "Google Hybrid": googleHybrid
+        };
+
+        let overlayMaps = {
+            "Shop Marker": marker
+        };
+
+        L.control.layers(baseMaps, overlayMaps, { collapsed: false }).addTo(map);
+    </script>
+                </div>
+     
+            </div>
+        </div>
+    </section>
+
+
+<!-- Why Choose Us section -->
+<section id="why-choose-us" class="why-choose-us">
+    <div class="container">
+        <h2>ကျွန်ုပ်တို့ကို ရွေးချယ်ရန်</h2>
+        <div class="features">
+            <div class="feature">
+                <h3>အနုစိတ်ဂရုစိုက်ထုတ်လုပ်ထားခြင်း</h3>
+                <p>ဒေသခံပန်းပညာရှင်များမှ စိတ်ဝင်စားဖွယ်ဒီဇိုင်းများဖြင့် ပြင်ဆင်ထားပါသည်</p>
+            </div>
+            <div class="feature">
+                <h3>တစ်နေ့တာပို့ဆောင်ရေး</h3>
+                <p>မနက် ၂ နာရီမတိုင်မီမှာယူပါက နေ့ချင်းပြန်ပို့ဆောင်ပေးပါသည်</p>
+            </div>
+            <div class="feature">
+                <h3>၁၀၀% စိတ်ချမှုအပြည့်</h3>
+                <p>မကျေနပ်ပါက ပြန်လည်အစားထိုးပေးမည် သို့မဟုတ် ငွေပြန်အမ်းပါမည်</p>
+            </div>
+            <div class="feature">
+                <h3>မန္တလေးလက်ရာမြောက်</h3>
+                <p>ရွှေဘိုဈေးမှ ပန်းပညာရှင်များ၏ သမိုင်းကြောင်းပါကတ်ပြားများနှင့်အတူ</p>
+            </div>
+            <div class="feature">
+                <h3>အရေးပေါ်လက်ဆောင်</h3>
+                <p>မေ့လျော့သွားလျှင် မန္တလေးအလယ်ပိုင်းသို့ ၂ နာရီအတွင်း အရည်အသွေးပြည့် လက်ဆောင်များပို့ဆောင်ပေးပါမည်</p>
+            </div>
+            <div class="feature">
+                <h3>မန္တလေးယုံကြည်စိတ်ချရ</h3>
+                <p>မြို့နယ်အနှံ့ COD ဝန်ဆောင်မှု၊ စိတ်မကျေနပ်ပါက ကိုယ်တိုင်ပြန်လည်ပို့ဆောင်ပေးပါမည်</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials section -->
+<section id="testimonials" class="testimonials">
+    <div class="container">
+        <h2>ဖောက်သည်များ၏အမြင်</h2>
+        <div class="testimonial-grid">
+            <!-- First Testimonial -->
+            <div class="testimonial-card">
+                <div class="testimonial-content">
+                    <p>"အသေးစိတ်ဂရုစိုက်မှုနဲ့ စိတ်ကြိုက်ပြင်ဆင်မှုတွေက ကျွန်မရဲ့လက်ဆောင်ကို အထူးဖြစ်စေတယ်။ သူတို့ရဲ့အနုပညာကို ခံစားမိပါတယ်!"</p>
+                </div>
+                <div class="testimonial-author">
+                    <img src="https://via.placeholder.com/70x70.png?text=SM" alt="ဧဖြိုး">
+                    <div class="author-info">
+                        <span class="author-name">ဧဖြိုး</span>
+                        <span class="author-title">ပြည်ကြီးတံခွန်မြို့နယ်၊ မန္တလေး</span>
+                        <div class="testimonial-rating">
+                            ★★★★★
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Second Testimonial -->
+            <div class="testimonial-card">
+                <div class="testimonial-content">
+                    <p>"သူတို့ရဲ့အကြံပြုစနစ်က ကျွန်တော့်အတွက် အကောင်းဆုံးပန်းစည်းကို ရွေးချယ်ပေးနိုင်ခဲ့တယ်။ တကယ့်ကို လိုချင်တာနဲ့ အတိအကျကိုက်ညီပါတယ်!"</p>
+                </div>
+                <div class="testimonial-author">
+                    <img src="https://via.placeholder.com/70x70.png?text=MR" alt="သဲသဲ">
+                    <div class="author-info">
+                        <span class="author-name">သဲသဲ</span>
+                        <span class="author-title">ချမ်းအေးသာစံမြို့နယ်၊ မန္တလေး</span>
+                        <div class="testimonial-rating">
+                            ★★★★★
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Third Testimonial -->
+            <div class="testimonial-card">
+                <div class="testimonial-content">
+                    <p>"ပန်းအရည်အသွေးနဲ့ ဝန်ဆောင်မှုက တစ်သမတ်တည်းကောင်းမွန်ပါတယ်။ လက်ဆောင်ရောက်ရှိချိန်အထိ အဆင့်ဆင့်အချက်ပေးမှုတွေကို အထူးသဘောကျမိပါတယ်"</p>
+                </div>
+                <div class="testimonial-author">
+                    <img src="https://via.placeholder.com/70x70.png?text=ET" alt="အမလီထွန်း">
+                    <div class="author-info">
+                        <span class="author-name">အမလီထွန်း</span>
+                        <span class="author-title">ချမ်းမြသာစည်မြို့နယ်၊ မန္တလေး</span>
+                        <div class="testimonial-rating">
+                            ★★★★★
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Newsletter section -->
+<section id="newsletter" class="newsletter">
+    <div class="container">
+        <h2>Lovingly မိသားစုဝင်အဖြစ် ပါဝင်ပါ</h2>
+        <p>အထူးအပို့ဆောင်ခ၊ ထုတ်ကုန်အသစ်များနှင့် လက်ဆောင်ရွေးချယ်နည်းများကို ပထမဆုံးသိရှိနိုင်ရန် သတင်းလွှာကို စာရင်းသွင်းပါ</p>
+    </div>
+</section>
+{% endblock %}

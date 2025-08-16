@@ -1,0 +1,184 @@
+{% extends 'en/base.html' %}
+{% load static %}
+{% block styles %}
+<link rel="stylesheet" href="{% static 'css/about_us.css' %}">
+{% endblock %}
+{% block content %}
+ 
+    <!-- Hero section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Where Moments Bloom into Memories <span style="color: #ff6b9b;">❤</span></h1>
+            <p>Discover the perfect way to express your feelings with our curated collection of thoughtful gifts and stunning floral arrangements.</p>
+            
+        </div>
+    </section>
+
+    <!-- Our Story section -->
+    <section id="our-story" class="our-story">
+        <div class="container">
+            <h2>Our Blooming Journey</h2>
+            <div class="row"> 
+            <div class="story-content">
+                <div class="story-text">
+                    <h3> The Spark </h3>
+                    <p>It began at Myanmar Institute of Information Technology at 2020 rooted by 4 friends with a simple realization - in our fast-paced digital world, the art of thoughtful gifting was getting lost in generic mass-produced items. In 2008, our team of passionate developers and artisan advocates came together in Mandalay with a shared vision: to create a digital bridge between skilled craftspeople and discerning gift-seekers worldwide.</p>
+                    <h3> First Bloom</h3>
+                    <p>What started as a university project between coffee-fueled coding sessions has blossomed into a global marketplace. We taught ourselves Django to build a robust platform that could handle intricate custom orders while maintaining that personal touch. Nights turned into mornings as we perfected the balance between technical precision and artistic expression.</p>
+                    <h3> Standing On Firm Business</h3>
+                    <p>We have been standing on bussiness for 4 years and now partnering with 85 local makers, we've delivered 5,000+ smiles across the city. Now many people are contacting us to enjoy bouquets and cake orders accessorized with chocolates and teddy bears to make memorable moments with their loved ones in seasonal occasions.</p>
+                    
+                </div>
+       
+                <div class="story-image">
+    <div id="map" style="height: 600px; width: 600px;" class="col-12 col-lg-6"></div>
+    <script>
+        // Set fixed coordinates
+        const fixedLat = 21.9379;
+        const fixedLng = 96.0920;
+
+        const map = L.map('map').setView([fixedLat, fixedLng], 18); 
+
+        // Base map layers
+        let osm = L.tileLayer('https://tile.openstreetmap.de/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        });
+
+        let googleStreets = L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
+            maxZoom: 19,
+            subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
+        });
+
+        let googleHybrid = L.tileLayer('http://{s}.google.com/vt/lyrs=s,h&x={x}&y={y}&z={z}', {
+            maxZoom: 20,
+            subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
+        });
+
+        // Add default base layer
+        googleStreets.addTo(map);
+
+        // Add marker at fixed location
+        let marker = L.marker([fixedLat, fixedLng], { alt: 'shop location' }).addTo(map);
+        marker.bindPopup("<b>Shop Location</b><br>Lat: " + fixedLat + "<br>Lng: " + fixedLng).openPopup();
+
+        // Add scale control
+        L.control.scale().addTo(map);
+
+        // Layer controls
+        let baseMaps = {
+            "OpenStreetMap": osm,
+            "Google Streets": googleStreets,
+            "Google Hybrid": googleHybrid
+        };
+
+        let overlayMaps = {
+            "Shop Marker": marker
+        };
+
+        L.control.layers(baseMaps, overlayMaps, { collapsed: false }).addTo(map);
+    </script>
+                </div>
+     
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us section -->
+    <section id="why-choose-us" class="why-choose-us">
+        <div class="container">
+            <h2>Why Bloom With Us?</h2>
+            <div class="features">
+                <div class="feature">
+                    <h3>Handcrafted with Care</h3>
+                    <p>Each arrangement is thoughtfully designed and crafted by local artisan florists.</p>
+                </div>
+                <div class="feature">
+                    <h3>Same-Day Delivery</h3>
+                    <p>Need it now? We offer same-day delivery for orders placed before 2 PM local time.</p>
+                </div>
+                <div class="feature">
+                    <h3>100% Satisfaction Guarantee</h3>
+                    <p>Not completely satisfied? We'll make it right or refund your purchase.</p>
+                </div>
+                <div class="feature">
+                    <h3>True Mandalay Craftsmanship</h3>
+                    <p>Every product comes with an artisan's story card - meet the potter from Yankin Hill or the florist training since age 12 at Zegyo Market.</p>
+                </div>
+                <div class="feature">
+                    <h3>Last-Minute Lifesavers</h3>
+                    <p>Forgot an anniversary? Our 2-hour "Emergency Gifting" service covers central Mandalay with readymade luxury bundles</p>
+                </div>
+                <div class="feature">
+                    <h3>Mandalay-Trusted</h3>
+                    <p>Cash on Delivery available citywide. 100% satisfaction guarantee - we'll personally redeliver if anything disappoints.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials section -->
+<section id="testimonials" class="testimonials">
+    <div class="container">
+        <h2>What Our Customers Say</h2>
+        <div class="testimonial-grid">
+            <div class="testimonial-card">
+                <div class="testimonial-content">
+                    <p>"The attention to detail and personal touch made my gift extra special. Lovingly truly understands the art of gifting! I was blown away by the quality and presentation. It's clear that they put their heart into every arrangement."</p>
+                </div>
+                <div class="testimonial-author">
+                    <img src="https://via.placeholder.com/70x70.png?text=SM" alt="Sarah M.">
+                    <div class="author-info">
+                        <span class="author-name">Ei Phyoe</span>
+                        <span class="author-title">Pyigyidagun Township, Myandalay</span>
+                        <div class="testimonial-rating">
+                            ★★★★★
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-content">
+                    <p>"Their recommendation engine helped me pick the perfect arrangement. It was exactly what I was looking for!"</p>
+                </div>
+                <div class="testimonial-author">
+                    <img src="https://via.placeholder.com/70x70.png?text=MR" alt="Michael R.">
+                    <div class="author-info">
+                        <span class="author-name">Thae Thae</span>
+                        <span class="author-title">Chan Aye Thar San Township, Mandalay</span>
+                        <div class="testimonial-rating">
+                            ★★★★★
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-content">
+                    <p>"The quality of flowers and service is consistently outstanding. I appreciate how they keep me updated throughout the delivery process, ensuring my gift arrives perfectly."</p>
+                </div>
+                <div class="testimonial-author">
+                    <img src="https://via.placeholder.com/70x70.png?text=ET" alt="Emily T.">
+                    <div class="author-info">
+                        <span class="author-name">Emily Htun</span>
+                        <span class="author-title">Chan Mya Thar Zi Township, Mandalay</span>
+                        <div class="testimonial-rating">
+                            ★★★★★
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+</section>
+
+    <!-- Newsletter section -->
+    <section id="newsletter" class="newsletter">
+        <div class="container">
+            <h2>Join the Lovingly Family</h2>
+            <p>Sign up for our newsletter and be the first to know about special offers, new collections, and gifting tips!</p>
+            
+        </div>
+    </section>
+{% endblock %}

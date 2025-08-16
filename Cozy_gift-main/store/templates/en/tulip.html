@@ -1,0 +1,266 @@
+{% extends 'en/base.html' %}
+{% load static %}
+{% block styles %}
+<link rel="stylesheet" href="{% static 'css/discovery.css' %}">
+
+<style>
+          .article-list {
+            border-left: 3px solid #9B7EBD;
+             padding-left: 20px;
+        }
+
+        .article-list-item {
+             padding: 15px;
+             margin-bottom: 15px;
+             border: 2px solid #e9ecef;
+             border-radius: 10px;
+             transition: all 0.3s ease;
+                
+        }
+
+        .article-list-item:hover {
+             border-color: #9B7EBD;
+            background: #F7F7F7;
+            }
+        
+    </style>
+{% endblock %}
+{% block content %}
+
+    <!-- Full-Screen Section -->
+    <div class="container-fluid d-flex flex-column flex-md-row align-items-center text-dark" style="background-color: #9B7EBD;">
+    <!-- Left Side: Text and Paragraph -->
+    <div class="col-md-6 d-flex flex-column justify-content-between vh-100 m-4 py-6 vh-sm-0 min-vh-sm-50">
+         <h1 class="fs-4 md-mt-3 mt-xl-0 text-center fw-light text-uppercase title1 ">Flower articles</h1>
+    
+        <h2 class="display-1 m-3 text-center text-capitalize my-title ">Tulip</h2>
+      
+        <p class="d-none d-md-block lead fs-5 mb-0 description2">
+        </p>
+    
+    </div>
+
+    <!-- Right Side: Full-Size Image -->
+    <div class="col-md-6">
+        <img src="{% static 'images/ch-tulipcover.png' %}" alt="Tulip Image" class="img-fluid">
+    </div>
+</div>
+
+<!-- Additional Paragraph (only for smaller screens) -->
+<div class="container-fluid text-center d-md-none p-4 text-dark" style="background-color: #9B7EBD;">
+    <p class="lead description3">
+    </p>
+</div>
+   
+<div class="container py-5 mt-5">
+    <div class="row g-5">
+        <!-- Article List -->
+        <div class="col-md-6">
+            <div class="article-list">
+                <h3 class="mb-4 display-5">Discover Related Articles</h3>
+                <div class="article-list-item">
+                    <a href="#article1" class="text-decoration-none text-dark">
+                        <span>How to Plant Tulips</span>
+                        <span style="float: right;"><button type="button" class="btn read-btn" style="background-color: #9B7EBD;cursor: pointer;border:#9B7EBD;">read more <i class="bi bi-arrow-right"></i></button></span>
+                    </a>
+                </div>
+                <div class="article-list-item">
+                    <a href="#article2" class="text-decoration-none text-dark">
+                        <span>Tulip Bulb Watering and Temperature Control</span>
+                        <span style="float: right;"><button type="button" class="btn read-btn" style="background-color: #9B7EBD;cursor: pointer;border:#9B7EBD;">read more <i class="bi bi-arrow-right"></i></button></span>
+
+                    </a>
+                </div>
+                <div class="article-list-item">
+                    <a href="#article3" class="text-decoration-none text-dark">
+                        <span>Tulip Sprouting and Blooming Management</span>
+                        <span style="float: right;"><button type="button" class="btn read-btn" style="background-color: #9B7EBD;cursor: pointer;border:#9B7EBD;">read more <i class="bi bi-arrow-right"></i></button></span>
+
+                    </a>
+                </div>
+                <div class="article-list-item">
+                    <a href="#article4" class="text-decoration-none text-dark">
+                        <span>Essential Tips for Tulip Blooming Season</span>
+                        <span style="float: right;"><button type="button" class="btn read-btn" style="background-color: #9B7EBD;cursor: pointer;border:#9B7EBD;">read more <i class="bi bi-arrow-right"></i></button></span>
+
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    
+    </div>
+</div>
+
+
+<!-- blog card -->
+ <article id="article1" class="container my-5 article-card">
+    <div class="row g-0 shadow-lg">
+        <!-- Image column -->
+        <div class="col-md-6">
+            <img 
+                src="{% static 'images/tuliparticle1.jpg' %}"
+                alt="topic1" 
+                class="img-fluid h-100 object-fit-cover"
+                loading="lazy"
+            >
+        </div>
+
+        <!-- Content column-->
+        <div class="col-md-6 p-4 d-flex flex-column bg-white">
+            <header class="mb-4">
+                <div class=" text-dark">
+                    <h2 class="display-5 mb-3 pb-2 custom-border">How to Plant Tulips</h2>   
+                </div>
+            </header>
+
+            <div class="lead mb-4 flex-grow-1">
+                <p class="text-dark">
+                    English name: Tulip <br>
+                    Botanical name: Tulipa gesneriana <br>
+                    family: Liliaceae (lily family) <br>
+                    Tulip thrives when planted in pots with proper drainage. Use a pot with minimum diameter of 8.5inches (2cm) and drainage holes at the center. 
+                    This size can accommodate 2 to 9 tulip bulbs, while a larger pot with a 22-inch diameter can hold up to 25 bulbs. 
+                    You may choose ceramic, terracotta, or plastic pots based on preference. Fill half the pot with a mix of perlite and vermiculite.
+                    Place the tulip bulbs into the soil, spacing them 1 inch apart.
+                    Finally, cover the bulbs with 5-8 inches (13-20 cm) of soil to ensure healthy growth.
+            </div>
+
+            <div class="text-end">
+                <time datetime="2024-03-26T07:00:00Z" class="fst-italic text-muted">
+                    March 26, 2024
+                </time>
+            </div>
+        </div>
+    </div>
+</article>
+
+<!-- blog card -->
+<article id="article2" class="container my-5 article-card">
+    <div class="row g-0 shadow-lg">
+        <!-- Image column -->
+        <div class="col-md-6">
+            <img 
+                src="{% static 'images/tuliparticle2.jpg' %}"
+                alt="topic2" 
+                class="img-fluid h-100 object-fit-cover"
+                loading="lazy"
+            >
+        </div>
+
+        <!-- Content column-->
+        <div class="col-md-6 p-4 d-flex flex-column bg-white">
+            <header class="mb-4">
+                <div  class=" text-dark">
+                    <h2 class="display-5 mb-3 pb-2 custom-border">Tulip Bulb Watering and Temperature Control</h2>
+                </div>
+            </header>
+
+            <div class="lead mb-4 flex-grow-1">
+                <p class="text-dark">
+                    After planting bulbs, water the soil thoroughly. 
+                    For indoor cultivation, water the tulips 2 to 3 times per week.
+                    If planted outdoors in a region with regular rainfall, additional watering is unnecessary. 
+                    In dry climates, water them 2 to 3 times weekly. Place the pot in a cool location (45–55°F or 7–13°C) for 12 to 16 weeks. 
+                    Ensure the pot remains in a stable temperature environment to protect the bulbs from damage caused by freezing and thawing cycles. 
+                    If kept outdoors, maintain the temperature within the ideal range of 45–55°F (7–13°C) to promote healthy growth. 
+                    Avoid exposing the bulbs to fluctuating temperatures, as this may hinder their development.
+                 </p>
+            </div>
+
+            <div class="text-end">
+                <time datetime="2024-03-26T07:00:00Z" class="fst-italic text-muted">
+                    March 26, 2024
+                </time>
+            </div>
+        </div>
+    </div>
+</article>
+
+
+<!-- blog card -->
+<article id="article3" class="container my-5 article-card">
+    <div class="row g-0 shadow-lg">
+        <!-- Image column -->
+        <div class="col-md-6">
+            <img 
+                src="{% static 'images/tuliparticle3.jpg' %}"
+                alt="Topic3" 
+                class="img-fluid h-100 object-fit-cover"
+                loading="lazy"
+            >
+        </div>
+
+        <!-- Content column-->
+        <div class="col-md-6 p-4 d-flex flex-column bg-white">
+            <header class="mb-4">
+                <div class=" text-dark">
+                    <h2 class="display-5 mb-3 pb-2 custom-border">Tulip Sprouting and Blooming Management</h2>
+                </div>
+            </header>
+
+            <div class="lead mb-4 flex-grow-1">
+                <p class="text-dark">
+                    When tulips begin to sprout, they should be moved to an environment with a temperature of 60–70°F (16–21°C). 
+                    For indoor plants, relocate the pot to a sunny area or near a window. 
+                    If grown outdoors, ensure the temperature remains within this range.
+                    It typically takes 1 to 3 weeks for the tulips to start blooming after sprouting. Blooming periods vary depending on the tulip bulb variety, with different types flowering at specific times throughout the year. 
+                    When purchasing bulbs, check their recommended planting season and blooming schedule to choose varieties that suit your preferences and local climate. This ensures optimal growth and allows you to plan your gardening activities effectively.        
+                </p>
+                
+            </div>
+
+            <div class="text-end">
+                <time datetime="2024-03-26T07:00:00Z" class="fst-italic text-muted">
+                    March 26, 2024
+                </time>
+            </div>
+        </div>
+    </div>
+</article>
+
+<!-- blog card  -->
+<article id="article4" class="container my-5 article-card">
+    <div class="row g-0 shadow-lg">
+        <!-- Image column -->
+        <div class="col-md-6">
+            <img 
+                src="{% static 'images/tuliparticle4.jpg' %}"
+                alt="topic4" 
+                class="img-fluid h-100 object-fit-cover"
+                loading="lazy"
+            >
+        </div>
+
+        <!-- Content column-->
+        <div class="col-md-6 p-4 d-flex flex-column bg-white">
+            <header class="mb-4">
+                <div class=" text-dark">
+                    <h2 class="display-5 mb-3 pb-2 custom-border">Essential Tips for Tulip Blooming Season</h2>
+                </div>
+            </header>
+
+            <div class="lead mb-4 flex-grow-1">
+                <p class="text-dark">
+                    Water tulips only when the top 1 inch(2.5 cm) of soil feels dry.
+                     Ensure they receive at least 6 hours of direct sunlight daily. 
+                     Regularly inspect and remove pests or diseased plants, and discard infected bulbs to prevent spreading. 
+                     If outdoor temperatures drop below freezing, move tulips indoors to a cool, stable environment like a garage or basement, maintaining 45–55°F (7–13°C). 
+                     Replace the potting soil mix annually to replenish nutrients and improve drainage. Store bulbs in well-ventilated, dark, and temperature-controlled spaces during dormancy. 
+                     These steps ensure vibrant blooms and healthy growth while protecting plants from environmental stress and disease.
+                </p>
+            </div>
+            <div class="text-end">
+                <time datetime="2024-03-26T07:00:00Z" class="fst-italic text-muted">
+                    March 26, 2024
+                </time>
+            </div>
+        </div>
+    </div>
+</article>
+
+
+            {% endblock %}
+            {% block script %}
+        <script src="{% static 'js/discovery.js' %}"></script>
+        {% endblock %}

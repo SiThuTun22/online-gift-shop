@@ -1,0 +1,270 @@
+{% extends 'en/base.html' %}
+{% load static %}
+{% block styles %}
+<link rel="stylesheet" href="{% static 'css/discovery.css' %}">
+
+<style>
+          .article-list {
+            border-left: 3px solid  #4f772d;
+             padding-left: 20px;
+        }
+
+        .article-list-item {
+             padding: 15px;
+             margin-bottom: 15px;
+             border: 2px solid #e9ecef;
+             border-radius: 10px;
+             transition: all 0.3s ease;
+                
+        }
+
+        .article-list-item:hover {
+             border-color: #4f772d;
+            background: #F7F7F7;
+            }
+        
+    </style>
+{% endblock %}
+{% block content %}
+
+    <!-- Full-Screen Section -->
+    <div class="container-fluid d-flex flex-column flex-md-row align-items-center " style="background-color:#4f772d;">
+    <!-- Left Side: Text and Paragraph -->
+    <div class="col-md-6 d-flex flex-column justify-content-between vh-100 m-4 py-6 vh-sm-0 min-vh-sm-50">
+         <h1 class="fs-4 md-mt-3 mt-xl-0 text-center fw-light text-uppercase title1">Flower Meanings</h1>
+    
+        <h2 class="display-1 m-3 text-center text-capitalize my-title description1">Jasmine</h2>
+      
+        <p class="d-none d-md-block lead fs-5 mb-0 description2">
+
+        </p>
+    
+    </div>
+
+    <!-- Right Side: Full-Size Image -->
+    <div class="col-md-6">
+                <img src="{% static 'images/ch-sabalcover.png' %}" alt="Jasmine Image" class="img-fluid">
+
+    </div>
+</div>
+
+<!-- Additional Paragraph (only for smaller screens) -->
+<div class="container-fluid text-center d-md-none p-4 text-dark" style="background-color: #4f772d;">
+    <p class="lead description3">
+
+    </p>
+</div>
+   
+
+<div class="container py-5 mt-5">
+    <div class="row g-5">
+        <!-- Article List -->
+        <div class="col-md-6">
+            <div class="article-list">
+                <h3 class="mb-4 display-5">Discover Related Articles</h3>
+                <div class="article-list-item">
+                    <a href="#article1" class="text-decoration-none text-dark">
+                        <span>Botanical Profile and Native Regions</span>
+                        <span style="float: right;"><button type="button" class="btn read-btn" style="background-color: #4f772d;cursor: pointer;border:#4f772d;">read more <i class="bi bi-arrow-right"></i></button></span>
+
+                    </a>
+                </div>
+                <div class="article-list-item">
+                    <a href="#article2" class="text-decoration-none text-dark">
+                        <span>How to Grow Jasmine Plants</span>
+                        <span style="float: right;"><button type="button" class="btn read-btn" style="background-color: #4f772d;cursor: pointer;border:#4f772d;">read more <i class="bi bi-arrow-right"></i></button></span>
+
+                    </a>
+                </div>
+                <div class="article-list-item">
+                    <a href="#article3" class="text-decoration-none text-dark">
+                        <span>Preparation and Plant Care</span>
+                        <span style="float: right;"><button type="button" class="btn read-btn" style="background-color: #4f772d;cursor: pointer;border:#4f772d;">read more <i class="bi bi-arrow-right"></i></button></span>
+
+                    </a>
+                </div>
+                <div class="article-list-item">
+                    <a href="#article4" class="text-decoration-none text-dark">
+                        <span>Medicinal Benefits of Jasmine Herbal Tea</span>
+                        <span style="float: right;"><button type="button" class="btn read-btn" style="background-color: #4f772d;cursor: pointer;border:#4f772d;">read more <i class="bi bi-arrow-right"></i></button></span>
+
+                    </a>
+                
+                </div>
+            </div>
+        </div>
+           <!-- New Video Section -->
+        <div class="col-md-6">
+            <div class="video-container p-4 rounded-4 shadow" style="background-color: #4f772d;">
+                <h3 class="mb-4 display-5 text-dark">Growing Guide Video</h3>
+                <div class="ratio ratio-16x9">
+                    <video controls class="rounded-3 w-100" style="border: 3px solid #ffffff;">
+                    <source src="{% static 'videos/jasmine.mp4' %}" type="video/mp4">
+                    Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="mt-3 text-end">
+                    <small class="text-muted">Credits to the video contributor</small>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    </div>
+</div>
+
+
+<!-- blog card -->
+ <article class="container my-5 article-card" id="article1">
+    <div class="row g-0 shadow-lg">
+        <!-- Image column -->
+        <div class="col-md-6">
+            <img 
+                src="{% static 'images/jasminearticle1.jpg' %}"
+                alt="topic1" 
+                class="img-fluid h-100 object-fit-cover"
+                loading="lazy"
+            >
+        </div>
+
+        <!-- Content column-->
+        <div class="col-md-6 p-4 d-flex flex-column bg-white">
+            <header class="mb-4">
+                <a href="#" class="text-decoration-none text-dark">
+                    <h2 class="display-5 mb-3 pb-2 custom-border">Botanical Profile and Native Regions</h2>
+                </a>
+            </header>
+
+            <div class="lead mb-4 flex-grow-1">
+                <p class="text-dark">
+                    Burmese Name - Sampanepan,Sabal (Jasmine Flower) <br>
+                    English Name - Jasmine <br>
+                    Botanical Name - Jasminum sambac <br>
+                    Family - Oleaceae <br>
+                    Sabal is native to Myanmar and Southern Arabia.
+                    It thrives in diverse soil types, from sandy to clayey soils, though it grows in fertile, nutrient-rich conditions. This perennial shrub prefers hot and humid climates, well-suited to tropical and subtropical regions. While jasmine is categorized as a shrub, its long-lived nature allows it to persist and bloom for many years.
+                </p>
+             </div>
+
+            <div class="text-end">
+                <time datetime="2024-03-26T07:00:00Z" class="fst-italic text-muted">
+                    March 26, 2024
+                </time>
+            </div>
+        </div>
+    </div>
+</article>
+
+<!-- blog card -->
+<article class="container my-5 article-card" id="article2">
+    <div class="row g-0 shadow-lg">
+        <!-- Image column -->
+        <div class="col-md-6">
+            <img 
+                src="{% static 'images/jasminearticle2.jpg' %}"
+                alt="topic2" 
+                class="img-fluid h-100 object-fit-cover"
+                loading="lazy"
+            >
+        </div>
+
+        <!-- Content column-->
+        <div class="col-md-6 p-4 d-flex flex-column bg-white">
+            <header class="mb-4">
+                <a href="#" class="text-decoration-none text-dark">
+                    <h2 class="display-5 mb-3 pb-2 custom-border">How to Grow Jasmine Plants</h2>
+                </a>
+            </header>
+
+            <div class="lead mb-4 flex-grow-1">
+                <p class="text-dark">
+                    Jasmine is not typically grown from seeds. Instead, it is propagated through methods such as stem layering, division, or cuttings. To propagate by layering, a soft stem is buried in the soil. After about a month, roots will emerge from the nodes. Once rooted, the stem can be cut from the parent plant and replanted.
+                    Transplant suckers (shoots growing from the base of the plant) with their roots intact to a new location. For cuttings, select a stem with three to five nodes and trim it. Bury three nodes in the soil and water regularly. Roots will develop from the nodes within about one and a half months, after which the cutting can be planted.
+                </p>
+            </div>
+
+            <div class="text-end">
+                <time datetime="2024-03-26T07:00:00Z" class="fst-italic text-muted">
+                    March 26, 2024
+                </time>
+            </div>
+        </div>
+    </div>
+</article>
+
+
+<!-- blog card -->
+<article class="container my-5 article-card" id="article3">
+    <div class="row g-0 shadow-lg">
+        <!-- Image column -->
+        <div class="col-md-6">
+            <img 
+                src="{% static 'images/jasminearticle3.jpg' %}"
+                alt="Topic3" 
+                class="img-fluid h-100 object-fit-cover"
+                loading="lazy"
+            >
+        </div>
+
+        <!-- Content column-->
+        <div class="col-md-6 p-4 d-flex flex-column bg-white">
+            <header class="mb-4">
+                <a href="#" class="text-decoration-none text-dark">
+                    <h2 class="display-5 mb-3 pb-2 custom-border">Preparation and Plant Care</h2>
+                </a>
+            </header>
+
+            <div class="lead mb-4 flex-grow-1">
+                <p class="text-dark">
+                    In the rainy season, jasmine can be cultivated without raised beds in areas with minimal waterlogging or with raised beds in waterlogged areas. Construct raised beds with dimensions of 30 feet (length) x 5 feet (width) x 1 foot (thickness), with 6 inches above ground and 6 inches below ground. Leave a 1-foot pathway between each bed for accessibility.
+                    After planting, press the base of the plant firmly into the soil and water thoroughly. Jasmine flowers bloom from young, tender branches. During early winter (the pruning season), trim the tips of trailing or overgrown branches to stimulate the growth of new shoots and buds.
+                </p>
+            </div> 
+                <div class="text-end">
+                <time datetime="2024-03-26T07:00:00Z" class="fst-italic text-muted">
+                    March 26, 2024
+                </time>
+            </div>
+        </div>
+    </div>
+</article>
+
+<article class="container my-5 article-card" id="article4">
+    <div class="row g-0 shadow-lg">
+        <!-- Image column -->
+        <div class="col-md-6">
+            <img 
+                src="{% static 'images/jasminearticle4.jpg' %}"
+                alt="topic4" 
+                class="img-fluid h-100 object-fit-cover"
+                loading="lazy"
+            >
+        </div>
+
+        <!-- Content column-->
+        <div class="col-md-6 p-4 d-flex flex-column bg-white">
+            <header class="mb-4">
+                <a href="#" class="text-decoration-none text-dark">
+                    <h2 class="display-5 mb-3 pb-2 custom-border">Medicinal Benefits of Jasmine Flower Herbal Tea</h2>
+                </a>
+            </header>
+
+            <div class="lead mb-4 flex-grow-1">
+                <p class="text-dark">
+                
+                    Jasmine herbal tea is known for aiding in weight loss, alleviating liver-related ailments such as hepatitis, jaundice, and abdominal pain caused by liver cirrhosis or diarrhea, and reducing stress. It also lowers the risk of breast cancer and lung cancer. For those managing diabetes, it helps regulate blood sugar levels and supports overall metabolic balance. Jasmine tea promotes regular bowel movements, stimulates the production of digestive enzymes, and improves digestion. To reduce facial wrinkles, it is recommended to drink 2 to 3 cups of jasmine herbal tea daily for consistent benefits.
+                </p>
+            </div>
+            <div class="text-end">
+                <time datetime="2024-03-26T07:00:00Z" class="fst-italic text-muted">
+                    March 26, 2024
+                </time>
+            </div>
+        </div>
+    </div>
+</article>
+
+            {% endblock %}
+            {% block script %}
+        <script src="{% static 'js/discovery.js' %}"></script>
+        {% endblock %}

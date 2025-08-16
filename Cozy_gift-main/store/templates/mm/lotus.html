@@ -1,0 +1,266 @@
+{% extends 'en/base.html' %}
+{% load static %}
+{% block styles %}
+<link rel="stylesheet" href="{% static 'css/discovery.css' %}">
+
+<style>
+          .article-list {
+            border-left: 3px solid #ff8fab;
+             padding-left: 20px;
+        }
+
+        .article-list-item {
+             padding: 15px;
+             margin-bottom: 15px;
+             border: 2px solid #e9ecef;
+             border-radius: 10px;
+             transition: all 0.3s ease;
+                
+        }
+
+        .article-list-item:hover {
+             border-color: #ff8fab;
+            background: #F7F7F7;
+            }
+        
+    </style>
+{% endblock %}
+{% block content %}
+<!-- Full-Screen Section -->
+    <div class="container-fluid d-flex flex-column flex-md-row align-items-center text-dark" style="background-color: #ff8fab">
+    <!-- Left Side: Text and Paragraph -->
+    <div class="col-md-6 d-flex flex-column justify-content-between vh-100 m-4 py-6 vh-sm-0 min-vh-sm-50">
+         <h1 class="fs-4 md-mt-3 mt-xl-0 text-center fw-light text-uppercase title1 ">အသိအမြင်ဆောင်းပါး</h1>
+    
+        <h2 class="display-1 m-3 text-center text-capitalize my-title ">ကြာပင်</h2>
+      
+        <p class="d-none d-md-block lead fs-5 mb-0 description2">
+        </p>
+    
+    </div>
+
+    <!-- Right Side: Full-Size Image -->
+    <div class="col-md-6">
+            <img src="{% static 'images/ch-lotuscover.png' %}" alt="Lotus Image" class="img-fluid">
+    </div>
+</div>
+
+<!-- Additional Paragraph (only for smaller screens) -->
+<div class="container-fluid text-center d-md-none p-4 text-dark" style="background-color: #ff8fab">
+    <p class="lead description3">
+    </p>
+</div>
+   
+<div class="container py-5 mt-5">
+    <div class="row g-5">
+        <!-- Article List -->
+        <div class="col-md-6">
+            <div class="article-list">
+                <h3 class="mb-4">ဆက်စပ်သော ဆောင်းပါးများကို ရှာဖွေပါ</h3>
+                <div class="article-list-item">
+                    <a href="#article1" class="text-decoration-none text-dark">
+                        <span>ကြာပန်းအကြောင်း သိကောင်းစရာ</span>
+                        <span style="float: right;"><button type="button" class="btn read-btn" style="background-color:#ff8fab;cursor: pointer;border:#ff8fab;">ဖတ်ရန်<i class="bi bi-arrow-right"></i></button></span>
+
+                    </a>
+                </div>
+                <div class="article-list-item">
+                    <a href="#article2" class="text-decoration-none text-dark">
+                        <span>ကြာစေ့ စိုက်ပျိုးထားသိုနည်း</span>
+                        <span style="float: right;"><button type="button" class="btn read-btn" style="background-color:#ff8fab;cursor: pointer;border:#ff8fab;">ဖတ်ရန်<i class="bi bi-arrow-right"></i></button></span>
+
+                    </a>
+                </div>
+                <div class="article-list-item">
+                    <a href="#article3" class="text-decoration-none text-dark">
+                        <span>ကြာပန်းပင် စိုက်ပျိုးနည်းမှန်</span>
+                        <span style="float: right;"><button type="button" class="btn read-btn" style="background-color:#ff8fab;cursor: pointer;border:#ff8fab;">ဖတ်ရန်<i class="bi bi-arrow-right"></i></button></span>
+
+                    </a>
+                </div>
+                <div class="article-list-item">
+                    <a href="#article4" class="text-decoration-none text-dark">
+                        <span>ကြာစေ့မှ အကျိုးကျေးဇူးများ</span>
+                        <span style="float: right;"><button type="button" class="btn read-btn" style="background-color:#ff8fab;cursor: pointer;border:#ff8fab;">ဖတ်ရန်<i class="bi bi-arrow-right"></i></button></span>
+
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- New Video Section -->
+        <div class="col-md-6">
+            <div class="video-container p-4 rounded-4 shadow" style="background-color: #ff8fab;">
+                <h3 class="mb-4 display-5 text-dark">စိုက်ပျိုးနည်းအဆင့်ဆင့်</h3>
+                <div class="ratio ratio-16x9">
+                    <video controls class="rounded-3 w-100" style="border: 3px solid #ffffff;">
+                    <source src="{% static 'videos/lotus.mp4' %}" type="video/mp4">
+                    Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="mt-3 text-end">
+                    <small class="text-muted">Credits to the video contributor</small>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- blog card -->
+ <article id="article1" class="container my-5 article-card">
+    <div class="row g-0 shadow-lg">
+        <!-- Image column -->
+        <div class="col-md-6">
+            <img 
+                src="{% static 'images/lotusarticle1.jpg' %}"
+                alt="topic1" 
+                class="img-fluid h-100 object-fit-cover"
+                loading="lazy"
+            >
+        </div>
+
+        <!-- Content column-->
+        <div class="col-md-6 p-4 d-flex flex-column bg-white">
+            <header class="mb-4">
+                <div class=" text-dark">
+                    <h2 class="display-5 mb-3 pb-2 custom-border">ကြာပန်းအကြောင်း သိကောင်းစရာ</h2>
+                </div>
+            </header>
+
+            <div class="lead mb-4 flex-grow-1">
+                <p class="text-dark">
+                    အင်္ဂလိပ်အမည်: Lotus <br>
+                    ရုက္ခဗေဒအမည်: Nelumbo nucifera <br>
+                    မျိုးကွဲ: Magnoliopsida <br>
+                    ကြာပန်းသည် အိန္ဒိယနိုင်ငံ၏ အမျိုးသားပန်း ဖြစ်ပြီး ဟင်ဒူ ဘာသာနှင့် ဗုဒ္ဓဘာသာဝင်တို့ အထွဋ်အမြတ်ထားရာ ပန်းလည်း ဖြစ်ပါတယ်။ မူရင်းဒေသမှာ တောင်အာရှနှင့် သြစတြေးလျတို့ ဖြစ်သည်။ အစေ့မှလည်းကောင်း၊ ဥမှလည်းကောင်း စိုက်ပျိုးနိုင်ပြီး အစေ့မှစိုက်ပါက ပထမနှစ်တွင် အပွင့်ရရှိမည် မဟုတ်ပဲ ဒုတိယနှစ်မှ စတင်ပန်းပွင့်မည်ဖြစ်ပါတယ်။
+                    အစေ့ခွံကို တံစည်း ဖြင့် ပွတ်တိုက်စားပစ်ခြင်း(သို့) ကပ်ကျေးဖြင့် အစေ့ခွံကို အနည်းငယ် ညှပ်ပေးခြင်း ပြုလုပ်ရပါမယ်။ 
+            </div>
+
+            <div class="text-end">
+                <time datetime="2024-03-26T07:00:00Z" class="fst-italic text-muted">
+                    March 26, 2024
+                </time>
+            </div>
+        </div>
+    </div>
+</article>
+
+<!-- blog card -->
+<article id="article2" class="container my-5 article-card">
+    <div class="row g-0 shadow-lg">
+        <!-- Image column -->
+        <div class="col-md-6">
+            <img 
+                src="{% static 'images/lousarticle2.jpg' %}"
+                alt="topic2" 
+                class="img-fluid h-100 object-fit-cover"
+                loading="lazy"
+            >
+        </div>
+
+        <!-- Content column-->
+        <div class="col-md-6 p-4 d-flex flex-column bg-white">
+            <header class="mb-4">
+                <div  class=" text-dark">
+                    <h2 class="display-5 mb-3 pb-2 custom-border">ကြာစေ့ စိုက်ပျိုးထားသိုနည်း</h2>
+                </div>
+            </header>
+
+            <div class="lead mb-4 flex-grow-1">
+                <p class="text-dark">
+                    အစေ့ခွံပွတ်တိုက်စားပစ်ပြီးပါက ကောင်းစွာကျိုချက်ပြီး အပူချိန် ၂၄-၂၇ ဒီဂရီစင်တီဂရိတ်ရှိ ရေနွေးထဲတွင် စိမ်ပေးပါ။ ပွယောင်းလာသော မျိုးစေ့မှ အစိုအညှောက် ထွက်ပြုလာသည်အထိ စိမ်ထားပေးရန်လိုပြီး နေ့စဉ် ရေလဲလှယ်ပေးရမည် ဖြစ်တယ်။ လေးရက်မှငါးရက်ခန့်အကြာတွင် ကြာပင်များ အစိုအညှောက် ထွက်လာလိမ့်မည်။ အညှောက်အရှည် ခြောက်လက်မခန့် ရှိသည့်အခါ အသင့်ပြင်ဆင်ထားသော ပျိုးအိုးတွင် ပြောင်းရွှေ့စိုက်ပျိုးပေးရမယ်။   
+                   ပျိုးအိုးပြင်ဆင်ရာတွင် အဝကျယ်ရေလုံပလပ်စတစ်အိုး(ရေ ၁၁လီတာ မှ ၁၉လီတာ ဆန့်ရမည်)တွင် အောက်ခြေ၌ ရွှ ၂ဆ နှင့် အပေါ်တွင် မြစ်သဲတစ်ဆနှုန်း ထည့်ထားပေးရမည်။ ၎င်း၏အမြင့် မှာ အိုးအတွင်း ၆လက်မခန့် ရှိရပါမည်။           
+                 </p>
+            </div>
+
+            <div class="text-end">
+                <time datetime="2024-03-26T07:00:00Z" class="fst-italic text-muted">
+                    March 26, 2024
+                </time>
+            </div>
+        </div>
+    </div>
+</article>
+
+
+<!-- blog card -->
+<article id="article3" class="container my-5 article-card">
+    <div class="row g-0 shadow-lg">
+        <!-- Image column -->
+        <div class="col-md-6">
+            <img 
+                src="{% static 'images/lotusarticle3.png' %}"
+                alt="Topic3" 
+                class="img-fluid h-100 object-fit-cover"
+                loading="lazy"
+            >
+        </div>
+
+        <!-- Content column-->
+        <div class="col-md-6 p-4 d-flex flex-column bg-white">
+            <header class="mb-4">
+                <div class=" text-dark">
+                    <h2 class="display-5 mb-3 pb-2 custom-border">ကြာပန်းပင် စိုက်ပျိုးနည်းမှန်</h2>
+                </div>
+            </header>
+
+            <div class="lead mb-4 flex-grow-1">
+                <p class="text-dark">
+                    ကြာပန်းထည့်၍စိုက်သော အိုးမှာမြေကြီးအထူ အနည်းဆုံး ၂လက်မ မှ ၄လက်မ ရှိရမည်။ ရေအနက်မှာ ကြာရိုးရှည်မျိုးဖြစ်ပါက ၁၈လက်မ၊ ကြာပင်ပု ဖြစ်ပါက ၂လက်မ မှ ၁၂လက်မ ရှိသင့်သည်။
+                    အေးသောဒေသများတွင် ရေနွေးထည့်၍၊ Heaterသုံး၍လည်းကောင်း ရေအပူချိန်ကို ချိန်ညှိပေးရပါမည်။ မျိုးစေ့မှ ပျိုးထောင်စိုက်ပျိုးသော ကြာပင်မှာ ပထမနှစ်အတွင်း ပွင့်ရန်အခွင့်အရေး နည်းပါးပါသည်။ ပထမနှစ်အတွင် ကြာမြေသြဇာ ထည့်သွင်းပေးမှုကိုလည်း အနည်းငယ်သာ ပြုလုပ်သင့်ပါသည်။
+                    မြန်မာနိုင်ငံ(ရန်ကုန်မြို့)တွင် ကြာကို နိုင်ငံခြားမျိုးစေ့များ တင်သွင်းဖြန့်ဖြူးရောင်းချပေးနေသကဲ့သို ဒေသပေါက် ကြာဖြူ ကြာနီနှင့် ပဒုမ္မာ ကြာများကိုလည်း အပင်ပေါက်ဝယ်ယူစိုက်ပျိုးလျက် ရှိကြပါတယ်။           
+                </p>
+                
+            </div>
+
+            <div class="text-end">
+                <time datetime="2024-03-26T07:00:00Z" class="fst-italic text-muted">
+                    March 26, 2024
+                </time>
+            </div>
+        </div>
+    </div>
+</article>
+
+<!-- blog card  -->
+<article id="article4" class="container my-5 article-card">
+    <div class="row g-0 shadow-lg">
+        <!-- Image column -->
+        <div class="col-md-6">
+            <img 
+                src="{% static 'images/lotusarticle4.jpg' %}"
+                alt="topic4" 
+                class="img-fluid h-100 object-fit-cover"
+                loading="lazy"
+            >
+        </div>
+
+        <!-- Content column-->
+        <div class="col-md-6 p-4 d-flex flex-column bg-white">
+            <header class="mb-4">
+                <div class=" text-dark">
+                    <h2 class="display-5 mb-3 pb-2 custom-border">ကြာစေ့မှ အကျိုးကျေးဇူးများ</h2>
+                </div>
+            </header>
+
+            <div class="lead mb-4 flex-grow-1">
+                <p class="text-dark">
+                    ကြာစေ့ဆိုတာက ကြာပန်းအလယ်ပိုင်းက ဝတ်ဆံလေးတွေ ရင့်မာသွားတာဖြစ်ပြီး အပြင်ခွံစိမ်းစိမ်းလေးနဲ့ အတွင်းက အဆံလေးကတော့ ဖြူဖြူလေးပါ။ ကြာစေ့ကို စားတဲ့အခါ ဖန်တွန့်တွန့် အရသာရှိတဲ့ အပြင်ခွံစိမ်းစိမ်းလေးကိုဖယ်ပြီး အတွင်းက အဆံဖြူဖြူလေးကို စားရတာပါ။ နုလေချိုလေ။ 
+                    ကြာစေ့လေးတွေထဲမှာ အရွယ်တင်စေနိုင်တဲ့ အင်ဇိုင်းပါဝင်တာကြောင့် အသားအရေလှပစေဖို့အတွက် အထောက်အကူဖြစ်စေပါတယ်။ 
+                    အသားအရေကိုတင်းရင်းလှပစေမယ့်အပြင် ဖလေဗာနွိက်ပါဝင်မှုကြောင့် အရေပြားမှာဖြစ်တဲ့ရောင်ရမ်းမှုတွေကိုလည်းလျော့ပါးသက်သာစေနိုင်တယ်။ 
+                    အရေးကြီးကိုယ်တွင်းအင်္ဂါဖြစ်တဲ့ ကျောက်ကပ်၊ သရက်ရွက် ကိုလည်း ကျန်းမာစေနိုင်ပါတယ်။
+                </p>
+            </div>
+            <div class="text-end">
+                <time datetime="2024-03-26T07:00:00Z" class="fst-italic text-muted">
+                    March 26, 2024
+                </time>
+            </div>
+        </div>
+    </div>
+</article>
+            {% endblock %}
+            {% block script %}
+        <script src="{% static 'js/discovery.js' %}"></script>
+        {% endblock %}

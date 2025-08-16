@@ -1,0 +1,185 @@
+{% extends "en/base.html" %}
+{% load static %}
+{% block styles %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+{% endblock %}
+{% block content %}
+
+<!-- 
+    <section class="promo-banner bg-light py-3">
+           <div class="container text-center">
+            <p>Send Joy with <strong>$10 OFF</strong> using code <strong>COZY24</strong>
+                <a href="#" class="btn btn-light ms-2">Shop Now</a>
+            </p>
+        </div>
+    </section>
+
+<section class="hero text-center text-white py-5" 
+        
+</section>
+    
+    
+    <section class="special-offer py-5">
+        <div class="container text-center">
+            <h2>Special Offer!</h2>
+            <p>Get 20% off on your first order. Use code <strong>WELCOME20</strong> at checkout.</p>
+            <a href="#" class="btn btn-light">Shop Now</a>
+        </div>
+    </section>
+!-->    
+    <section class="video-section">
+        <div class="video-container">
+            <video autoplay loop muted playsinline poster="{% static 'images/video-poster.jpg' %}">
+                <source src="{% static 'videos/home.mp4' %}" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </section>
+    <section class="popular-occasions">
+        <div class="header">
+            <h2>Let's find your</h2>
+            <h2>perfect gift</h2>
+            <h2>for you,</h2>
+        </div>
+        <div class="occasions-container">
+            <div class="occasion">
+                <a href="{% url 'en:category_en' 'bouquet' %}">
+                     <img src="{% static 'images/bouquet.png' %}" alt="Bouquet">
+                    <p>Bouquet</p>
+                </a>    
+            </div>
+            <div class="occasion">
+                <a href="{% url 'en:category_en' 'cake' %}">
+                    <img src="{% static 'images/cake.png' %}" alt="Cakes">
+                    <p>Cakes</p>
+                </a>
+            </div>
+            <div class="occasion">
+                <a href="{% url 'en:category_en' 'accessory' %}">
+                     <img src="{% static 'images/material.png' %}" alt="Materials">
+                    <p>Materials</p>
+                </a>
+            </div>
+            <div class="occasion">
+                <a href="{% url 'en:category_en' 'toy' %}">
+                    <img src="{% static 'images/plushies.png' %}" alt="Plushies">
+                    <p>Plushies</p>
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <section class="collections py-5">
+        <div class="container">
+            <h2 class="mb-5" style="text-align: center;">Discover Our Collections</h2>
+            <div class="row justify-content-center text-center">
+                <!-- Collection 1 -->
+                <div class="col-lg-2">
+                    <div class="collection">
+                        <img src="https://i.pinimg.com/736x/44/ce/6b/44ce6bc9a05bc4065c6f977f2bb38103.jpg" 
+                             alt="Heartwarming Anniversary" class="img-fluid">
+                        <h3>Heartwarming Anniversary</h3>
+                        <p>Celebrate love with our curated anniversary gifts.</p>
+                        <a href="{% url 'en:product_detail' 11 %}" class="btn">Shop Now</a>
+                    </div>
+                </div>
+                <!-- Collection 2 -->
+                <div class="col-lg-2">
+                    <div class="collection">
+                        <img src="https://i.pinimg.com/736x/5c/10/e6/5c10e6a298b2898732de2b71067b5a5c.jpg" 
+                             alt="Joyful Birthday Surprises" class="img-fluid">
+                        <h3>Joyful Birthday Surprises</h3>
+                        <p>Make birthdays extra special with our delightful gifts.</p>
+                        <a href="{% url 'en:product_detail' 121 %}" class="btn">Shop Now</a>
+                    </div>
+                </div>
+                <!-- Collection 3 -->
+              <div class="col-lg-2">
+    <div class="collection">
+        <img src="{% static 'images/graduation.png' %}" 
+             alt="Graduation Gift Ideas" class="img-fluid">
+        <h3>Graduation Gifts</h3>
+        <p>Celebrate achievements with thoughtful graduation gifts.</p>
+        <a href="{% url 'en:product_detail' 63 %}" class="btn">Shop Now</a>
+    </div>
+</div>
+                <!-- Collection 4 -->
+                <div class="col-lg-2">
+            <div class="collection">
+                <img src="{% static 'images/bdmaterial.png' %}" 
+                    alt="Birthday Party Materials" class="img-fluid">
+                <h3>Birthday Decorations</h3>
+                <p>Decorate with confetti, balloons, and more for a joyful celebration.</p>
+                <a href="{% url 'en:product_detail' 169 %}" class="btn">Shop Now</a>
+            </div>
+        </div>
+
+       
+                <!-- Collection 5-->
+                <div class="col-lg-2">
+                    <div class="collection">
+                        <img src="https://i.pinimg.com/736x/f0/a8/c1/f0a8c102fcd1ab00a535c1d394598fbe.jpg" 
+                             alt="Comforting Sympathy Gifts" class="img-fluid">
+                        <h3>Comforting Sympathy Gifts</h3>
+                        <p>Show your support with thoughtful sympathy presents.</p>
+                        <a href="#" class="btn">Shop Now</a>
+                    </div>
+                </div>
+
+                <!-- Collection 6 -->
+                <div class="col-lg-2">
+                    <div class="collection">
+                        <img src="https://i.pinimg.com/736x/c6/f5/76/c6f576137a1ecfb1faaa349a5b265d90.jpg" 
+                             alt="Warm Winter Wonders" class="img-fluid">
+                        <h3>Warm Winter Wonders</h3>
+                        <p>Gift warmth and comfort this winter season.</p>
+                        <a href="#" class="btn">Shop Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+
+    {% load static %}
+    <section class="monthly-special py-5 text-center" 
+        style="background: url('{% static 'images/new.png' %}') center center; 
+               background-repeat: no-repeat; 
+               background-size: 100% auto;">
+        <div class="container">
+            <h2>COMING SOON</h2>
+            <p>Discover our curated selection of cozy gifts perfect for the season!</p>
+            <a href="{% url 'en:coming' %}"class="btn btn-light">See More</a>
+        </div>
+    </section>
+
+
+
+    <section class="special-offer-2 py-5">
+        <div class="container text-center">
+            <h2>Limited Time Offer</h2>
+            <p>Buy any two items from our Winter Collection and get a third item for free!</p>
+            <a href="#" class="btn btn-primary">Shop Winter Collection</a>
+        </div>
+    </section>
+
+    <section class="testimonials py-5 bg-light">
+        <div class="container text-center">
+            <h2>What Our Customers Are Saying</h2>
+            <blockquote class="blockquote">
+                <p>"The best service! The bouquet I ordered for my friend's birthday was perfect!"</p>
+                <footer class="blockquote-footer">Happy Customer</footer>
+            </blockquote>
+            <blockquote class="blockquote">
+                <p>"Cozy Gifts made my anniversary unforgettable. Thank you for the amazing gifts!"</p>
+                <footer class="blockquote-footer">Satisfied Client</footer>
+            </blockquote>
+            <blockquote class="blockquote">
+                <p>"The delivery was so fast, and the quality was beyond what I expected. Highly recommend!"</p>
+                <footer class="blockquote-footer">Happy Shopper</footer>
+            </blockquote>
+        </div>
+    </section>
+
+{% endblock %}

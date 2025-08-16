@@ -1,0 +1,262 @@
+{% extends 'mm/base.html' %}
+{% load static %}
+{% block styles %}
+<link rel="stylesheet" href="{% static 'css/discovery.css' %}">
+{% endblock %}
+{% block content %}
+
+
+    <style>
+          .article-list {
+            border-left: 3px solid #9B7EBD;
+             padding-left: 20px;
+        }
+
+        .article-list-item {
+             padding: 15px;
+             margin-bottom: 15px;
+             border: 2px solid #e9ecef;
+             border-radius: 10px;
+             transition: all 0.3s ease;
+                
+        }
+
+        .article-list-item:hover {
+             border-color: #9B7EBD;
+            background: #F7F7F7;
+            }
+        
+    </style>
+
+</head>
+<body>
+     <!-- Full-Screen Section -->
+    <div class="container-fluid d-flex flex-column flex-md-row align-items-center text-dark" style="background-color: #9B7EBD;">
+    <!-- Left Side: Text and Paragraph -->
+    <div class="col-md-6 d-flex flex-column justify-content-between vh-100 m-4 py-6 vh-sm-0 min-vh-sm-50">
+         <h1 class="fs-4 md-mt-3 mt-xl-0 text-center fw-light text-uppercase title1 ">အသိအမြင်ဆောင်းပါးများ</h1>
+    
+        <h2 class="display-1 m-3 text-center text-capitalize my-title ">ကျူးလစ်</h2>
+      
+        <p class="d-none d-md-block lead fs-5 mb-0 description2">
+        </p>
+    
+    </div>
+
+    <!-- Right Side: Full-Size Image -->
+    <div class="col-md-6">
+        <img src="{% static 'images/ch-tulipcover.png' %}" alt="Tulip Image" class="img-fluid">
+    </div>
+</div>
+
+<!-- Additional Paragraph (only for smaller screens) -->
+<div class="container-fluid text-center d-md-none p-4 text-dark" style="background-color:#9B7EBD;">
+    <p class="lead description3">
+    </p>
+</div>
+   
+<div class="container py-5 mt-5">
+    <div class="row g-5">
+        <!-- Article List -->
+        <div class="col-md-6">
+            <div class="article-list">
+                <h3 class="mb-4">ဆက်စပ်သော ဆောင်းပါးများကို ရှာဖွေပါ</h3>
+                <div class="article-list-item">
+                    <a href="#article1" class="text-decoration-none text-dark">
+                        <span>ကျူးလစ်ပန်းစိုက်ပျိုးနည်း</span>
+                        <span style="float: right;"><button type="button" class="btn read-btn" style="background-color: #9B7EBD;cursor: pointer;border:#9B7EBD;">ဖတ်ရန် <i class="bi bi-arrow-right"></i></button></span>
+
+                    </a>
+                </div>
+                <div class="article-list-item">
+                    <a href="#article2" class="text-decoration-none text-dark">
+                        <span>ကျူးလစ်ပန်းဥများ အပူချိန်ထိန်းသိမ်းနည်း</span>
+                        <span style="float: right;"><button type="button" class="btn read-btn" style="background-color: #9B7EBD;cursor: pointer;border:#9B7EBD;">ဖတ်ရန် <i class="bi bi-arrow-right"></i></button></span>
+
+                    </a>
+                </div>
+                <div class="article-list-item">
+                    <a href="#article3" class="text-decoration-none text-dark">
+                        <span>ကျူးလစ်ပန်းပေါက်ဖွားခြင်း၊ ပန်းပွင့်ချိန်စီမံခန့်ခွဲမှု</span>
+                        <span style="float: right;"><button type="button" class="btn read-btn" style="background-color: #9B7EBD;cursor: pointer;border:#9B7EBD;">ဖတ်ရန် <i class="bi bi-arrow-right"></i></button></span>
+
+                    </a>
+                </div>
+                <div class="article-list-item">
+                    <a href="#article4" class="text-decoration-none text-dark">
+                        <span>ကျူးလစ်ပန်းပွင့်ချိန် ဆောင်ရန်အချက်များ</span>
+                        <span style="float: right;"><button type="button" class="btn read-btn" style="background-color: #9B7EBD;cursor: pointer;border:#9B7EBD;">ဖတ်ရန် <i class="bi bi-arrow-right"></i></button></span>
+
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<!-- blog card -->
+ <article id="article1" class="container my-5 article-card">
+    <div class="row g-0 shadow-lg">
+        <!-- Image column -->
+        <div class="col-md-6">
+            <img 
+                src="{% static 'images/tuliparticle1.jpg' %}"
+                alt="topic1" 
+                class="img-fluid h-100 object-fit-cover"
+                loading="lazy"
+            >
+        </div>
+
+        <!-- Content column-->
+        <div class="col-md-6 p-4 d-flex flex-column bg-white">
+            <header class="mb-4">
+                <div class=" text-dark">
+                    <h2 class="display-5 mb-3 pb-2 custom-border">ကျူးလစ်ပန်းစိုက်ပျိုးနည်း</h2>
+                </div>
+            </header>
+
+            <div class="lead mb-4 flex-grow-1">
+                <p class="text-dark">
+                    အင်္ဂလိပ်အမည်: Tulip <br>
+                    ရုက္ခဗေဒအမည်: Tulipa gesneriana <br>
+                    မျိုးစု: Liliaceae (lily family) <br>
+                    ကျူးလစ်စိုက်ပျိုးရာ အိုးအလယ်တွင်ရေဆင်းရန်အပေါက်ပါပြီး အချင်းအနည်းဆုံး ၈.၅လက်မ (၂၂စင်တီမီတာ) ရှိသောအိုးကိုသုံးရမယ်။ ဒီအရွယ်အစားကကျူးလစ်ပန်း ၂ပင်မှ၉ပင်ထိစိုက်ပျိုးနိုင်ပါတယ်။
+                    အချင်း ၂၂လက်မ ရှိသော အိုးတစ်လုံးလျှင် ကျူးလစ်ပန်း ၂၅ပင်ထိ စိုက်ပျိုးနိုင်ပါတယ်။မိမိကြိုက်နှစ်သက်တဲ့ ကြွေအိုး၊ မြေနီအိုး၊ ပလတ်စတစ်အိုး ကြိုက်ရာအိုးကိုသုံးနိုင်ပါတယ်။
+                    အိုးတစ်ဝက်ကို perlite နှင့် vermiculite ရောနှော၍ဖြည့်ပါ။
+                    ကျူးလစ်ပန်းဥများကို မြေကြီးထဲသိုထည့်ပါ။ ၁လက်မခြားပြီးထည့်ပါ။
+                    ကျူးလစ်ပန်းဥများပေါ် မြေဆီလွှာ ၅-၈ လက်မ (၁၃-၂၀ စင်တီမီတာ) ဖြင့်ဖုံးအုပ်ပါ။
+            </div>
+
+            <div class="text-end">
+                <time datetime="2024-03-26T07:00:00Z" class="fst-italic text-muted">
+                    March 26, 2024
+                </time>
+            </div>
+        </div>
+    </div>
+</article>
+
+<!-- blog card -->
+<article id="article2" class="container my-5 article-card">
+    <div class="row g-0 shadow-lg">
+        <!-- Image column -->
+        <div class="col-md-6">
+            <img 
+                src="{% static 'images/tuliparticle2.jpg' %}"
+                alt="topic2" 
+                class="img-fluid h-100 object-fit-cover"
+                loading="lazy"
+            >
+        </div>
+
+        <!-- Content column-->
+        <div class="col-md-6 p-4 d-flex flex-column bg-white">
+            <header class="mb-4">
+                <div  class=" text-dark">
+                    <h2 class="display-5 mb-3 pb-2 custom-border">ကျူးလစ်ပန်းဥများ အပူချိန်ထိန်းသိမ်းနည်း</h2>
+                </div>
+            </header>
+
+            <div class="lead mb-4 flex-grow-1">
+                <p class="text-dark">
+                    ထိုမျိုးဥများစိုက်ပျိုးပြီးနောက် မြေဆီလွှာကိုရေလောင်းပေးပါ။ အိမ်ထဲမှာပဲစိုက်ပျိုးတာဆိုရင် တစ်ပတ်ကို ရေ ၂ကြိမ်သို့မဟုတ် ၃ကြိမ်လောင်းပေးပါ။ အိမ်ပြင်ဥယျာဥ်မှာစိုက်ပျိုးတာဆိုလျှင် မိုးပုံမှန်ရရှိတဲ့ဒေသဖြစ်ပါက ရေလောင်းဖိုမလိုပါဘူး။မိုးမရဘူးဆိုရင်တော့ တစ်ပတ်ကို ၂ကြိမ်ကနေ၃ကြိမ်အတွင်းရေလောင်းနိုင်ပါတယ်။
+                    အေးမြသောနေရာတွင် စိုက်ပျိုးထားသောအိုးကို ၁၂ပတ်မှ ၁၆ပတ်ထိထားပါ။ ၄၅-၅၅ ဒီဂရီဖာရင်ဟိုက်(၇-၁၃ ဒီဂရီစင်တီဂရိတ်) ရှိသည့်နေရာတွင်ထားပါ။
+                    မျိုးဥများစိုက်ပျိုးထားသောအိုးကို အပူချိန်တသတ်မတ်တည်း ပုံမှန်ရရှိသောနေရာတွင်သာထားပါ။ သို့မှသာ အေးခဲခြင်း၊ အရည်ပျော်ခြင်းဒဏ်မှ ကာကွယ်နိုင်မယ်။ အိုးများကိုအပြင်ဘက်ထားရှိပါက ပြင်ပအပူချိန် ၄၅ မှ ၅၅ ဒီဂရီဖာရင်ဟိုက်(၇ မှ ၁၃ ဒီဂရီစင်တီဂရိတ်)ဟာ အကောင်းဆုံးဖြစ်ပါတယ်။          
+                 </p>
+            </div>
+
+            <div class="text-end">
+                <time datetime="2024-03-26T07:00:00Z" class="fst-italic text-muted">
+                    March 26, 2024
+                </time>
+            </div>
+        </div>
+    </div>
+</article>
+
+
+<!-- blog card -->
+<article id="article3" class="container my-5 article-card">
+    <div class="row g-0 shadow-lg">
+        <!-- Image column -->
+        <div class="col-md-6">
+            <img 
+                src="{% static 'images/tuliparticle3.jpg' %}"
+                alt="Topic3" 
+                class="img-fluid h-100 object-fit-cover"
+                loading="lazy"
+            >
+        </div>
+
+        <!-- Content column-->
+        <div class="col-md-6 p-4 d-flex flex-column bg-white">
+            <header class="mb-4">
+                <div class=" text-dark">
+                    <h2 class="display-5 mb-3 pb-2 custom-border">ကျူးလစ်ပန်းပေါက်ဖွားခြင်း၊ ပန်းပွင့်ချိန်စီမံခန့်ခွဲမှု</h2>
+                </div>
+            </header>
+
+            <div class="lead mb-4 flex-grow-1">
+                <p class="text-dark">
+                    အပင်ပေါက်ဖြစ်လာချိန်တွင် ကျူးလစ်များကို အနည်းဆုံး ၆၀-၇၀ ဒီဂရီဖာရင်ဟိုက် (၁၆ မှ ၂၁ ဒီဂရီစင်တီဂရိတ်) ရှိသည့်နေရာသို့ရွှေ့သင့်တယ်။ အိမ်ထဲတွင်စိုက်ပျိုးပါက နေရောင်ခြည်ကျရောက်နိုင်သောနေရာ သို့မဟုတ် ပြတင်းပေါက်သို့ပြောင်းရွှေ့နိုင်ပါတယ်။ အိမ်ပြင်ဥယျာဥ်တွင် စိုက်ပျိုးနေပါက အပူချိန်သည်အနည်းဆုံး ၆၀ မှ ၇၀ ဒီဂရီဖာရင်ဟိုက် (၁၆ မှ ၂၁ ဒီဂရီစင်တီဂရိတ်) ရှိကြောင်းသေချာရမယ်။
+                    ကျူးလစ်ပင်မှပန်းစတင်ပွင့်ရန် အချိန် ၁ပတ်မှ ၃ပတ်လောက်စောင့်ပါ။ ကျူးလစ်ပန်းမျိုးဥ အမျိုးအစားပေါ်မူတည်ပြီး တစ်နှစ်အတွင်းပွင့်တဲ့ အချိန်မတူညီတာကြောင့် မျိုးဥစတင်၀ယ်ယူထဲက သူ့ရာသီနှင့်အချိန်သိရပါမယ်။ သို့မှသာစိုက်ပျိုးတဲ့အခါ မိမိနှင့်အဆင်ပြေရာကိုရွေးချယ်နိုင်မှာပါ။          
+                </p>
+                
+            </div>
+
+            <div class="text-end">
+                <time datetime="2024-03-26T07:00:00Z" class="fst-italic text-muted">
+                    March 26, 2024
+                </time>
+            </div>
+        </div>
+    </div>
+</article>
+
+<!-- blog card  -->
+<article id="article4" class="container my-5 article-card">
+    <div class="row g-0 shadow-lg">
+        <!-- Image column -->
+        <div class="col-md-6">
+            <img 
+                src="{% static 'images/tuliparticle4.jpg' %}"
+                alt="topic4" 
+                class="img-fluid h-100 object-fit-cover"
+                loading="lazy"
+            >
+        </div>
+
+        <!-- Content column-->
+        <div class="col-md-6 p-4 d-flex flex-column bg-white">
+            <header class="mb-4">
+                <div class=" text-dark">
+                    <h2 class="display-5 mb-3 pb-2 custom-border">ကျူးလစ်ပန်းပွင့်ချိန် ဆောင်ရန်အချက်များ</h2>
+                </div>
+            </header>
+
+            <div class="lead mb-4 flex-grow-1">
+                <p class="text-dark">
+                    မြေဆီလွှာရဲ့ထိပ် ၁လက်မ ခြောက်သွေ့သောအခါမှာ ကျူးလစ်ပန်းများကို ရေလောင်းပေးဖိုလိုပါတယ်။
+                    တစ်နေ့လျှင်အနည်းဆုံး ၆ နာရီခန့်နေရောင်ခြည်ရရှိသည့်နေရာတွင် ထားရှိရပါမယ်။
+                    ရောဂါများဖြစ်ပေါ်စေသည့် ပိုးမွှားများနှင့် ကပ်နေသောမည်သည့် ကျူးလစ်များကိုမဆိုဖယ်ရှားရပါမယ်။ ရောဂါဖြစ်ပွားနေသည့် လက္ခဏာပြသော ကျူးလစ်ပန်းမျိုးဥများကို တူး၍ဖယ်ထုတ်ပစ်ရပါမယ်။
+                    အပူချိန်အေးခဲနေသော အောက်တွင်ရှိပါက ကျူးလစ်များကို အတွင်းသို့ယူထားရပါမယ်။ ကျူးလစ်များကို ကားဂိုဒေါင် (သို့မဟုတ်) မြေအောက်ခန်းကဲ့သိုသော အပူချိန် ၄၅ မှ ၅၅ ဒီဂရီဖာရင်ဟိုက် ရှိသည့်အခန်းသို့ သယ်ဆောင်သင့်ပါတယ်။
+                    တစ်နှစ်တစ်ခါ အိုးထဲရှိမြေဆီလွှာအရောအနှောကိုအသစ်လဲပေးရပါမယ်။
+                </p>
+            </div>
+            <div class="text-end">
+                <time datetime="2024-03-26T07:00:00Z" class="fst-italic text-muted">
+                    March 26, 2024
+                </time>
+            </div>
+        </div>
+    </div>
+</article>
+
+
+
+            {% endblock %}
+            {% block script %}
+        <script src="{% static 'js/discovery.js' %}"></script>
+        {% endblock %}

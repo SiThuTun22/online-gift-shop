@@ -1,0 +1,249 @@
+{% extends 'en/base.html' %}
+{% load static %}
+{% block styles %}
+<link rel="stylesheet" href="{% static 'css/discovery.css' %}">
+
+<style>
+          .article-list {
+            border-left: 3px solid #9ac244;
+             padding-left: 20px;
+        }
+
+        .article-list-item {
+             padding: 15px;
+             margin-bottom: 15px;
+             border: 2px solid #e9ecef;
+             border-radius: 10px;
+             transition: all 0.3s ease;
+                
+        }
+
+        .article-list-item:hover {
+             border-color: #9ac244;
+            background: #F7F7F7;
+            }
+        
+    </style>
+{% endblock %}
+{% block content %}
+
+    <!-- Full-Screen Section -->
+    <div class="container-fluid d-flex flex-column flex-md-row align-items-center text-dark" style="background-color: #9ac244;">
+    <!-- Left Side: Text and Paragraph -->
+    <div class="col-md-6 d-flex flex-column justify-content-between vh-100 m-4 py-6 vh-sm-0 min-vh-sm-50">
+         <h1 class="fs-4 md-mt-3 mt-xl-0 text-center fw-light text-uppercase title1 ">အသိအမြင်ဆောင်းပါး</h1>
+    
+        <h2 class="display-1 m-3 text-center text-capitalize my-title ">ကံ့ကော်</h2>
+      
+        <p class="d-none d-md-block lead fs-5 mb-0 description2">
+        </p>
+    
+    </div>
+
+    <!-- Right Side: Full-Size Image -->
+    <div class="col-md-6">
+        <img src="{% static 'images/ch-kantkawcover.png' %}" alt="Kantkaw Image" class="img-fluid">
+    </div>
+</div>
+
+<!-- Additional Paragraph (only for smaller screens) -->
+<div class="container-fluid text-center d-md-none p-4 text-dark" style="background-color: #9ac244;">
+    <p class="lead description3">
+    </p>
+</div>
+   
+
+<div class="container py-5 mt-5">
+    <div class="row g-5">
+        <!-- Article List -->
+        <div class="col-md-6">
+            <div class="article-list">
+                <h3 class="mb-4">ဆက်စပ်သော ဆောင်းပါးများကို ရှာဖွေပါ</h3>
+                <div class="article-list-item">
+                    <a href="#article1" class="text-decoration-none text-dark">
+                        <span>ကံ့ကော်ပင်အကြောင်း သိကောင်းစရာ</span>
+                        <span style="float: right;"><button type="button" class="btn read-btn" style="background-color: #9ac244;cursor: pointer;border:#9ac244;">ဖတ်ရန် <i class="bi bi-arrow-right"></i></button></span>
+
+                    </a>
+                </div>
+                <div class="article-list-item">
+                    <a href="#article2" class="text-decoration-none text-dark">
+                        <span>ကံ့ကော်ပင်၏ သဘာဝပတ်ဝန်းကျင် လိုအပ်ချက်များ</span>
+                        <span style="float: right;"><button type="button" class="btn read-btn" style="background-color: #9ac244;cursor: pointer;border:#9ac244;">ဖတ်ရန် <i class="bi bi-arrow-right"></i></button></span>
+
+                    </a>
+                </div>
+                <div class="article-list-item">
+                    <a href="#article3" class="text-decoration-none text-dark">
+                        <span>ကံ့ကော်ပင်မျိုးစေ့၏ စိုက်ပျိုးနည်း</span>
+                        <span style="float: right;"><button type="button" class="btn read-btn" style="background-color: #9ac244;cursor: pointer;border:#9ac244;">ဖတ်ရန် <i class="bi bi-arrow-right"></i></button></span>
+
+                    </a>
+                </div>
+                <div class="article-list-item">
+                    <a href="#article4" class="text-decoration-none text-dark">
+                        <span>ကံ့ကော်ပင် စိုက်ပျိုးလမ်းစဉ်နှင့် အသုံးဝင်ပုံ</span>
+                        <span style="float: right;"><button type="button" class="btn read-btn" style="background-color: #9ac244;cursor: pointer;border:#9ac244;">ဖတ်ရန် <i class="bi bi-arrow-right"></i></button></span>
+
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- blog card -->
+ <article id="article1" class="container my-5 article-card">
+    <div class="row g-0 shadow-lg">
+        <!-- Image column -->
+        <div class="col-md-6">
+            <img 
+                src="{% static 'images/kantkawarticle1.png' %}"
+                alt="topic1" 
+                class="img-fluid h-100 object-fit-cover"
+                loading="lazy"
+            >
+        </div>
+
+        <!-- Content column-->
+        <div class="col-md-6 p-4 d-flex flex-column bg-white">
+            <header class="mb-4">
+                <div class=" text-dark">
+                    <h2 class="display-5 mb-3 pb-2 custom-border">ကံ့ကော်ပင် အကြောင်း သိကောင်းစရာ</h2>
+                </div>
+            </header>
+
+            <div class="lead mb-4 flex-grow-1">
+                <p class="text-dark">
+                    အင်္ဂလိပ်အမည် - Ceylon Ironwood Tree<br>
+
+                    ရုက္ခဗေဒ အမည် - Mesua ferresa<br>
+                    
+                    ကံ့ကော်ပင်ဟာ Caryophyllaceae ဆိုတဲ့ မျိုးရင်းထဲမှာပါဝင်ပြီး ကြီးထွားမှုနှေးကွေးကာ လှပတဲ့ ပုံသဏ္ဍာန်၊ စိမ်းလန်းတဲ့ အရွက်နဲ့ ကြီးမားပြီးမွှေးပျံ့တဲ့ အဖြူရောင်ပန်းပွင့်တွေကြောင့် လူသိများတဲ့ အပင်တစ်မျိုးဖြစ်ပါတယ်။ အပူပိုင်းနဲ့ စိုစွတ်တဲ့ ရာသီဥတုကို ကြိုက်နှစ်သက်ပြီး ကံ့ကော်ပင်ရဲ့ မူရင်းဒေသတွေကတော့ သီရိလင်္ကာ၊ အိန္ဒိယ၊ နီပေါ၊ မြန်မာ၊ ထိုင်း၊ ဖိလစ်ပိုင်၊ မလေးရှားနဲ့ ဆူမားတြားဒေသတိုပဲ ဖြစ်ပါတယ်။              
+            
+                </p>
+            </div>
+
+            <div class="text-end">
+                <time datetime="2024-03-26T07:00:00Z" class="fst-italic text-muted">
+                    March 26, 2024
+                </time>
+            </div>
+        </div>
+    </div>
+</article>
+
+<!-- blog card -->
+<article id="article2" class="container my-5 article-card">
+    <div class="row g-0 shadow-lg">
+        <!-- Image column -->
+        <div class="col-md-6">
+            <img 
+                src="{% static 'images/kantkawarticle2.png' %}"
+                alt="topic2" 
+                class="img-fluid h-100 object-fit-cover"
+                loading="lazy"
+            >
+        </div>
+
+        <!-- Content column-->
+        <div class="col-md-6 p-4 d-flex flex-column bg-white">
+            <header class="mb-4">
+                <div  class=" text-dark">
+                    <h2 class="display-5 mb-3 pb-2 custom-border">ကံ့ကော်ပင်၏ သဘာဝပတ်ဝန်းကျင် လိုအပ်ချက်များ</h2>
+                </div>
+            </header>
+
+            <div class="lead mb-4 flex-grow-1">
+                <p class="text-dark">
+                    ကံ့ကော်ပင်တွေဟာ နှစ်စဥ်အပူချိန် ၃၀ - ၃၅ ဒီဂရီစင်တီဂရိတ် အတွင်းမှာရှိမယ်ဆိုရင် ကောင်းစွာဖြစ်ထွန်းနိုင်တာ ဖြစ်ပါတယ်။ နှစ်စဉ်မိုးရေချိန် ၁၁၈ - ၁၅၇ လက်မ အတွင်းဆိုရင် ကြိုက်နှစ်သက်တာ ဖြစ်ပါတယ်။ ရေကောင်းစွာ စိမ့်ဝင်နိုင်ပြီး အစိုဓာတ်ရှိတဲ့ မြေဆီလွှာကို လိုအပ်ပြီး မြေအက်စစ်ပမာဏကတော့ ၅ - ၅.၅ အတွင်း ဖြစ်သည်။
+                </p>
+            </div>
+
+            <div class="text-end">
+                <time datetime="2024-03-26T07:00:00Z" class="fst-italic text-muted">
+                    March 26, 2024
+                </time>
+            </div>
+        </div>
+    </div>
+</article>
+
+
+<!-- blog card -->
+<article id="article3" class="container my-5 article-card">
+    <div class="row g-0 shadow-lg">
+        <!-- Image column -->
+        <div class="col-md-6">
+            <img 
+                src="{% static 'images/kantkawarticle3.png' %}"
+                alt="Topic3" 
+                class="img-fluid h-100 object-fit-cover"
+                loading="lazy"
+            >
+        </div>
+
+        <!-- Content column-->
+        <div class="col-md-6 p-4 d-flex flex-column bg-white">
+            <header class="mb-4">
+                <div class=" text-dark">
+                    <h2 class="display-5 mb-3 pb-2 custom-border">ကံ့ကော်ပင်မျိုးစေ့၏ စိုက်ပျိုးနည်း</h2>
+                </div>
+            </header>
+
+            <div class="lead mb-4 flex-grow-1">
+                <p class="text-dark">
+                    ကံ့ကော်ပင်ရဲ့ မျိုးစေ့တွေဟာ စီမံခန့်ခွဲရတာလွယ်ကူပြီး မျိုးညှောင့်ပေါက်မှုဟာလည်း ကောင်းမွန် မြန်ဆန်ပါတယ်။ အပင်ပေါက်ရာခိုင်နှုန်းဟာ ၃၀ - ၇၀ ရာခိုင်နှုန်း ဝန်းကျင်ရှိပြီး ၁၁ - ၁၄ ရက်အတွင်းမှာ ပေါက်လေ့ရှိပါတယ်။ ခြောက်သွေ့ပြီး အညိုရောင်ရှိတဲ့ မျိုးစေ့တွေဆိုရင်တော့ ၁၀၀ ရာခိုင်နှုန်း အပင်ပေါက်နှုန်းကို ပေးစွမ်းနိုင်မှာ ဖြစ်ပါတယ်။  မျိုးစေ့တွေဟာ ၂ - ၄ လ အတွင်းဆိုရင် ရှင်သန်နိုင်စွမ်းဆုံးရှုးလေ့ရှိပါတယ်။                 </p>
+            </div>
+
+            <div class="text-end">
+                <time datetime="2024-03-26T07:00:00Z" class="fst-italic text-muted">
+                    March 26, 2024
+                </time>
+            </div>
+        </div>
+    </div>
+</article>
+
+<!-- blog card  -->
+<article id="article4" class="container my-5 article-card">
+    <div class="row g-0 shadow-lg">
+        <!-- Image column -->
+        <div class="col-md-6">
+            <img 
+                src="{% static 'images/kantkawarticle4.png' %}"
+                alt="topic4" 
+                class="img-fluid h-100 object-fit-cover"
+                loading="lazy"
+            >
+        </div>
+
+        <!-- Content column-->
+        <div class="col-md-6 p-4 d-flex flex-column bg-white">
+            <header class="mb-4">
+                <div class=" text-dark">
+                    <h2 class="display-5 mb-3 pb-2 custom-border">ကံ့ကော်ပင် စိုက်ပျိုးလမ်းစဉ်နှင့် အသုံးဝင်ပုံ</h2>
+                </div>
+            </header>
+
+            <div class="lead mb-4 flex-grow-1">
+                <p class="text-dark">
+                
+                    အစေ့ကနေပေါက်တဲ့ ပျိုးပင်တွေဟာဆိုရင် စိုက်ပျိုးမယ့်အချိန်မှာ အမြင့်အားဖြင့် ၄၅ - ၅၀ စင်တီမီတာ (၁၇ - ၁၉ လက်မ) ရှိနေမယ်ဆိုရင် သင့်တော်ပါတယ်။ ကံ့ကော်ပင်ရဲ့ အပွင့်နဲ့ အသီးတွေဟာဆိုရင် ဆေးဘက်ဝင်ပြီး စီးပွားရေးအရလည်း အရေးပါပါတယ်။
+
+                    ကံ့ကော်ပင်ကို  တစ်နိုင်တစ်ပိုင်ပဲ အလှစိုက်ပျိုးမယ်ဆိုရင်တော့ အပင်ပေါက်တွေကို တစ်ပင်နဲ့ တစ်ပင် ပေ ၂၀ မှ ၂၅ ပေ ခွာပြီး စိုက်ပျိုးသင့်ပါတယ်။
+                    </p>
+                    </div>
+            <div class="text-end">
+                <time datetime="2024-03-26T07:00:00Z" class="fst-italic text-muted">
+                    March 26, 2024
+                </time>
+            </div>
+        </div>
+    </div>
+</article>
+
+            {% endblock %}
+            {% block script %}
+        <script src="{% static 'js/discovery.js' %}"></script>
+        {% endblock %}

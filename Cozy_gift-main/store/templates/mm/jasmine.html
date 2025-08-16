@@ -1,0 +1,265 @@
+{% extends 'en/base.html' %}
+{% load static %}
+{% block styles %}
+<link rel="stylesheet" href="{% static 'css/discovery.css' %}">
+
+<style>
+          .article-list {
+            border-left: 3px solid  #4f772d;
+             padding-left: 20px;
+        }
+
+        .article-list-item {
+             padding: 15px;
+             margin-bottom: 15px;
+             border: 2px solid #e9ecef;
+             border-radius: 10px;
+             transition: all 0.3s ease;
+                
+        }
+
+        .article-list-item:hover {
+             border-color: #4f772d;
+            background: #F7F7F7;
+            }
+        
+    </style>
+{% endblock %}
+{% block content %}
+
+     <!-- Full-Screen Section -->
+    <div class="container-fluid d-flex flex-column flex-md-row align-items-center text-dark" style="background-color: #9ac244;">
+    <!-- Left Side: Text and Paragraph -->
+    <div class="col-md-6 d-flex flex-column justify-content-between vh-100 m-4 py-6 vh-sm-0 min-vh-sm-50">
+         <h1 class="fs-4 md-mt-3 mt-xl-0 text-center fw-light text-uppercase title1 ">အသိအမြင်ဆောင်းပါး</h1>
+    
+        <h2 class="display-1 m-3 text-center text-capitalize my-title ">စံပယ်</h2>
+      
+        <p class="d-none d-md-block lead fs-5 mb-0 description2">
+        </p>
+    
+    </div>
+
+    <!-- Right Side: Full-Size Image -->
+    <div class="col-md-6">
+                        <img src="{% static 'images/ch-sabalcover.png' %}" alt="Jasmine Image" class="img-fluid">
+
+    </div>
+</div>
+
+<!-- Additional Paragraph (only for smaller screens) -->
+<div class="container-fluid text-center d-md-none p-4 text-dark" style="background-color: #9ac244;">
+    <p class="lead description3">
+    </p>
+</div>
+   
+<div class="container py-5 mt-5">
+    <div class="row g-5">
+        <!-- Article List -->
+        <div class="col-md-6">
+            <div class="article-list">
+                <h3 class="mb-4">ဆက်စပ်သော ဆောင်းပါးများကို ရှာဖွေပါ</h3>
+                <div class="article-list-item">
+                    <a href="#article1" class="text-decoration-none text-dark">
+                        စံပယ် မြေအမျိုးအစား နှင့် ရာသီဥတု
+                        <span style="float: right;"><button type="button" class="btn read-btn" style="background-color: #4f772d;cursor: pointer;border:#4f772d;">ဖတ်ရန်<i class="bi bi-arrow-right"></i></button></span>
+
+                    </a>
+                </div>
+                <div class="article-list-item">
+                    <a href="#article2" class="text-decoration-none text-dark">
+                        စံပယ်ပင် စိုက်ပျိုးနည်း
+                        <span style="float: right;"><button type="button" class="btn read-btn" style="background-color: #4f772d;cursor: pointer;border:#4f772d;">ဖတ်ရန်<i class="bi bi-arrow-right"></i></button></span>
+
+                    </a>
+                </div>
+                <div class="article-list-item">
+                    <a href="#article3" class="text-decoration-none text-dark">
+                        စိုက်ဘောင်များပြုပြင်ခြင်းနှင့် အပင်ပြုစုခြင်း
+                        <span style="float: right;"><button type="button" class="btn read-btn" style="background-color: #4f772d;cursor: pointer;border:#4f772d;">ဖတ်ရန်<i class="bi bi-arrow-right"></i></button></span>
+
+                    </a>
+                </div>
+                <div class="article-list-item">
+                    <a href="#article4" class="text-decoration-none text-dark">
+                        စံပယ်ပန်း ရေနွေးကြမ်းရဲ့ ဆေးဖက်ဝင်ပုံ
+                        <span style="float: right;"><button type="button" class="btn read-btn" style="background-color: #4f772d;cursor: pointer;border:#4f772d;">ဖတ်ရန်<i class="bi bi-arrow-right"></i></button></span>
+
+                    </a>
+                </div>
+            </div>
+        </div>
+         <!-- New Video Section -->
+        <div class="col-md-6">
+            <div class="video-container p-4 rounded-4 shadow" style="background-color: #4f772d;">
+                <h3 class="mb-4 text-dark">စိုက်ပျိုးနည်းအဆင့်ဆင့်</h3>
+                <div class="ratio ratio-16x9">
+                    <video controls class="rounded-3 w-100" style="border: 3px solid #ffffff;">
+                    <source src="{% static 'videos/jasmine.mp4' %}" type="video/mp4">
+                    Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="mt-3 text-end">
+                    <small class="text-muted">Credits to the video contributor</small>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- blog card -->
+ <article id="article1" class="container my-5 article-card">
+    <div class="row g-0 shadow-lg">
+        <!-- Image column -->
+        <div class="col-md-6">
+            <img 
+                 src="{% static 'images/jasminearticle1.jpg' %}"
+                alt="topic1" 
+                class="img-fluid h-100 object-fit-cover"
+                loading="lazy"
+            >
+        </div>
+
+        <!-- Content column-->
+        <div class="col-md-6 p-4 d-flex flex-column bg-white">
+            <header class="mb-4">
+                <div class=" text-dark">
+                    <h2 class="display-5 mb-3 pb-2 custom-border">စံပယ် မြေအမျိုးအစား နှင့် ရာသီဥတု</h2>
+                </div>
+            </header>
+
+            <div class="lead mb-4 flex-grow-1">
+                <p class="text-dark">
+                    မြန်မာအမည် - စံပယ်ပန်း <br>
+                    အင်္ဂလိပ်အမည် - Jasmine  <br>
+                    ရုက္ခဗေဒအမည် - Jasminum sambae <br>
+                    မျိုးရင်း - Oleaeeae <br>
+                    မူရင်းဒေသမှာ မြန်မာနိုင်ငံနှင့် အာရုတိုက်တောင်ပိုင်းတို့ဖြစ်သည်။ စံပယ်ပင်သည် သဲမြေမှ မြေစေးမြေနက် အထိ မြေအမျိုးအစားမရွေး ဖြစ်ထွန်းသော်လည်း မြေဆီသြဇာ ထက်သန်လျှင် ပိုမိုဖြစ်ထွန်းသည်။စံပယ်ပင်သည် ပူအိုက်စိုစွတ်သော ရာသီဥတုကို ကြိုက်နှစ်သက် သည်။ စံပယ်သည် ချုံပင်အမျိုးအစားဖြစ်သော်လည်းနှစ်ရှည်ခံပင်ဖြစ်သည်။
+                </p>
+            </div>
+
+            <div class="text-end">
+                <time datetime="2024-03-26T07:00:00Z" class="fst-italic text-muted">
+                    March 26, 2024
+                </time>
+            </div>
+        </div>
+    </div>
+</article>
+
+<!-- blog card -->
+<article id="article2" class="container my-5 article-card">
+    <div class="row g-0 shadow-lg">
+        <!-- Image column -->
+        <div class="col-md-6">
+            <img 
+                src="{% static 'images/jasminearticle2.jpg' %}"
+                alt="topic2" 
+                class="img-fluid h-100 object-fit-cover"
+                loading="lazy"
+            >
+        </div>
+
+        <!-- Content column-->
+        <div class="col-md-6 p-4 d-flex flex-column bg-white">
+            <header class="mb-4">
+                <div  class=" text-dark">
+                    <h2 class="display-5 mb-3 pb-2 custom-border">စံပယ်ပင် စိုက်ပျိုးနည်း</h2>
+                </div>
+            </header>
+
+            <div class="lead mb-4 flex-grow-1">
+                <p class="text-dark">
+                    စံပယ်ကို အစေ့မှ စိုက်ပျိုးလေ့မရှိ။ အကိုင်းမြေမြှုပ်မျိုးပွား၍ လည်းကောင်း၊ ပင်ပွားတူစိုက်၍ လည်းကောင်း၊ ကိုင်းဖြတ်၍လည်းကောင်း၊ စိုက်ပျိုးကြသည်။ ကိုင်းပျော့ကို မြေကြီးထဲ မြှုပ်ထားလျှင် တစ်လခန့်အကြာတွင် အဆစ်မှအမြစ်များထွက်လာသည်။ ထိုအခါအကိုင်းရင်းမှ ဖြတ်တောက်၍ စိုက်ပျိုးနိုင်သည်။             
+                    ပင်ခြေတွင် ပေါက်နေသော ပင်ပွားကို အမြစ်ပါပါအောင် တူးယူပြီး နေရာပြောင်း၍ စိုက်ပျိုးနိုင်ပါသည်။ တစ်ပေခွဲရှည်သော အဆစ်သုံးဆစ်မှ ငါးဆစ်ပါအကိုင်းများရအောင် ဖြတ်ယူစ်၊ သုံးဆစ်မြှုပ်၍ ပျိုးထောင်ပြီး ရေမှန်မှန်လောင်းပေးပါက တစ်လခွဲအကြာ အကိုင်းမှ အမြစ်များထွက်လာသည်။
+                  </p>
+            </div>
+
+            <div class="text-end">
+                <time datetime="2024-03-26T07:00:00Z" class="fst-italic text-muted">
+                    March 26, 2024
+                </time>
+            </div>
+        </div>
+    </div>
+</article>
+
+
+<!-- blog card -->
+<article id="article3" class="container my-5 article-card">
+    <div class="row g-0 shadow-lg">
+        <!-- Image column -->
+        <div class="col-md-6">
+            <img 
+                src="{% static 'images/jasminearticle3.jpg' %}"
+                alt="Topic3" 
+                class="img-fluid h-100 object-fit-cover"
+                loading="lazy"
+            >
+        </div>
+
+        <!-- Content column-->
+        <div class="col-md-6 p-4 d-flex flex-column bg-white">
+            <header class="mb-4">
+                <div class=" text-dark">
+                    <h2 class="display-5 mb-3 pb-2 custom-border">စိုက်ဘောင်များပြုပြင်ခြင်းနှင့် အပင်ပြုစုခြင်း</h2>
+                </div>
+            </header>
+
+            <div class="lead mb-4 flex-grow-1">
+                <p class="text-dark">
+                      မိုးရာသီတွင် ရေမဝပ်တတ်က ဘောင်မဖော်ဘဲလည်းကောင်း၊ ရေဝပ်တတ်က ဘောင်ဖော်၍ လည်းကောင်းစိုက်ပျိုးနိုင်သည်။ အလျားပေသုံးဆယ် x အနံငါးပေ x ထုတစ်ပေ (မြေပေါ် ခြောက်လက်မ၊ မြေအောက် ခြောက်လက်မ) ရှိသော ဘောင်များကို တစ်ဘောင်နှင့် တစ်ဘောင် လူသွားလမ်း တစ်ပေခြားကာ ပြုလုပ်ရသည်။ စိုက်ပြီးနောက်အပင်အရင်းကို နာနာဖိပေးကာ ရေလောင်းပေးရသည်။ စံပယ်ပန်းများသည် အကိုင်းနု များမှ ပွင့်လာတတ်ကြသည်။ စံပယ်များကို ဆောင်းဦး (ပန်းတုံးချိန်တွင်) ဘေးသို့နွယ်ကျနေသော အကိုင်းများကို အညွန့်သစ်အကိုင်းသစ်များထွက်အောင် ကိုင်းဖျားဖြတ်ပေးရသည်။
+                </p>          
+              </div>
+
+            <div class="text-end">
+                <time datetime="2024-03-26T07:00:00Z" class="fst-italic text-muted">
+                    March 26, 2024
+                </time>
+            </div>
+        </div>
+    </div>
+</article>
+
+<!-- blog card  -->
+<article id="article4" class="container my-5 article-card">
+    <div class="row g-0 shadow-lg">
+        <!-- Image column -->
+        <div class="col-md-6">
+            <img 
+                src="{% static 'images/jasminearticle4.jpg' %}"
+                alt="topic4" 
+                class="img-fluid h-100 object-fit-cover"
+                loading="lazy"
+            >
+        </div>
+
+        <!-- Content column-->
+        <div class="col-md-6 p-4 d-flex flex-column bg-white">
+            <header class="mb-4">
+                <div class=" text-dark">
+                    <h2 class="display-5 mb-3 pb-2 custom-border">စံပယ်ပန်း ရေနွေးကြမ်းရဲ့ ဆေးဖက်ဝင်ပုံ</h2>
+                </div>
+            </header>
+
+            <div class="lead mb-4 flex-grow-1">
+                <p class="text-dark">
+                    နွေးကြမ်းရဲ့ ဆေးဖက်ဝင်ပုံက ကိုယ်အလေးချိန် ကျဆင်းစေနိုင်တယ်။ အသည်းရောဂါ အသည်းရောင် အသားဝါ အသည်းခြောက်တာကြောင့်ဖြစ်တဲ့ အသည်းနာခြင်းဝမ်းလျှောတာကြောင့်ဖြစ်တဲ့ ဗိုက်အောင့်ခြင်း၊ စိတ်ဖိစီးမှုကိုသက်သာစေနိုင်ခြင်း၊ သားကင်ဆာနဲ့ အဆုတ်ကင်ဆာဖြစ်နိုင်ခြေကို ကျဆင်းစေတယ်။
+                    ဆီးချို ကာကွယ်ချင်သူတွေအတွက် သွေးတွင်း သကြားဓာတ်ကို ထိန်းညှိချင်နေသူတွေအတွက်ပါ အဆင်ပြေစေပါတယ်။ ဝမ်းမှန်စေပြီး အစာခြေအင်ဇိုင်းတွေ ပိုမိုထွက်ရှိလာအောင်လည်း လှုဆော်ပေးနိုင်မှာပါ။ မျက်နှာပေါ်က အရေးအကြောင်းတွေ သက်သာစေဖိုအတွက်ကတော့ စံပယ်ပန်းရေနွေးကြမ်းကို တစ်နေ့ ၂ခွက် ကနေ ၃ ခွက်လောက်အထိသောက်ပေးပါ။
+                </p>
+            </div>
+            <div class="text-end">
+                <time datetime="2024-03-26T07:00:00Z" class="fst-italic text-muted">
+                    March 26, 2024
+                </time>
+            </div>
+        </div>
+    </div>
+</article>
+
+
+            {% endblock %}
+            {% block script %}
+        <script src="{% static 'js/discovery.js' %}"></script>
+        {% endblock %}

@@ -1,0 +1,122 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cozy Gifts - Warm and Heartfelt Presents</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="{% static 'css/styles.css' %}" rel="stylesheet">
+    <!-- Leaflet CSS file -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""/>
+    <!-- Leaflet JavaScript file -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    {% block styles %}{% endblock %}
+    
+    <style>
+        
+        .fixed-message {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1051; 
+            margin: 0 auto;
+            width: 100%;
+            max-width: 1200px; 
+        }
+    </style>
+</head>
+<body>
+    <!-- Messages -->
+    {% if messages %}   
+        {% for message in messages %}
+        <div class="alert alert-warning alert-dismissible fade show fixed-message" role="alert" id="message-alert">
+            {{ message }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {% endfor %}
+    {% endif %}
+
+
+    {% include 'mm/navbar.html' %}
+
+ 
+    {% block content %}
+    {% endblock %}
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h3>Cozy Gifts</h3>
+                    <p>အချစ်နှင့်ပျော်ရွှင်မှုကို နေ့စဉ်တိုင်းပေးဆောင်လျက်ရှိပါတယ်။</p>
+                    <p><i class="bi bi-phone"></i>ဖုန်း: +၁ (၅၅၅)၁၂၃-၄၅၆၇</p>
+                    <p><i class="bi bi-envelope"></i> hello@cozygifts.com</p>
+                </div>
+                <div class="col-md-4">
+                    <h3>လင့်များ</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="{% url 'mm:about_us' %}" class="text-white">ကျွန်ုပ်တို့အကြောင်း</a></li>
+                        <li><a href="#" class="text-white">မေးလေ့ရှိသောမေးခွန်းများ</a></li>
+                        <li><a href="#" class="text-white">ကွတ်ကီး မူဝါဒ</a></li>
+                        <li><a href="#" class="text-white">ဝန်ဆောင်မှု သတ်မှတ်ချက်များ</a></li>
+                        <li><a href="#" class="text-white">Support</a></li>
+                        <li><a href="#" class="text-white">အလုပ်အကိုင်အခွင့်အလမ်းများ</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h3>Stay Cozy with Updates</h3>
+                    <form>
+                        <input type="email" placeholder="Your email here" class="form-control mb-2">
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                    <div class="social-icons mt-3">
+                        <a href="#" class="bi bi-facebook text-white me-3"></a>
+                        <a href="#" class="bi bi-twitter text-white me-3"></a>
+                        <a href="#" class="bi bi-instagram text-white"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <p>&copy; 2024 Cozy Gifts | All Rights Reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    {% block script %}{% endblock %}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        
+        document.addEventListener("DOMContentLoaded", function() {
+            var messageAlert = document.getElementById('message-alert');
+            if (messageAlert) {
+           
+                var messageHeight = messageAlert.offsetHeight;
+                document.body.style.paddingTop = messageHeight + 'px';
+
+                // Remove the message after seconds
+                setTimeout(function() {
+                    messageAlert.style.display = 'none';
+                  
+                    document.body.style.paddingTop = '0';
+                }, 2000); 
+
+                var closeButton = messageAlert.querySelector('.btn-close');
+                closeButton.addEventListener('click', function() {
+                   
+                    document.body.style.paddingTop = '0';
+                });
+            }
+        });
+    </script>
+</body>
+</html>

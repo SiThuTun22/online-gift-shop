@@ -1,0 +1,69 @@
+{% extends 'en/base.html' %}
+{% load static %}
+{% block content %}
+
+<style>
+  body {
+      background: url('{% static "images/login.png" %}') no-repeat center center scroll; 
+      background-size: cover;
+      min-height: 100vh;
+  }
+
+  .content-wrapper {
+      display: flex;
+      justify-content: right;  /* Center the form horizontally */
+      align-items: center;
+      min-height: 80vh; 
+  }
+
+  .login-container {
+      background-color: #fdf5f5;
+      border-radius: 10px;
+      padding: 30px;
+      width: 350px; 
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      margin-right: 220px; 
+  }
+
+  .form-control {
+      border: 1px solid #f497b6;
+      background-color: #fdf5f5;
+  }
+
+  .btn-primary {
+      background-color: #d6336c;
+      border-color: #d6336c;
+  }
+
+  .btn-primary:hover {
+      background-color: #c72e60;
+  }
+
+  @media (max-width: 768px) {
+      .content-wrapper {
+          justify-content: center; /* Centers on small screens */
+          padding-left: 0;
+      }
+  }
+</style>
+
+<div class="content-wrapper">
+  <div class="login-container">
+      <h2 class="text-center mb-3" style="color: #d6336c;">Welcome Back!</h2>
+      <p class="text-center mb-4" style="color: #f497b6;">Please log in to continue</p>
+      <form method="POST" action="{% url 'en:login' %}">
+          {% csrf_token %}
+          <div class="mb-3">
+              <input type="text" class="form-control" name="username" placeholder="Enter Your Username">
+          </div>
+          <div class="mb-3">
+              <input type="password" class="form-control" name="password" placeholder="Enter Your Password">
+          </div>
+          <div class="text-center">
+              <button type="submit" class="btn btn-primary w-100">Login</button>
+          </div>
+      </form>
+  </div>
+</div>
+
+{% endblock %}

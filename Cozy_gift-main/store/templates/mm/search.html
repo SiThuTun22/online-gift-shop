@@ -1,0 +1,118 @@
+{% extends 'mm/base.html' %}
+{% load static %}
+
+{% block styles %}
+<link rel="stylesheet" href="{% static 'css/about_us.css' %}">
+<style>
+    body {
+        background-color: #f8f9fa;
+    }
+    .header-section {
+        background: url('{% static "images/1.jpg" %}') no-repeat center center/cover;
+
+        height: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 50px;
+    }
+    .search-container {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    .search-card {
+        border-radius: 15px;
+        box-shadow: 0 4px 10px #f497b6;
+        margin-bottom: 50px;
+    }
+    .search-btn {
+        background-color:#f497b6;
+        border: none;
+    }
+    .search-btn:hover {
+        background-color: #f497b6;
+    }
+    .product-card {
+        transition: transform 0.3s ease-in-out;
+        margin-bottom: 70px; /* Increased spacing between products */
+    }
+    .product-card:hover {
+        transform: scale(1.05);
+    }
+    .badge-sale {
+        font-size: 0.9rem;
+        padding: 5px 10px;
+        border-radius: 10px;
+    }
+    .card-img-top {
+        height: 250px;
+        object-fit: cover;
+    }
+    .container {
+        margin-bottom: 100px; /* Added space between products and footer */
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<header class="header-section text-white">
+    
+</header>
+
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card search-card p-4">
+                <div class="card-header" style="background-color: #f497b6; color: white; text-align: center;">
+                    <h4>ပစ္စည်းရှာရန်</h4>
+                </div>
+                <div class="card-body">
+                    <form method="POST" action="{% url 'store:search_mm' %}">
+                        {% csrf_token %}
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Search For Products" name="searched">
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn search-btn text-white">ပစ္စည်းရှာရန်</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 g-5">
+        {% if searched %}
+            {% for product in searched %}
+                <div class="col">
+                    <div class="card h-100 product-card">
+                        {% if product.is_sale %}
+                            <div class="badge bg-danger text-white position-absolute badge-sale" style="top: 10px; right: 10px;">Sale</div>
+                        {% endif %}
+                        <img class="card-img-top" src="{{ product.image.url }}" alt="{{ product.name }}">
+                        <div class="card-body text-center">
+                            <h5 class="fw-bolder">{{ product.name }}</h5>
+                            {% if product.is_sale %}
+                                <div class="d-flex justify-content-center small text-warning mb-2">
+                                    <span class="text-decoration-line-through">{{ product.price }} Kyats</span>
+                                    <span class="ms-2 text-danger fw-bold">${{ product.sale_price }} Kyats</span>
+                                </div>
+                            {% else %}
+                                <span class="fw-bold">{{ product.price }} Kyats</span>
+                            {% endif %}
+                        </div>
+                        <div class="card-footer text-center border-top-0 bg-transparent">
+                            <a class="btn btn-outline-dark mt-auto" href="{% url 'store:product_detail' product.id %}">ပစ္စည်းကြည့်ရန်</a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        {% else %}
+           
+        {% endif %}
+    </div>
+</div>
+
+{% endblock %}

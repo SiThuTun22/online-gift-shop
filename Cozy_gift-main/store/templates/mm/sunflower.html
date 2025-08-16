@@ -1,0 +1,266 @@
+{% extends 'mm/base.html' %}
+{% load static %}
+{% block styles %}
+<link rel="stylesheet" href="{% static 'css/discovery.css' %}">
+
+      <style>
+            .article-list {
+            border-left: 3px solid #F9CB43;
+             padding-left: 20px;
+        }
+
+        .article-list-item {
+             padding: 15px;
+             margin-bottom: 15px;
+             border: 2px solid #e9ecef;
+             border-radius: 10px;
+             transition: all 0.3s ease;
+                
+        }
+
+        .article-list-item:hover {
+             border-color: #F9CB43;
+            background: #F7F7F7;
+            }
+        </style>
+{% endblock %}
+{% block content %}
+ 
+   <!-- Full-Screen Section -->
+    <div class="container-fluid d-flex flex-column flex-md-row align-items-center text-dark" style="background-color: #F9CB43;">
+    <!-- Left Side: Text and Paragraph -->
+    <div class="col-md-6 d-flex flex-column justify-content-between vh-100 m-4 py-6 vh-sm-0 min-vh-sm-50">
+         <h1 class="fs-4 md-mt-3 mt-xl-0 text-center fw-light text-uppercase title1 ">အသိအမြင်ဆောင်းပါးများ</h1>
+    
+        <h2 class="display-1 m-3 text-center text-capitalize my-title ">နေကြာ</h2>
+      
+        <p class="d-none d-md-block lead fs-5 mb-0 description2">
+        </p>
+    
+    </div>
+
+    <!-- Right Side: Full-Size Image -->
+    <div class="col-md-6">
+        <img src="{% static 'images/ch-sunflowercover2.png' %}" alt="Sunflower Image" class="img-fluid">
+    </div>
+</div>
+
+<!-- Additional Paragraph (only for smaller screens) -->
+<div class="container-fluid text-center d-md-none p-4 text-dark" style="background-color: #F9CB43;">
+    <p class="lead description3">
+    </p>
+</div>
+   
+<div class="container py-5 mt-5">
+    <div class="row g-5">
+        <!-- Article List -->
+        <div class="col-md-6">
+            <div class="article-list">
+                <h3 class="mb-4">ဆက်စပ်သော ဆောင်းပါးများကို ရှာဖွေပါ</h3>
+                <div class="article-list-item">
+                    <a href="#article1" class="text-decoration-none text-dark">
+                        <span>နေကြာ စိုက်ပျိုးချိန်နှင့် မြေအမျိုးအစား</span>
+                        <span style="float: right;"><button type="button" class="btn read-btn" style="background-color: #F9CB43;cursor: pointer;border:#F9CB43;">ဖတ်ရန် <i class="bi bi-arrow-right"></i></button></span>
+
+                    </a>
+                </div>
+                <div class="article-list-item">
+                    <a href="#article2" class="text-decoration-none text-dark">
+                        <span>နေကြာပင် မြေသြဇာကျွေးခြင်း</span>
+                        <span style="float: right;"><button type="button" class="btn read-btn" style="background-color: #F9CB43;cursor: pointer;border:#F9CB43;">ဖတ်ရန် <i class="bi bi-arrow-right"></i></button></span>
+
+                    </a>
+                </div>
+                <div class="article-list-item">
+                    <a href="#article3" class="text-decoration-none text-dark">
+                        <span>နေကြာပင် မြေပြုစုစောင့်ရှောက်ခြင်း</span>
+                        <span style="float: right;"><button type="button" class="btn read-btn" style="background-color: #F9CB43;cursor: pointer;border:#F9CB43;">ဖတ်ရန်<i class="bi bi-arrow-right"></i></button></span>
+
+                    </a>
+                </div>
+                <div class="article-list-item">
+                    <a href="#article4" class="text-decoration-none text-dark">
+                        <span>နေကြာပိုးမွှားကာကွယ်နည်းနှင့် ရိတ်သိမ်းနည်း</span>
+                        <span style="float: right;"><button type="button" class="btn read-btn" style="background-color: #F9CB43;cursor: pointer;border:#F9CB43;">ဖတ်ရန် <i class="bi bi-arrow-right"></i></button></span>
+
+                    </a>
+                </div>
+            </div>
+        </div>
+
+         <!-- New Video Section -->
+        <div class="col-md-6">
+            <div class="video-container p-4 rounded-4 shadow" style="background-color: #F9CB43;">
+                <h3 class="mb-4 display-5 text-dark">စိုက်ပျိုးနည်းအဆင့်ဆင့်</h3>
+                <div class="ratio ratio-16x9">
+                    <video controls class="rounded-3 w-100" style="border: 3px solid #ffffff;">
+                    <source src="{% static 'videos/sunflower.mp4' %}" type="video/mp4">
+                    Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="mt-3 text-end">
+                    <small class="text-muted">Credits to the video contributor</small>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    </div>
+</div>
+
+
+<!-- blog card -->
+ <article id="article1" class="container my-5 article-card">
+    <div class="row g-0 shadow-lg">
+        <!-- Image column -->
+        <div class="col-md-6">
+            <img 
+                src="{% static 'images/sunflowerarticle1.jpg' %}"
+                alt="topic1" 
+                class="img-fluid h-100 object-fit-cover"
+                loading="lazy"
+            >
+        </div>
+
+        <!-- Content column-->
+        <div class="col-md-6 p-4 d-flex flex-column bg-white">
+            <header class="mb-4">
+                <div class=" text-dark">
+                    <h2 class="display-5 mb-3 pb-2 custom-border">နေကြာ စိုက်ပျိုးချိန်နှင့် မြေအမျိုးအစား</h2>
+                </div>
+            </header>
+
+            <div class="lead mb-4 flex-grow-1">
+                <p class="text-dark">
+                    အင်္ဂလိပ်အမည်: Sunflower <br>
+                    ရုက္ခဗေဒအမည်: Helianthus annuus <br>
+                    မျိုးကွဲ : Magnoliopsida (dicotyledons) <br>
+                    အကောင်းဆုံးစိုက်ပျိုးချိန်မှာ စက်တင်ဘာလနှင့် အောက်တိုဘာလဖြစ်သော်လည်း မြေအစိုဓာတ် လုံလောက်စွာရှိပါက စပါးအပြီးစိုက်ပျိုးရာတွင် နိုဝင်ဘာနှင့် ဒီဇင်ဘာလအထိ စိုက်ပျိုးနိုင်ပါသည်။ မြေဆီလွှာထက်သန်သည့် သဲနုန်းမြေအမျိုးအစားမှ မြေစေးမြေအမျိုးအစားထိ စိုက်ပျိုးနိုင်သည်။ မြေချဉ်ငန်ဓာတ် pH တန်ဖိုး ၆.0 မှ ၇.၅ သည် အသင့်တော်ဆုံးဖြစ်သည်။ ခြောက်သွေ့သည့်ဒေသတွင် မြေစေးမြေအမျိုးအစားကဲ့သို ရေထိန်းထားနိုင်သည့်မြေတွင် စိုက်ပျိုးနိုင်ပါသည်။
+                </p>
+            </div>
+
+            <div class="text-end">
+                <time datetime="2024-03-26T07:00:00Z" class="fst-italic text-muted">
+                    March 26, 2024
+                </time>
+            </div>
+        </div>
+    </div>
+</article>
+
+<!-- blog card -->
+<article id="article2" class="container my-5 article-card">
+    <div class="row g-0 shadow-lg">
+        <!-- Image column -->
+        <div class="col-md-6">
+            <img 
+                src="{% static 'images/sunflowerarticle2.jpg' %}"
+                alt="topic2" 
+                class="img-fluid h-100 object-fit-cover"
+                loading="lazy"
+            >
+        </div>
+
+        <!-- Content column-->
+        <div class="col-md-6 p-4 d-flex flex-column bg-white">
+            <header class="mb-4">
+                <div  class=" text-dark">
+                    <h2 class="display-5 mb-3 pb-2 custom-border">နေကြာပင် မြေသြဇာကျွေးခြင်း</h2>
+                </div>
+            </header>
+
+            <div class="lead mb-4 flex-grow-1">
+                <p class="text-dark">
+                    နေကြာပင်သည် ကြီးမားသောမြစ်အုံရှိသဖြင့် ရေနှင့် အစာအာဟာရဓာတ်ကို များစွာစားသုံးနိုင်သည်။ သဘာဝမြေသြဇာနှင့် ဓာတ်မြေသြဇာကို ထည့်သွင်းပေးရန် လိုသည်။ မြေမပြုပြင်မီ တစ်ဧကလျှင် နွားချေး၊ ကြက်ချေး သို့မဟုတ် သဘာဝမြေဆွေးများကို လှည်း၅မှ၁၀စီး ထည့်ပေးသင့်ပါသည်။ တစ်ဧကလျှင် ယူရီးယားဓာတ်မြေသြဇာ ၁၁၂ပေါင်၊ တီစူပါမြေသြဇာ ၅၆ပေါင်နှင့် ပိုတက်ရှ်ဓာတ်မြေသြဇာ ၅၆ပေါင်ကို မြေပြုပြင်ချိန်တွင် ထည့်ပေးရပါမည်။ ထို့ပြင် အဖူးဝင်ချိန်တွင် ယူရီးယားဓာတ်မြေသြဇာ တစ်ဧကလျှင် ၅၆ပေါင်နှုန်း ထပ်မံထည့်ပေးရန်လိုအပ်သည်။
+                  </p>
+            </div>
+
+            <div class="text-end">
+                <time datetime="2024-03-26T07:00:00Z" class="fst-italic text-muted">
+                    March 26, 2024
+                </time>
+            </div>
+        </div>
+    </div>
+</article>
+
+
+<!-- blog card -->
+<article id="article3" class="container my-5 article-card">
+    <div class="row g-0 shadow-lg">
+        <!-- Image column -->
+        <div class="col-md-6">
+            <img 
+                src="{% static 'images/sunflowerarticle3.jpg' %}"
+                alt="Topic3" 
+                class="img-fluid h-100 object-fit-cover"
+                loading="lazy"
+            >
+        </div>
+
+        <!-- Content column-->
+        <div class="col-md-6 p-4 d-flex flex-column bg-white">
+            <header class="mb-4">
+                <div class=" text-dark">
+                    <h2 class="display-5 mb-3 pb-2 custom-border">နေကြာပင် မြေပြုစုစောင့်ရှောက်ခြင်း</h2>
+                </div>
+            </header>
+
+            <div class="lead mb-4 flex-grow-1">
+                <p class="text-dark">
+                    နေကြာပန်းဖူးဝင်ချိန်မှ ပန်းပွင့်ချိန်ထိ ၃ ပတ်အတွင်း မြေအစိုဓာတ်မလုံလောက်ပါက ပန်းပွင့်ကြီးထွားမှုကို ရပ်တန့်စေပြီး အထွက်များစွာထိခိုက်စေသည်။ ရေလိုအပ်မှုရှိပါက အဖူး ၇၅ % ဝင်ချိန်နှင့် ပန်း ၇၅% ပွင့်ချိန်တွင် ရေတစ်ကြိမ်စီသွင်းပေးသင့်သည်။ အပင်ငယ်စဉ်ပေါင်းမြက်ကင်းစင်အောင်ပြုလုပ်ပေးပါ။ ပေါင်းမြက်ကြောင့် နေကြာအထွက် ၅၀ ရာခိုင်နှုန်းကျော်လျော့ကျစေသည်။ အပင်အညှောင့်ပေါက်ပြီး (၇)ရက်အတွင်း ကြားပေါင်းလိုက်ကိရိယာဖြင့် ပေါင်းမြက်ကို နှိမ်နင်းသင့်သည်။ အပင်၏အခြေနေရာတစ်ဝိုက်ကိုမူ ပေါင်းမြက်များအား လက်ပေါင်းလိုက်ခြင်းဖြင့် နှိမ်နင်းနိုင်သည်။
+                </p>
+                
+            </div>
+
+            <div class="text-end">
+                <time datetime="2024-03-26T07:00:00Z" class="fst-italic text-muted">
+                    March 26, 2024
+                </time>
+            </div>
+        </div>
+    </div>
+</article>
+
+<!-- blog card  -->
+<article id="article4" class="container my-5 article-card">
+    <div class="row g-0 shadow-lg">
+        <!-- Image column -->
+        <div class="col-md-6">
+            <img 
+                src="{% static 'images/sunflowerarticle4.jpg' %}"
+                alt="topic4" 
+                class="img-fluid h-100 object-fit-cover"
+                loading="lazy"
+            >
+        </div>
+
+        <!-- Content column-->
+        <div class="col-md-6 p-4 d-flex flex-column bg-white">
+            <header class="mb-4">
+                <div class=" text-dark">
+                    <h2 class="display-5 mb-3 pb-2 custom-border">နေကြာပိုးမွှားကာကွယ်နည်းနှင့် ရိတ်သိမ်းနည်း</h2>
+                </div>
+            </header>
+
+            <div class="lead mb-4 flex-grow-1">
+                <p class="text-dark">
+                    နေကြာပင်ကို ဖြုတ်စိမ်း၊ ရွက်လိပ်ရွက်ကပ်ပိုး၊ ပျ၊ ယင်ဖြူ၊ ငမြှောင်တောင်၊ ခူမွေးရှည်၊ ပန်းပွင့်ထိုးပိုး၊ ငှက်၊ ကြွက် စသည့်အင်းဆက်ပိုးမျိုးစုံ ဖျက်ဆီးနိုင်သည်။
+                    မျိူးစေ့ဆောင်ရောဂါများကို ကာကွယ်ရန် မျိုးစေ့ချချိန်တွင် မှိုသတ်ဆေးဖြင့် မျိူးစေ့ကို စိမ်သင့်သည်။ နေကြာရွက်ခြောက်ရောဂါကို 
+                    ကာကွယ်နိုင်ရန် ပန်းပွင့်ပမာဏ ၅၀ရာခိုင်နှုန်းရှိသည့် ကာလတွင် ၂ပတ် တစ်ကြိမ်နှုန်းဖြင့် ၃ကြိမ်တိုင် ရောဂါကာကွယ်ဆေးတစ်မျိုးမျိုး ပက်ဖျန်းပေးသင့်သည်။
+                    ပန်းပွင့်များ၏ ကျောဘက်အရောင်သည် အဝါရောင်သိုပြောင်းချိန်တွင် ရိတ်သိမ်းသင့်သည်။ းပြီး နေကြာပန်းပွင့်များကို နေပူတွင် (၂ - ၃)ရက်ကြာ နေလှန်းရန်လိုပါသည်။
+                </p>
+            </div>
+            <div class="text-end">
+                <time datetime="2024-03-26T07:00:00Z" class="fst-italic text-muted">
+                    March 26, 2024
+                </time>
+            </div>
+        </div>
+    </div>
+</article>
+
+            {% endblock %}
+            {% block script %}
+        <script src="{% static 'js/discovery.js' %}"></script>
+        {% endblock %}

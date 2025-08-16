@@ -1,0 +1,253 @@
+{% extends 'mm/base.html' %}
+{% load static %}
+{% block styles %}
+<link rel="stylesheet" href="{% static 'css/discovery.css' %}">
+
+ <style>
+            .article-list {
+            border-left: 3px solid #98FB98;
+             padding-left: 20px;
+        }
+
+        .article-list-item {
+             padding: 15px;
+             margin-bottom: 15px;
+             border: 2px solid #e9ecef;
+             border-radius: 10px;
+             transition: all 0.3s ease;
+                
+        }
+
+        .article-list-item:hover {
+             border-color: #98FB98;
+            background: #F7F7F7;
+            }
+        </style>
+{% endblock %}
+{% block content %}
+
+    <!-- Full-Screen Section -->
+    <div class="container-fluid d-flex flex-column flex-md-row align-items-center text-dark" style="background-color: #98FB98;">
+    <!-- Left Side: Text and Paragraph -->
+    <div class="col-md-6 d-flex flex-column justify-content-between vh-100 m-4 py-6 vh-sm-0 min-vh-sm-50">
+         <h1 class="fs-4 md-mt-3 mt-xl-0 text-center fw-light text-uppercase title1 ">အသိအမြင်ဆောင်းပါးများ</h1>
+    
+        <h2 class="display-1 m-3 text-center text-capitalize my-title ">ဒေစီ</h2>
+      
+        <p class="d-none d-md-block lead fs-5 mb-0 description2">
+        </p>
+    
+    </div>
+
+    <!-- Right Side: Full-Size Image -->
+    <div class="col-md-6">
+                <img src="{% static 'images/ch-daisycover.png' %}" alt="Daisy Image" class="img-fluid">
+    </div>
+</div>
+
+<!-- Additional Paragraph (only for smaller screens) -->
+<div class="container-fluid text-center d-md-none p-4 text-dark" style="background-color: #98FB98;">
+    <p class="lead description3">
+    </p>
+</div>
+   
+<div class="container py-5 mt-5">
+    <div class="row g-5">
+        <!-- Article List -->
+        <div class="col-md-6">
+            <div class="article-list">
+                <h3 class="mb-4">ဆက်စပ်သော ဆောင်းပါးများကို ရှာဖွေပါ</h3>
+                <div class="article-list-item">
+                    <a href="#article1" class="text-decoration-none text-dark">
+                        <span>ဒေစီပန်းပင် စိုက်ပျိုးနည်းနှင့် စောင့်ရှောက်နည်း</span>
+                        <span style="float: right;"><button type="button" class="btn read-btn" style="background-color: #98FB98;cursor: pointer;border:#98FB98;">ဖတ်ရန် <i class="bi bi-arrow-right"></i></button></span>
+
+                    </a>
+                </div>
+                <div class="article-list-item">
+                    <a href="#article2" class="text-decoration-none text-dark">
+                        <span>ဒေစီပန်းပင် စိုက်ပျိုးမြေပြုပြင်ခြင်း</span>
+                        <span style="float: right;"><button type="button" class="btn read-btn" style="background-color: #98FB98;cursor: pointer;border:#98FB98;">ဖတ်ရန် <i class="bi bi-arrow-right"></i></button></span>
+
+                    </a>
+                </div>
+                <div class="article-list-item">
+                    <a href="#article3" class="text-decoration-none text-dark">
+                        <span>ဒေစီပန်းပင် ရေရှည်ထိန်းသိမ်းနည်း</span>
+                        <span style="float: right;"><button type="button" class="btn read-btn" style="background-color: #98FB98;cursor: pointer;border:#98FB98;">ဖတ်ရန် <i class="bi bi-arrow-right"></i></button></span>
+
+                    </a>
+                </div>
+                <div class="article-list-item">
+                    <a href="#article4" class="text-decoration-none text-dark">
+                         <span>ဒေစီပန်းဧ။် ပိုးမွှားကာကွယ်နည်းနှင့် အသုံးပြုပုံ</span>
+                        <span style="float: right;"><button type="button" class="btn read-btn" style="background-color: #98FB98;cursor: pointer;border:#98FB98;">ဖတ်ရန် <i class="bi bi-arrow-right"></i></button></span>
+
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+
+<!-- blog card -->
+ <article id="article1" class="container my-5 article-card">
+    <div class="row g-0 shadow-lg">
+        <!-- Image column -->
+        <div class="col-md-6">
+            <img 
+                src="{% static 'images/daisyarticle1.jpg' %}"
+                alt="topic1" 
+                class="img-fluid h-100 object-fit-cover"
+                loading="lazy"
+            >
+        </div>
+
+        <!-- Content column-->
+        <div class="col-md-6 p-4 d-flex flex-column bg-white">
+            <header class="mb-4">
+                <div class=" text-dark">
+                    <h2 class="display-5 mb-3 pb-2 custom-border">ဒေစီပန်းပင်စိုက်ပျိုးနည်းနှင့် စောင့်ရှောက်နည်း</h2>
+                </div>
+            </header>
+
+            <div class="lead mb-4 flex-grow-1">
+                <p class="text-dark">
+                    အင်္ဂလိပ်အမည်: Daisy <br>
+                    ရုက္ခဗေဒအမည်: Aster amellus(Michaelmas Daisy), Bellis perennis(Common Daisy), Bidens pilosa <br>
+                    မျိုးရင်း : Asteraceae <br>
+                    ရေစိမ့်စီးမှုကောင်းမွန်ပြီး အသင့်အတင့် မြေဆီဩဇာ ထက်သန်မယ်ဆို ဒေစီကို စိုက်လိုရပါ တယ်။ ဒေစီပန်းပင်ဟာ မြေဆီဩဇာ သိပ်ထက်သန်လွန်းတဲ့မြေမှာ စိုက်မယ်ဆိုရင်တော့ အပွင့် ပွင့်မယ့်အစား အပင်ကြီးထွားမှုဘက် ရောက်သွားမှာ ဖြစ်ပါတယ်။ ဒေစီဟာ နှစ်ရှည်ခံ ပန်းပင်အမျိုးအစားဖြစ်ပြီး နေရောင်ခြည်ကိုလည်း ကြိုက်နှစ်သက်ပါတယ်။
+                    ပင်လယ်ပြင်အမြင့် ပေ ၂၅၀၀ မှ ၅၀၀၀အတွင်းဖြစ်ထွန်းပြီး မိုးရေချိန် လက်မ ၄၀-၅၀၊ အပူချိန် ၃၀ဒီဂရီဖာရင်ဟိုက်မှ ၃၅ဒီဂရီဖာရင်ဟိုက်အတွင်း ကောင်းစွာဖြစ်ထွန်းပါတယ်။
+
+                </p>
+            </div>
+
+            <div class="text-end">
+                <time datetime="2024-03-26T07:00:00Z" class="fst-italic text-muted">
+                    March 26, 2024
+                </time>
+            </div>
+        </div>
+    </div>
+</article>
+
+<!-- blog card -->
+<article id="article2" class="container my-5 article-card">
+    <div class="row g-0 shadow-lg">
+        <!-- Image column -->
+        <div class="col-md-6">
+            <img 
+                src="{% static 'images/daisyarticle2.jpg' %}"
+                alt="topic2" 
+                class="img-fluid h-100 object-fit-cover"
+                loading="lazy"
+            >
+        </div>
+
+        <!-- Content column-->
+        <div class="col-md-6 p-4 d-flex flex-column bg-white">
+            <header class="mb-4">
+                <div  class=" text-dark">
+                    <h2 class="display-5 mb-3 pb-2 custom-border">ဒေစီပန်းပင် စိုက်ပျိုးမြေပြုပြင်ခြင်း</h2>
+                </div>
+            </header>
+
+            <div class="lead mb-4 flex-grow-1">
+                <p class="text-dark">
+                    မြန်မာနိုင်ငံတွင် ဒေစီပန်းကို မိုးဦးကျ မေ၊ ဇွန်လများတွင် စတင်စိုက်ပျိုးလေ့ရှိသည်။ မြေပြုပြင်ချိန်တွင် ၃ပေအကျယ်၊ ၃၀ပေအရှည်ရှိ စိုက်ပေါင်အတွင်း နွားချေးတစ်တင်းနှုန်းနှင့် ၁၅ပတ်လည် ကွန်ပေါင်းမြေဩဇာ နိုစီတစ်ဘူးနှုန်း ထည့်သွင်းပြီး သမအောင်မွှေပေးပါ။
+                    နိုင်ငံခြားတွင် မျိုးစေ့မှစိုက်ပျိုးကြသော်လည်း မြန်မာနိုင်ငံတွင်မျိုးအဖြစ် မိခင်ပင်မှ ထွက်ရှိ သော သားတက်များကိုဖဲ့၍ ပြန်လည် စိုက်ပျိုးကြပါတယ်။ သုံးပေအကျယ် မြေပေါင်များတွင် ပင်ကြားတန်းကြား (၁x၂)ပေ (၂x၂)ပေထား၍ စိုက်ပျိုးနိုင်တယ်။ ဒေစီပန်းပင်ဟာ မြေလျှောက်မြစ်မျိုးဖြစ်လို့ အပင်များပြန့်ကား၍ ပြန့်ပွားရန်လွယ်ကူတယ်။ 
+                  </p>
+            </div>
+
+            <div class="text-end">
+                <time datetime="2024-03-26T07:00:00Z" class="fst-italic text-muted">
+                    March 26, 2024
+                </time>
+            </div>
+        </div>
+    </div>
+</article>
+
+
+<!-- blog card -->
+<article id="article3" class="container my-5 article-card">
+    <div class="row g-0 shadow-lg">
+        <!-- Image column -->
+        <div class="col-md-6">
+            <img 
+                src="{% static 'images/daisyarticle3.jpg' %}"
+                alt="Topic3" 
+                class="img-fluid h-100 object-fit-cover"
+                loading="lazy"
+            >
+        </div>
+
+        <!-- Content column-->
+        <div class="col-md-6 p-4 d-flex flex-column bg-white">
+            <header class="mb-4">
+                <div class=" text-dark">
+                    <h2 class="display-5 mb-3 pb-2 custom-border">ဒေစီပန်းပင် ရေရှည်ထိန်းသိမ်းနည်း</h2>
+                </div>
+            </header>
+
+            <div class="lead mb-4 flex-grow-1">
+                <p class="text-dark">
+                    ဒေစီပန်း စိုက်ပျိုးပြီးအမြစ်များမစွဲခင် မြေအစိုဓါတ်မပြတ်စေရန်ဂရုစိုက် ပေးရပါမယ်။ သို့မှသာအတက်များ ခြောက်သေခြင်းမှ ကာကွယ်နိုင်ပါမယ်။ စိုက်ပျိုးပြီး ၂လအကြာမှာ ပန်းစတင်ပွင့်မှာ ဖြစ်ပါတယ်။ ရေလောင်းရာမှာတော့ လိုအပ်သည်ထက် မများစေရန် ဂရုစိုက်ပေးပါ။ လိုသည်ထက်များပါက အပင်ရှည်ပြီး အထိန်းလိုလာပါလိမ့်မယ်။ မလိုလားအပ်ပဲ အပင်ရှည် သည့် အတွက်လည်း အရိပ်ကျရောက်မှု များပြားပြီး အပင်ယိုင်လဲမှာ ဖြစ်ပါတယ်။
+                    တစ်နှစ်တစ်ခါ အပင်အိုများကို ဖြတ်တောက်ဖယ်ရှားပြီး အတက်သစ်များကို မွေးမြူခြင်းဖြင့် စဉ်ဆက်မပြတ် စိုက်ပျိုးထုတ်လုပ်သွားနိုင်ပါတယ်။ ၃နှစ်မှ လေးနှစ်အကြာမှာတော့ မြေပေါင် အသစ်ပြုလုပ်ပြီး ခွဲခြားစိုက်ပျိုးသင့်ပါတယ်။
+                </p>
+                
+            </div>
+
+            <div class="text-end">
+                <time datetime="2024-03-26T07:00:00Z" class="fst-italic text-muted">
+                    March 26, 2024
+                </time>
+            </div>
+        </div>
+    </div>
+</article>
+
+<!-- blog card  -->
+<article id="article4" class="container my-5 article-card">
+    <div class="row g-0 shadow-lg">
+        <!-- Image column -->
+        <div class="col-md-6">
+            <img 
+                src="{% static 'images/daisyarticle4.jpg' %}"
+                alt="topic4" 
+                class="img-fluid h-100 object-fit-cover"
+                loading="lazy"
+            >
+        </div>
+
+        <!-- Content column-->
+        <div class="col-md-6 p-4 d-flex flex-column bg-white">
+            <header class="mb-4">
+                <div class=" text-dark">
+                    <h2 class="display-5 mb-3 pb-2 custom-border">ဒေစီပန်းဧ။် ပိုးမွှားကာကွယ်နည်းနှင့် အသုံးပြုပုံ</h2>
+                </div>
+            </header>
+
+            <div class="lead mb-4 flex-grow-1">
+                <p class="text-dark">
+                    ဒေစီပန်းတွင် ပျပိုး၊ နီမတုတ်၊ ခရုနှင့် နဖာချေးပိုးများ ကျရောက်တတ်ပြီး သင့်တော်သော ပိုးသတ်ဆေးများ ရွေးချယ်သုံးစွဲ ကာကွယ်နိုင်ပါတယ်။ ရောဂါအနေနဲ့ ရွက်ပျောက်ရောဂါ ကျရောက်တတ်ပြီး တော့ပ်ဆင်အမ်ကဲ့သို ပင်လုံးပြန့်အာနိသင်ရှိ မှိသတ်ဆေးများ ကြိုတင်ပက်ဖြန်းခြင်းဖြင့် ကာကွယ်နိုင်ပါတယ်။  
+                    ဒေစီပန်းကို အနာသက်သာဖို့နဲ့ ဝမ်းလျှောခြင်း၊ ချောင်းဆိုးခြင်း၊ ဗိုက်နာခြင်းတွေအတွက် အသုံးပြုကြပါတယ်။ ဒေစီပန်း လက်ဖက်ရည်ကို ချောင်းဆိုးခြင်း၊ လေပြွန်ရောင်ခြင်း၊ အသည်းရောဂါ၊ ကျောက်ကပ်ရောဂါ၊ ရောင်ရမ်းခြင်းတွေအတွက် လူအချို့က သောက်သုံးကြပါတယ်။ သွေးတိတ်စေတဲ့အရာ သွေးသန့်စင်ပေးတဲ့အရာအဖြစ်လည်းကောင်း အသုံးပြုပါတယ်။
+                    အနာတွေနဲ့ အရေပြားရောဂါတွေအတွက်တိုက်ရိုက်လိမ်းပြီး အသုံးပြုနိုင်ပါတယ်။
+                </p>
+            </div>
+            <div class="text-end">
+                <time datetime="2024-03-26T07:00:00Z" class="fst-italic text-muted">
+                    March 26, 2024
+                </time>
+            </div>
+        </div>
+    </div>
+</article>
+
+
+            {% endblock %}
+            {% block script %}
+        <script src="{% static 'js/discovery.js' %}"></script>
+        {% endblock %}

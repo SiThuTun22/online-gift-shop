@@ -1,0 +1,252 @@
+{% extends 'en/base.html' %}
+{% load static %}
+{% block styles %}
+<link rel="stylesheet" href="{% static 'css/discovery.css' %}">
+
+ <style>
+            .article-list {
+            border-left: 3px solid #98FB98;
+             padding-left: 20px;
+        }
+
+        .article-list-item {
+             padding: 15px;
+             margin-bottom: 15px;
+             border: 2px solid #e9ecef;
+             border-radius: 10px;
+             transition: all 0.3s ease;
+                
+        }
+
+        .article-list-item:hover {
+             border-color: #98FB98;
+            background: #F7F7F7;
+            }
+        </style>
+{% endblock %}
+{% block content %}
+    
+   <!-- Full-Screen Section -->
+    <div class="container-fluid d-flex flex-column flex-md-row align-items-center text-dark" style="background-color: #98FB98">
+    <!-- Left Side: Text and Paragraph -->
+    <div class="col-md-6 d-flex flex-column justify-content-between vh-100 m-4 py-6 vh-sm-0 min-vh-sm-50">
+         <h1 class="fs-4 md-mt-3 mt-xl-0 text-center fw-light text-uppercase title1 ">Flower Articles</h1>
+    
+        <h2 class="display-1 m-3 text-center text-capitalize my-title ">Daisy</h2>
+      
+        <p class="d-none d-md-block lead fs-5 mb-0 description2">
+        </p>
+    
+    </div>
+
+    <!-- Right Side: Full-Size Image -->
+    <div class="col-md-6">
+        <img src="{% static 'images/ch-daisycover.png' %}" alt="Daisy Image" class="img-fluid">
+    </div>
+</div>
+
+<!-- Additional Paragraph (only for smaller screens) -->
+<div class="container-fluid text-center d-md-none p-4 text-dark" style="background-color: #98FB98;">
+    <p class="lead description3">
+    </p>
+</div>
+   
+<div class="container py-5 mt-5">
+    <div class="row g-5">
+        <!-- Article List -->
+        <div class="col-md-6">
+            <div class="article-list">
+                <h3 class="mb-4 display-5">Discover Related Articles</h3>
+                <div class="article-list-item">
+                    <a href="#article1" class="text-decoration-none text-dark">
+                        <span>Daisy Botanical Profile and Planting Guide</span>
+                        <span style="float: right;"><button type="button" class="btn read-btn" style="background-color: #98FB98;cursor: pointer;border:#98FB98;">read more <i class="bi bi-arrow-right"></i></button></span>
+
+                    </a>
+                </div>
+                <div class="article-list-item">
+                    <a href="#article2" class="text-decoration-none text-dark">
+                        <span>Cultivation of Daisies in Myanmar</span>
+                        <span style="float: right;"><button type="button" class="btn read-btn" style="background-color: #98FB98;cursor: pointer;border:#98FB98;">read more <i class="bi bi-arrow-right"></i></button></span>
+
+                    </a>
+                </div>
+                <div class="article-list-item">
+                    <a href="#article3" class="text-decoration-none text-dark">
+                        <span>Post-Planting Care and Maintenance for Daisy</span>
+                        <span style="float: right;"><button type="button" class="btn read-btn" style="background-color: #98FB98;cursor: pointer;border:#98FB98;">read more <i class="bi bi-arrow-right"></i></button></span>
+
+                    </a>
+                </div>
+                <div class="article-list-item">
+                    <a href="#article4" class="text-decoration-none text-dark">
+                        <span>Daisy Pest Management and Medicinal Uses</span>
+                        <span style="float: right;"><button type="button" class="btn read-btn" style="background-color: #98FB98;cursor: pointer;border:#98FB98;">read more <i class="bi bi-arrow-right"></i></button></span>
+                        
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        
+    </div>
+</div>
+
+
+<!-- blog card -->
+ <article id="article1" class="container my-5 article-card">
+    <div class="row g-0 shadow-lg">
+        <!-- Image column -->
+        <div class="col-md-6">
+            <img 
+                src="{% static 'images/daisyarticle1.jpg' %}"
+                alt="topic1" 
+                class="img-fluid h-100 object-fit-cover"
+                loading="lazy"
+            >
+        </div>
+
+        <!-- Content column-->
+        <div class="col-md-6 p-4 d-flex flex-column bg-white">
+            <header class="mb-4">
+                <div class=" text-dark">
+                    <h2 class="display-5 mb-1 pb-2 custom-border">Daisy Botanical Profile and Planting Guide</h2>
+                </div>
+            </header>
+
+            <div class="lead mb-4 flex-grow-1">
+                <p class="text-dark">
+                    English Name: Daisy     <br>
+                    Botanical Names: Aster amellus (Michaelmas Daisy), Bellis perennis (Common Daisy), Bidens pilosa <br>
+                    Family: Asteraceae <br>
+                    Daisies thrive in well-drained soil with moderate fertility. If the soil is overly rich in nutrients, the plant may focus more on foliage growth rather than blooming. As a perennial species, daisies prefer full sunlight and grow best at elevations between 2,500 to 5,000 feet above sea level. They require an annual rainfall of 40–50 inches and flourish in temperatures ranging from 30°F to 35°F.
+                </p>
+            </div>
+
+            <div class="text-end">
+                <time datetime="2024-03-26T07:00:00Z" class="fst-italic text-muted">
+                    March 26, 2024
+                </time>
+            </div>
+        </div>
+    </div>
+</article>
+
+<!-- blog card -->
+<article id="article2" class="container my-5 article-card">
+    <div class="row g-0 shadow-lg">
+        <!-- Image column -->
+        <div class="col-md-6">
+            <img 
+                src="{% static 'images/daisyarticle2.jpg' %}"
+                alt="topic2" 
+                class="img-fluid h-100 object-fit-cover"
+                loading="lazy"
+            >
+        </div>
+
+        <!-- Content column-->
+        <div class="col-md-6 p-4 d-flex flex-column bg-white">
+            <header class="mb-4">
+                <div  class=" text-dark">
+                    <h2 class="display-5 mb-1 pb-2 custom-border">Cultivation of Daisies in Myanmar</h2>
+                </div>
+            </header>
+
+            <div class="lead mb-4 flex-grow-1">
+                <p class="text-dark">
+                    In Myanmar, daisies are typically planted during early monsoon season in May and June. During soil preparation, raised beds measuring 3 feet in width and 30 feet in length are prepared. Each bed is amended with one tin(a local unit) of cow dung and one box (15 lbs) of NPK compound fertilizer, which is thoroughly mixed into the soil. While daisies are grown from seeds in other countries, farmers in Myanmar propagate them using offshoots (suckers) separated from mother plants.
+                    The plants are spaced at intervals of 1x2 feet or 2x2 feet within the 3-foot-wide beds. Daisies have a creeping root system, allowing them to spread and propagate easily across the soil.
+                  </p>
+            </div>
+
+            <div class="text-end">
+                <time datetime="2024-03-26T07:00:00Z" class="fst-italic text-muted">
+                    March 26, 2024
+                </time>
+            </div>
+        </div>
+    </div>
+</article>
+
+
+<!-- blog card -->
+<article id="article3" class="container my-5 article-card">
+    <div class="row g-0 shadow-lg">
+        <!-- Image column -->
+        <div class="col-md-6">
+            <img 
+                src="{% static 'images/daisyarticle3.jpg' %}"
+                alt="Topic3" 
+                class="img-fluid h-100 object-fit-cover"
+                loading="lazy"
+            >
+        </div>
+
+        <!-- Content column-->
+        <div class="col-md-6 p-4 d-flex flex-column bg-white">
+            <header class="mb-4">
+                <div class=" text-dark">
+                    <h2 class="display-5 mb-1 pb-2 custom-border">Post-Planting Care and Maintenance for Daisy</h2>
+                </div>
+            </header>
+
+            <div class="lead mb-4 flex-grow-1">
+                <p class="text-dark">
+                    After planting Daisy, ensure consistent soil moisture until roots are fully established to prevent shoot wilting. Flowering typically begins two months after planting. When watering, avoid overwatering, as excessive moisture can lead to leggy growth, requiring additional support. Uncontrolled elongation may cause excessive shading and increase the risk of the plant bending or collapsing. To sustain continuous production, prune and remove old growth annually, allowing new shoots to develop. After 3–4 years, rejuvenate the plants by dividing the clumps and replanting them in fresh soil beds.                </p>
+                
+            </div>
+
+            <div class="text-end">
+                <time datetime="2024-03-26T07:00:00Z" class="fst-italic text-muted">
+                    March 26, 2024
+                </time>
+            </div>
+        </div>
+    </div>
+</article>
+
+<!-- blog card  -->
+<article id="article4" class="container my-5 article-card">
+    <div class="row g-0 shadow-lg">
+        <!-- Image column -->
+        <div class="col-md-6">
+            <img 
+                src="{% static 'images/daisyarticle4.jpg' %}"
+                alt="topic4" 
+                class="img-fluid h-100 object-fit-cover"
+                loading="lazy"
+            >
+        </div>
+
+        <!-- Content column-->
+        <div class="col-md-6 p-4 d-flex flex-column bg-white">
+            <header class="mb-4">
+                <div class=" text-dark">
+                    <h2 class="display-5 mb-3 pb-2 custom-border">Daisy Pest Management and Medicinal Uses</h2>
+                </div>
+            </header>
+
+            <div class="lead mb-4 flex-grow-1">
+                <p class="text-dark">
+                    Daisy flowers are susceptible to pests such as aphids,red spider mites,snails,
+                 and mealybugs, which can be controlled using suitable insecticides. Leaf spot disease is
+                    a common fungal issue, and preventive measures like applying systemic fungicides (Topsin-M) are recommended.
+                    Medicinally, daisies are used to alleviate wounds,diarrhea,coughs and stomach pain. Daisy tea is consumed to address respiratory issues (bronchitis),liver and kidney disorders and inflammation. 
+                    It is also valued for its blood-clotting and blood-purifying properties. Daisy preparations are applied directly to wounds and skin conditions for healing.
+                </p>
+            </div>
+            <div class="text-end">
+                <time datetime="2024-03-26T07:00:00Z" class="fst-italic text-muted">
+                    March 26, 2024
+                </time>
+            </div>
+        </div>
+    </div>
+</article>
+
+
+            {% endblock %}
+            {% block script %}
+        <script src="{% static 'js/discovery.js' %}"></script>
+        {% endblock %}

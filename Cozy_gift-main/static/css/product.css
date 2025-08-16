@@ -1,0 +1,153 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+}
+
+/* Sidebar filters for desktop */
+.filters-container {
+    width: 100%;
+    background: #f9f9f9;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.filters-container h4 {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 10px 0;
+    cursor: pointer;
+    color: #333;
+}
+
+.filters-container h4.open {
+    color: #007bff;
+}
+
+.filter-content {
+    display: none;
+    margin-top: 10px;
+}
+
+.filter-content.visible {
+    display: block;
+}
+
+.collection img {
+    width: 100%;
+    height: 250px; /* Fixed height for all product images */
+    object-fit: cover; /* Ensure the image covers the area without distortion */
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.collection a:hover img {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.collection h3,
+.collection p {
+    text-align: center;
+    font-size: 18px;
+}
+
+.collection a.btn {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    display: block;
+    overflow: hidden;
+}
+
+.collection a.btn:active,
+.collection a.btn:focus {
+    background-color: transparent;
+    box-shadow: 0 0 0 0.25rem rgba(255, 192, 203, 0.5); /* Pink shadow on focus/active */
+}
+
+
+/* Hamburger menu for phone */
+.hamburger-menu {
+    display: none;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    background-color: #f9f9f9;
+}
+
+@media (min-width: 769px) {
+    .filters-container {
+        position: sticky;
+        top: 20px;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hamburger-menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .filter-section h5 span {
+        margin-left: auto;
+    }
+
+    .collection img {
+        height: 200px; /* Adjust for better fit on smaller screens */
+    }
+
+    /* Ensure Sort By is hidden on mobile and visible on desktop */
+    .sort-by-container {
+        display: none;
+    }
+
+    .filters-container {
+        display: none;
+    }
+
+    .collection h3 {
+        font-size: 16px;
+    }
+
+    .offcanvas-header {
+        border-bottom: 1px solid #ddd;
+    }
+
+    .filter-section {
+        border-bottom: 1px solid #ddd;
+        padding: 10px 0;
+    }
+
+    .filter-section h5 {
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #333;
+    }
+
+    .apply-filters-btn {
+        position: sticky;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 15px;
+        background-color: #008000;
+        color: white;
+        text-align: center;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .row.g-4>[class*="col-"] {
+        flex: 0 0 50%;
+        /* Two items per row */
+        max-width: 50%;
+        padding: 0.5rem;
+        /* Adjust spacing between items */
+    }
+}
+

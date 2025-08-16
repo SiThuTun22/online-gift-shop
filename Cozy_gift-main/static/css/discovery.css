@@ -1,0 +1,514 @@
+
+.full-screen-section-my {
+    display: flex;
+    flex-wrap: nowrap; 
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    background-color: #1d1a16;
+    margin: 0;
+    position: relative;
+    padding: 0 1.25rem;
+}
+
+.left-section-my {
+    width: 50%;
+    margin-right: 0.625rem;
+  
+    margin: 0.9375rem;
+    background-color: #1e1b18;
+    color: #f2e6d9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.25rem;   /* 20px = 1.25rem */
+    align-items: center;
+    padding: 2rem;
+    text-align: center;
+    justify-content: center;
+    position: sticky;
+    box-sizing: border-box; 
+  
+}
+
+
+.right-section-my {
+  width: 50%;
+  overflow: hidden;
+ 
+}
+
+
+
+@media (max-width: 1000px) {
+ 
+  .right-section-my {
+    width: 50%;
+    overflow: hidden;
+    }
+
+}
+
+@media (max-width: 768px) {
+ 
+  .full-screen-section-my {
+      flex-direction: column; 
+      flex-wrap: wrap;
+      height: 100vh; 
+  }
+
+  .left-section-my, .right-section-my {
+      width: 100%; 
+      height: auto; 
+      padding: 1rem;
+  }
+
+
+  .right-section-my {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    width: 100%;
+    height: 100%; 
+    padding: 0;
+    overflow: hidden;
+    position: absolute; 
+
+  }
+
+  .image-frame-my {
+    width: 50%;
+    height: 50%;
+    object-fit: cover; 
+    max-width: 100%;
+    max-height: 100%;
+    margin:30%; 
+    position: sticky;
+    display: block;
+    overflow: hidden;
+    box-sizing: border-box;
+    justify-content: space-between;
+}
+
+
+
+}
+@media (max-width: 1200px) {
+    .right-section-my {
+        display: flex;
+        justify-content: center;
+        align-items: fill; 
+        align-self: fill;
+        height: auto; 
+        width: auto;
+        padding-bottom: 0; 
+    }
+   
+}
+
+.divider-my {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 1.5rem;
+    
+    width: 10%;
+}
+.content-section-my {
+    margin: 0 auto;
+    max-width: 56.25rem; /* Limit content width */  /* 900px = 56.25rem */
+    padding: 1rem;
+    margin-top: 2rem;
+}
+.content-paragraph-my, .funfact-paragraph-my {
+    margin-bottom: 2rem;
+}
+
+.content-paragraph-my p {
+    font-size: 1.5em;
+}
+.funfact-paragraph-my p {
+  font-size: 1.2em;
+}
+
+/*practice*/
+.content-paragraph-my, .funfact-paragraph-my {
+  margin: 1.25rem auto; 
+  max-width: 40rem; /* 640px = 40rem */
+  padding: 0 0.9375rem; /* 15px = 0.9375rem */ 
+  font-size: 1rem; 
+  line-height: 1.5; 
+  color: #333; 
+  
+}
+
+@media (max-width: 767px) { /* Mobile devices */
+  .content-paragraph-my, .funfact-paragraph-my {
+      margin: 1.25rem 1.25rem; 
+      padding: 0.625rem;
+      font-size: 0.9rem; 
+      line-height: 1.5;
+      max-width: 100%; 
+    
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) { /* Tablets */
+  .content-paragraph-my , .funfact-paragraph-my {
+      margin: 1.25rem auto; 
+      padding: 0.9375rem; 
+      font-size: 1rem; 
+      line-height: 1.6; 
+      max-width: 90%; 
+  }
+}
+
+@media (min-width: 1200px) { /* Desktops and larger screens */
+  .content-paragraph-my , .funfact-paragraph-my {
+      margin:  1.25rem auto;
+      padding: 1.25rem; 
+      font-size: 1.1rem; 
+      line-height: 1.5;
+      max-width: 56.25rem; 
+      height: auto;
+      padding: 0 15px; 
+     
+  }
+}
+
+
+/* Add a dash before each paragraph */
+.content-paragraph-my p {
+    position: relative;
+    padding-left: 25px; /* Space for the dash */
+}
+
+.content-paragraph-my p {
+  position: relative;
+  padding-left: 25px;
+}
+
+.content-paragraph-my p::before {
+    content: '_'; /* Dash symbol */
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 1rem; 
+    color: #333; /* Adjust the color of the dash */
+}
+
+
+
+@media (min-width: 635px) {
+    .vd{
+     
+        max-width: 100%; 
+        padding: 20px 0;
+        }
+
+    }
+
+
+.frame-container-my {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  max-width: 75rem; /* 1200px = 75rem */
+  margin: 1.875rem; /* 30px = 1.875rem */
+  overflow: hidden;
+  margin-left: 6.25rem; /* 100px = 6.25rem */
+  justify-content: center;
+}
+
+.image-container-my img {
+  width: 100%;
+  height: auto;
+  max-width: 21.5625rem; /* 345px = 21.5625rem */
+  max-height: 29.375rem; /* 470px = 29.375rem */
+  display: block;
+  margin-right: 2rem;
+}
+
+.text-container-my {
+  padding: 1.25rem;
+  color: #333;
+  font-size: 1.125rem; /* 18px = 1.125rem */
+  line-height: 1.6;
+  margin-left: 2rem;
+  max-width: 28.125rem; /* 450px = 28.125rem */
+}
+
+
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .frame-container-my {
+    flex-direction: column;
+    text-align: center;
+    
+   
+  }
+
+  .text-container-my {
+    padding: 0.9375rem; /* 15px = 0.9375rem */
+  }
+
+  .image-container-my img {
+    width: 100%;
+    max-width: none;
+  }
+}
+@media screen and (max-width: 730){
+  .frame-container-my {
+    display: block;
+    width: 100%;
+    text-align: center; 
+    margin-left: 0.625rem;
+    padding:0;
+    position: absolute;
+
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .text-container-my {
+    font-size: 1rem;
+  }
+
+}
+.content-wrapper-my {
+  display: flex; 
+  align-items: center; 
+  margin: 2rem;
+  
+}
+
+.left-line-my {
+  float: left;
+  width: 0.3125rem; /* 5px = 0.3125rem */
+  height: 25rem; /* 400px = 25rem */
+  background-color: silver;
+
+}
+
+
+.left-line-my, .right-line-my {
+  width: 0.125rem; /* 2px = 0.125rem */
+  background-color: gray;
+  height: auto; /* Adjust height dynamically */
+}
+
+
+.right-line-my {
+  margin-left: 0.625rem; /* 10px = 0.625rem */ /* Space between content and line */
+}
+
+
+.content {
+  flex: 1; /* Content takes up available space */
+  margin: 0 0.625rem; /* 10px = 0.625rem */ 
+}
+
+
+.title-my {
+  text-transform: uppercase;
+  font-weight: 30px;
+  font-size: 1.25rem;
+  margin: 0 0 0.625rem 0; /* Space below title */
+  text-align: center;
+}
+
+/* Paragraph styling */
+.funfact-paragraph-my span {
+  text-align: justify; 
+  font-size: 1.2rem;
+}
+
+@media screen and (min-width: 740px) {
+  .content {
+    border-left: 2px solid silver;
+    border-right: 2px solid silver;
+       
+  }
+}
+@media screen and (max-width: 740px) {
+  .content-wrapper-my {
+      flex-direction: column; 
+      align-items: center;
+  }
+
+  .left-line-my, .right-line-my {
+      width: 100%; /* Horizontal lines on smaller screens */
+      height:  0.125rem; /* 2px = 0.125rem */
+      margin: 0.625rem 0; /* Space between lines and content */ /* 10px = 0.625rem */
+  }
+
+  .title-my, .funfact-paragraph-my span {
+      text-align: center; 
+  }
+}
+
+/* read more operation */
+.text-hidden-my {
+  display: none; /* Initially hidden */
+}
+
+.content-paragraph-my.visible {
+  display: block; 
+  /* Display paragraphs with "visible" class*/
+ 
+}
+
+.read-more {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 2rem;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 30px;
+  font-size: 20px;
+  padding: 0.5rem 1rem;
+  display: block;
+}
+
+.read-more:focus {
+  outline: none;
+}
+
+/* Custom CSS */
+@media (max-width: 767.98px) { /* Bootstrap's md breakpoint */
+  .vh-sm-0 {
+      height: 0vh !important;
+      min-height: auto !important;
+  }
+  
+  .min-vh-sm-50 {
+      min-height: 20vh !important;
+  }
+}
+
+/* modify code */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card-img-top {
+    height: 250px;
+    object-fit: cover;
+}
+
+/* blog menu links */
+
+.article-card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+  position: relative;
+}
+
+.article-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); 
+}
+/* Click Animation */
+.article-card:active {
+  animation: clickEffect 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes clickEffect {
+  0% { transform: scale(1); }
+  50% { transform: scale(0.98); }
+  100% { transform: scale(1); }
+}
+
+
+.article-card img {
+  border-radius: 12px 0 0 12px;
+  border-right: 1px solid rgba(0,0,0,0.1); /* Subtle separation line */
+}
+
+@media (max-width: 768px) {
+  .article-card img {
+    border-radius: 12px 12px 0 0;
+    border-right: none;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+  }
+}
+.custom-border {
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.custom-border::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+
+}
+
+.img-hover-zoom {
+  transition: transform 0.3s ease;
+  border-radius: 15px;
+}
+
+.img-hover-zoom:hover {
+  transform: scale(1.05);
+}
+
+/* Article List Styles */
+
+
+
+/* Add responsive design */
+
+
+.object-fit-cover {
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .vh-100 {
+      height: auto !important;
+  }
+  
+  .display-3 {
+      font-size: 2.5rem;
+  }
+}
+
+.video-container {
+    transition: transform 0.3s ease-in-out;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.video-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.video-container iframe {
+    filter: brightness(0.98) contrast(1.05);
+}
+
+/* Add zoom effect to blog images */
+.article-card .col-md-6 img {
+transition: transform 0.3s ease-in-out;
+}
+
+.article-card:hover .col-md-6 img {
+transform: scale(1.05); 
+}
+
