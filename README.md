@@ -38,4 +38,4 @@ The Online Gift Shop is a full-stack e-commerce website that allows users to bro
 ## Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/YourUsername/online-gift-shop.git
+   git clone https://github.com/SiThuTun22/online-gift-shop.git
