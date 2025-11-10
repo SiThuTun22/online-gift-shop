@@ -30,8 +30,8 @@ The Online Gift Shop is a full-stack e-commerce website that allows users to bro
 ## Team Members & Responsibilities
 | Member | Role | Tasks |
 |--------|------|-------|
-| Si Thu Tun (Leader) | Backend & Auth Developer | User authentication, backend development, filtering items, search functionality, simple frontend, admin page styling |
-| - [Lin Khant Min Maung](https://github.com/LinKhantAkaAisai) | Frontend Developer | Responsive frontend, language toggle, frontend styling |
+| [Si Thu Tun](https://github.com/SiThuTun22) | Backend & Auth Developer | User authentication, backend development, filtering items, search functionality, simple frontend, admin page styling |
+| [Lin Khant Min Maung](https://github.com/LinKhantAkaAisai) | Frontend Developer | Responsive frontend, language toggle, frontend styling |
 | Phoo Phoo Khaing Thinn | Frontend & Documentation | Responsive frontend, data collection, documentation, frontend styling |
 | Chit Hmue Than Thar | Content & Documentation | Flower story page, documentation, location info for About Us page |
 
